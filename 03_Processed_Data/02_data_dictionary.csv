@@ -1,0 +1,100 @@
+table,column,description,unit,label
+sparc_rar_points_baseline.csv,galaxy,Galaxy identifier,-,DATA
+sparc_rar_points_baseline.csv,galaxy_index,Contiguous 0..N-1 integer index for modelling,-,DERIVED
+sparc_rar_points_baseline.csv,point_index,Row order in the rotmod file,-,DATA (order)
+sparc_rar_points_baseline.csv,Rad,Galactocentric radius,kpc,DATA
+sparc_rar_points_baseline.csv,Vobs,Observed rotation velocity,km/s,DATA
+sparc_rar_points_baseline.csv,errV,Uncertainty on Vobs,km/s,DATA
+sparc_rar_points_baseline.csv,Vgas,Gas contribution (signed),km/s,DATA
+sparc_rar_points_baseline.csv,Vdisk,Disk contribution at Upsilon = 1,km/s,DATA
+sparc_rar_points_baseline.csv,Vbul,Bulge contribution at Upsilon = 1,km/s,DATA
+sparc_rar_points_baseline.csv,SBdisk,Disk surface brightness,Lsun/pc^2,DATA
+sparc_rar_points_baseline.csv,SBbul,Bulge surface brightness,Lsun/pc^2,DATA
+sparc_rar_points_baseline.csv,distance_mpc,Distance (SPARC MRT),Mpc,DATA
+sparc_rar_points_baseline.csv,e_distance_mpc,Distance error (SPARC MRT),Mpc,DATA
+sparc_rar_points_baseline.csv,inc_deg,Inclination (SPARC MRT),deg,DATA
+sparc_rar_points_baseline.csv,e_inc_deg,Inclination error (SPARC MRT),deg,DATA
+sparc_rar_points_baseline.csv,quality_flag_Q,SPARC quality flag,-,DATA
+sparc_rar_points_baseline.csv,R_over_Rmax,Radius divided by the galaxy's largest radius,-,DERIVED
+sparc_rar_points_baseline.csv,g_obs,Vobs^2 / R,m s^-2,DERIVED
+sparc_rar_points_baseline.csv,g_gas,Vgas|Vgas| / R,m s^-2,DERIVED
+sparc_rar_points_baseline.csv,g_disk_ups1,Vdisk^2 / R at Upsilon = 1,m s^-2,DERIVED
+sparc_rar_points_baseline.csv,g_bul_ups1,Vbul^2 / R at Upsilon = 1,m s^-2,DERIVED
+sparc_rar_points_baseline.csv,g_bar_ref,g_gas + 0.5 g_disk + 0.7 g_bul,m s^-2,REFERENCE (M/L)
+sparc_rar_points_baseline.csv,Vbar_ref_kms,Signed sqrt of g_bar_ref * R,km/s,REFERENCE (M/L)
+sparc_rar_points_baseline.csv,log_g_obs,log10 g_obs,dex (m s^-2),DERIVED
+sparc_rar_points_baseline.csv,log_g_bar_ref,log10 g_bar_ref (NaN if g_bar_ref <= 0),dex (m s^-2),REFERENCE (M/L)
+sparc_rar_points_baseline.csv,sigma_log_gobs_V,2 errV / (Vobs ln10): independent per point,dex,DERIVED
+sparc_rar_points_baseline.csv,sigma_log_gobs_D_galaxy,e_D / (D ln10): fully correlated within a galaxy,dex,DERIVED
+sparc_rar_points_baseline.csv,sigma_log_gobs_inc_galaxy,2 e_i / (tan i ln10): fully correlated within a galaxy,dex,DERIVED
+sparc_rar_points_baseline.csv,included_in_log_analysis,False if a log or uncertainty cannot be computed (see exclusion_reason),-,FLAG
+sparc_rar_points_baseline.csv,exclusion_reason,Why a point is excluded from log-space analysis,-,FLAG
+sparc_rar_points_baseline.csv,log_g_rar_ref,"Generalised RAR at a0 = 1.2e-10, beta = 0.5",dex (m s^-2),REFERENCE
+sparc_rar_points_baseline.csv,resid_ref_dex,log_g_obs - log_g_rar_ref,dex,NEW DIAGNOSTIC
+sparc_rar_points_baseline.csv,resid_ref_over_sigmaV,resid_ref_dex / sigma_log_gobs_V,-,NEW DIAGNOSTIC
+sparc_rar_galaxies_baseline.csv,galaxy,Galaxy identifier,-,DATA
+sparc_rar_galaxies_baseline.csv,galaxy_index,Contiguous 0..N-1 integer index for modelling,-,DERIVED
+sparc_rar_galaxies_baseline.csv,n_points_total,Count,-,DERIVED
+sparc_rar_galaxies_baseline.csv,n_points_used,Count,-,DERIVED
+sparc_rar_galaxies_baseline.csv,R_min_kpc,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+sparc_rar_galaxies_baseline.csv,R_max_kpc,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+sparc_rar_galaxies_baseline.csv,Vobs_max_kms,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+sparc_rar_galaxies_baseline.csv,median_frac_errV,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+sparc_rar_galaxies_baseline.csv,n_gbar_ref_nonpositive,Count,-,DERIVED
+sparc_rar_galaxies_baseline.csv,has_bulge,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+sparc_rar_galaxies_baseline.csv,n_vgas_negative,Count,-,DERIVED
+sparc_rar_galaxies_baseline.csv,mean_resid_ref_dex,Per-galaxy mean residual vs reference,dex,NEW DIAGNOSTIC
+sparc_rar_galaxies_baseline.csv,median_resid_ref_dex,Per-galaxy median residual,dex,NEW DIAGNOSTIC
+sparc_rar_galaxies_baseline.csv,std_resid_ref_dex,Per-galaxy residual standard deviation,dex,NEW DIAGNOSTIC
+sparc_rar_galaxies_baseline.csv,chi2_per_point_sigmaV,"Mean (residual/sigma_V)^2; sigma_V only, so not a goodness-of-fit",-,NEW DIAGNOSTIC
+sparc_rar_galaxies_baseline.csv,lag1_autocorr_resid,Lag-1 autocorrelation of residuals ordered by radius,-,NEW DIAGNOSTIC
+sparc_rar_galaxies_baseline.csv,log_gbar_min,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+sparc_rar_galaxies_baseline.csv,log_gbar_max,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+sparc_rar_galaxies_baseline.csv,distance_mpc,Distance (SPARC MRT),Mpc,DATA
+sparc_rar_galaxies_baseline.csv,e_distance_mpc,Distance error (SPARC MRT),Mpc,DATA
+sparc_rar_galaxies_baseline.csv,inc_deg,Inclination (SPARC MRT),deg,DATA
+sparc_rar_galaxies_baseline.csv,e_inc_deg,Inclination error (SPARC MRT),deg,DATA
+sparc_rar_galaxies_baseline.csv,quality_flag_Q,SPARC quality flag,-,DATA
+sparc_rar_galaxies_baseline.csv,hubble_type_T,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+sparc_rar_galaxies_baseline.csv,L36_1e9Lsun,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+sparc_rar_galaxies_baseline.csv,MHI_1e9Msun,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+sparc_rar_galaxies_baseline.csv,SBdisk0_Lsun_pc2,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+sparc_rar_galaxies_baseline.csv,SBeff_Lsun_pc2,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+sparc_rar_galaxies_baseline.csv,Rdisk_kpc,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+sparc_rar_galaxies_baseline.csv,Reff_kpc,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+sparc_rar_galaxies_baseline.csv,Vflat_kms,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+sparc_rar_galaxies_baseline.csv,e_Vflat_kms,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+sparc_rar_galaxies_baseline.csv,distance_method_code,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+rar_reference_residuals_binned.csv,n,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+rar_reference_residuals_binned.csv,log_gbar_center,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+rar_reference_residuals_binned.csv,median_log_gobs,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+rar_reference_residuals_binned.csv,median_resid,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+rar_reference_residuals_binned.csv,p16_resid,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+rar_reference_residuals_binned.csv,p84_resid,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+rar_reference_residuals_binned.csv,robust_sigma_resid,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+rar_reference_residuals_binned.csv,median_sigma_V,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+rar_reference_residuals_binned.csv,bin_low,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+rar_reference_residuals_binned.csv,bin_high,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+rar_reference_residuals_binned.csv,enough_points,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+rar_reference_parameters.csv,parameter,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+rar_reference_parameters.csv,value,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+rar_reference_parameters.csv,unit,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+rar_reference_parameters.csv,role,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+rar_reference_parameters.csv,source,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+sparc_rar_point_exclusions.csv,galaxy,Galaxy identifier,-,DATA
+sparc_rar_point_exclusions.csv,point_index,Row order in the rotmod file,-,DATA (order)
+sparc_rar_point_exclusions.csv,Rad,Galactocentric radius,kpc,DATA
+sparc_rar_point_exclusions.csv,Vobs,Observed rotation velocity,km/s,DATA
+sparc_rar_point_exclusions.csv,errV,Uncertainty on Vobs,km/s,DATA
+sparc_rar_point_exclusions.csv,Vgas,Gas contribution (signed),km/s,DATA
+sparc_rar_point_exclusions.csv,Vdisk,Disk contribution at Upsilon = 1,km/s,DATA
+sparc_rar_point_exclusions.csv,Vbul,Bulge contribution at Upsilon = 1,km/s,DATA
+sparc_rar_point_exclusions.csv,g_bar_ref,g_gas + 0.5 g_disk + 0.7 g_bul,m s^-2,REFERENCE (M/L)
+sparc_rar_point_exclusions.csv,exclusion_reason,Why a point is excluded from log-space analysis,-,FLAG
+phase1_warning_assessment.csv,section,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+phase1_warning_assessment.csv,check,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+phase1_warning_assessment.csv,status,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+phase1_warning_assessment.csv,severity,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+phase1_warning_assessment.csv,detail,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+phase1_warning_assessment.csv,affects_notebook_02,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC
+phase1_warning_assessment.csv,assessment,See notebook section that creates the table,-,DERIVED / DIAGNOSTIC

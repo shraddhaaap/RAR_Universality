@@ -1,0 +1,5 @@
+survey,n_entries,n_with_points,n_without_points,n_points_total,observed_point_columns,documented_point_columns,frac_with_radius,frac_with_velocity,frac_with_velocity_error,frac_with_vgas,frac_with_vdisk,frac_with_vbul,frac_with_distance,frac_with_inclination,frac_with_coordinates,frac_with_ml_info,n_galaxies_with_duplicate_radii,n_null_point_values,n_points_field_mismatch,quality_tiers
+LITTLE_THINGS,26,26,0,1716,"Rad, Vobs, errV","Rad, Vrot, errV",1.0,1.0,0.962,0.0,0.0,0.0,1.0,1.0,1.0,0.0,24,2,0,1
+SPARC,175,175,0,3391,"Rad, SBbul, SBdisk, Vbul, Vdisk, Vgas, Vobs, errV","Rad, Vobs, errV, Vgas, Vdisk, Vbul, SBdisk, SBbul",1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,0,0,0,1
+THINGS,34,19,15,2110,"Rad, Vrot, e_Vrot","Rad, Vrot, e_Vrot",0.559,0.559,0.559,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0,0,0,1
+WALLABY,203,203,0,1746,"Rad, Vdisp, Vrot","Rad, Vrot, Vdisp",1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0,0,0,2

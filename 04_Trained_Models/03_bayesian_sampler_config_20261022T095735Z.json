@@ -1,0 +1,258 @@
+{
+  "run_id": "20261022T095735Z",
+  "created_utc": "2026-10-22T09:57:35Z",
+  "versions": {
+    "python": "3.13.16",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.16.3",
+    "jax": "0.11.1",
+    "numpyro": "0.22.0",
+    "xarray": "2025.12.0",
+    "matplotlib": "3.10.0",
+    "arviz": "0.22.0",
+    "cpu_count": 2,
+    "jax_devices": 2,
+    "x64": true
+  },
+  "seed": 20261022,
+  "target_accept": 0.9,
+  "max_tree_depth": 10,
+  "pilot": {
+    "n_galaxies": 12,
+    "chains": 4,
+    "warmup": 1000,
+    "samples": 1000,
+    "model": "C",
+    "galaxies": [
+      "F571-8",
+      "NGC0289",
+      "NGC0300",
+      "NGC3953",
+      "NGC5005",
+      "NGC7793",
+      "UGC00891",
+      "UGC02487",
+      "UGC05716",
+      "UGC06446",
+      "UGC07577",
+      "UGC08837"
+    ],
+    "seconds": 60.18409276008606,
+    "chain_method": "sequential",
+    "stats": {
+      "divergences": 0,
+      "divergences_per_chain": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "max_tree_depth_hits": 0,
+      "bfmi_per_chain": [
+        1.032220402671571,
+        1.045649793499538,
+        0.9077963053226282,
+        0.9677630509255348
+      ],
+      "mean_accept_prob": 0.9361613032353443,
+      "max_r_hat_all": 1.0021435372934848,
+      "min_ess_bulk_all": 2553.916446910076,
+      "converged_by_all_criteria": true
+    }
+  },
+  "full_run_enabled": true,
+  "full": {
+    "models": [
+      "C",
+      "A",
+      "B"
+    ],
+    "chains": 4,
+    "warmup": 1500,
+    "samples": 1000,
+    "completed_models": {
+      "C": {
+        "seconds": 342.44034814834595,
+        "stats": {
+          "divergences": 0,
+          "divergences_per_chain": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "max_tree_depth_hits": 0,
+          "bfmi_per_chain": [
+            0.9056509070814439,
+            0.9399800359044418,
+            0.8579094089378891,
+            0.9677309998589283
+          ],
+          "mean_accept_prob": 0.9158048815631048,
+          "max_r_hat_all": 1.0013913323009709,
+          "min_ess_bulk_all": 2961.64501290572,
+          "converged_by_all_criteria": true
+        },
+        "netcdf": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Posterior_Samples/03_bayesian_full_modelC_posterior.nc",
+        "chain_method": "sequential"
+      },
+      "A": {
+        "seconds": 74.60177969932556,
+        "stats": {
+          "divergences": 0,
+          "divergences_per_chain": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "max_tree_depth_hits": 0,
+          "bfmi_per_chain": [
+            0.9819198870133375,
+            0.9583162768060891,
+            1.0226202396562307,
+            1.1113116977939348
+          ],
+          "mean_accept_prob": 0.9514359960789411,
+          "max_r_hat_all": 1.0025651418326058,
+          "min_ess_bulk_all": 1913.1586164304997,
+          "converged_by_all_criteria": true
+        },
+        "netcdf": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Posterior_Samples/03_bayesian_full_modelA_posterior.nc",
+        "chain_method": "sequential"
+      },
+      "B": {
+        "seconds": 82.06738209724426,
+        "stats": {
+          "divergences": 0,
+          "divergences_per_chain": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "max_tree_depth_hits": 0,
+          "bfmi_per_chain": [
+            1.1009922531645728,
+            1.070656013145433,
+            1.148531057621988,
+            1.001624300744802
+          ],
+          "mean_accept_prob": 0.9489246133091104,
+          "max_r_hat_all": 1.0001972823433933,
+          "min_ess_bulk_all": 2012.0963554544228,
+          "converged_by_all_criteria": true
+        },
+        "netcdf": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Posterior_Samples/03_bayesian_full_modelB_posterior.nc",
+        "chain_method": "sequential"
+      }
+    }
+  },
+  "convergence_criteria": {
+    "r_hat_max": 1.01,
+    "ess_bulk_min": 400,
+    "divergences_max": 0
+  },
+  "priors": {
+    "log10_a0": {
+      "dist": "Uniform",
+      "low": -11.5,
+      "high": -8.5,
+      "unit": "log10(m s^-2)",
+      "kind": "computational support (broad)"
+    },
+    "beta": {
+      "dist": "Uniform",
+      "low": 0.05,
+      "high": 1.0,
+      "unit": "-",
+      "kind": "computational support; keeps low-g slope 1-beta in [0, 0.95]"
+    },
+    "sigma_int": {
+      "dist": "HalfNormal",
+      "scale": 0.1,
+      "unit": "dex",
+      "kind": "proposal: half-normal including zero; scale is a regularisation choice"
+    },
+    "tau": {
+      "dist": "HalfNormal",
+      "scale": 0.1,
+      "unit": "dex",
+      "kind": "proposal: half-normal including zero; scale is a regularisation choice"
+    },
+    "error_inflation_s": {
+      "dist": "LogNormal",
+      "loc": 0.0,
+      "scale": 0.5,
+      "unit": "-",
+      "kind": "Model B only; regularisation choice (median 1)"
+    },
+    "distance": {
+      "dist": "LogNormal per galaxy",
+      "loc": "ln D_SPARC",
+      "scale": "e_D / D_SPARC",
+      "unit": "Mpc",
+      "kind": "physical: proposal (log-normal, catalogue errors)"
+    },
+    "inclination": {
+      "dist": "TruncatedNormal per galaxy",
+      "loc": "i_SPARC",
+      "scale": "e_i",
+      "low": 1.0,
+      "high": 90.0,
+      "unit": "deg",
+      "kind": "physical: proposal (Gaussian, catalogue errors); bounds 0<i<=90 as in Li et al. 2018"
+    },
+    "upsilon_disk": {
+      "dist": "LogNormal per galaxy",
+      "median": 0.5,
+      "sigma_dex": 0.1,
+      "unit": "Msun/Lsun",
+      "kind": "physical: proposal (log-normal about SPARC value 0.5); 0.1 dex width as in Li et al. 2018, Sec. 2.2"
+    },
+    "upsilon_bulge": {
+      "dist": "LogNormal per bulge galaxy",
+      "median": 0.7,
+      "sigma_dex": 0.1,
+      "unit": "Msun/Lsun",
+      "kind": "physical: as above; only galaxies with Vbul > 0 get this parameter"
+    }
+  },
+  "sigma_x_log_gbar": 0.0,
+  "reference_values_not_fitted": {
+    "a0": 1.2e-10,
+    "beta": 0.5,
+    "upsilon_disk": 0.5,
+    "upsilon_bulge": 0.7
+  },
+  "positivity_rule": {
+    "P_prior_min": 0.999,
+    "mc_draws": 200000,
+    "n_points_included": 3164,
+    "excluded_points": [
+      [
+        "DDO064",
+        0
+      ],
+      [
+        "UGC01281",
+        0
+      ],
+      [
+        "UGC01281",
+        1
+      ],
+      [
+        "UGC07577",
+        0
+      ]
+    ]
+  },
+  "input_checksums": {
+    "sparc_rar_points_baseline.csv": "00d6c70a16f198118ebdeac366e60bfccb4ea1fc8abb278b40faf98151d5d04d",
+    "sparc_rar_galaxies_baseline.csv": "6ab7205b2a5f70d8196f7ed87926c4b9d5fcda9a6a90f10d47de363632d205c6",
+    "sparc_rar_model_inputs.npz": "7d56b9edeb02a50abcbcde2363d3834e2517e879c98738ceba73cea59a035a65"
+  },
+  "resume_note": "No sampler-state checkpointing: interrupted chains cannot be resumed."
+}

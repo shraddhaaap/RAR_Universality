@@ -1,0 +1,44 @@
+section,check,status,severity,detail
+Notebook 02,all expected Notebook 02 files present,PASS,critical,10 files
+Notebook 02,saved 02 check register has no FAIL rows,PASS,critical,"36 checks, 0 FAIL, 0 WARN"
+Notebook 02,Notebook 02 outputs match their recorded SHA-256,PASS,critical,17 entries checked
+Notebook 02,points table has required columns,PASS,critical,ok
+Notebook 02,galaxy table has required columns,PASS,critical,ok
+Notebook 02,153 galaxies and 3168 points,PASS,critical,153 / 3168
+Notebook 02,galaxy identifiers unique and indices contiguous,PASS,critical,ok
+Notebook 02,model-input arrays (npz) identical to the points table,PASS,critical,3168 rows
+Inputs,Notebook 02 values identical to original rotmod files,PASS,critical,max |diff| 0.0
+Inputs,bulge flag agrees with Notebook 02,PASS,critical,31 galaxies with a bulge
+Inputs,all e_distance_mpc > 0 (needed for proper priors),PASS,critical,min 0.05
+Inputs,all e_inc_deg > 0 (needed for proper priors),PASS,critical,min 1.0
+Scaling,catalogue nuisance values reproduce Notebook 02 g_obs and g_bar,PASS,critical,ok
+Scaling,"g_bar independent of D, g_obs ∝ 1/D, sigma_V independent of D",PASS,critical,D x 1.3
+Scaling,g_obs ∝ (sin i_SPARC / sin i)^2 and sigma_V invariant to i,PASS,critical,i - 5 deg
+Scaling,extreme nuisance values give finite accelerations,PASS,critical,"D x3, i = 1 deg, Y x10"
+Units,100 km/s at 1 kpc = 3.2408e-10 m s^-2,PASS,critical,ok
+Positivity,every point excluded by the rule was also non-positive at reference Upsilon (no new exclusions),WARN,warning,"rule excludes [('DDO064', 0), ('UGC01281', 0), ('UGC01281', 1), ('UGC07577', 0)]"
+Positivity,no galaxy loses all its points,PASS,critical,ok
+RAR,f matches the Notebook 02 reference form (beta = 0.5),PASS,critical,ok
+RAR,high-g limit f(x) -> x,PASS,critical,ok
+RAR,low-g slope -> 1 - beta (beta = 0.3),PASS,critical,ok
+RAR,analytic f' equals autodiff f',PASS,critical,ok
+RAR,"f monotonic and finite on [-14, -7]",PASS,critical,ok
+Likelihood,"Sherman–Morrison = dense MVN (galaxy 0, params (np.float64(-9.920818753952375), 0.5, 0.05, 0.07))",PASS,critical,-38.040159 vs -38.040159
+Likelihood,covariance positive-definite (galaxy 0),PASS,critical,min eig 7.28e-03
+Likelihood,"Sherman–Morrison = dense MVN (galaxy 76, params (np.float64(-9.920818753952375), 0.5, 0.05, 0.07))",PASS,critical,55.834947 vs 55.834947
+Likelihood,covariance positive-definite (galaxy 76),PASS,critical,min eig 2.55e-03
+Likelihood,"Sherman–Morrison = dense MVN (galaxy 152, params (np.float64(-9.920818753952375), 0.5, 0.05, 0.07))",PASS,critical,29.349164 vs 29.349164
+Likelihood,covariance positive-definite (galaxy 152),PASS,critical,min eig 1.02e-02
+Likelihood,"all galaxy log-likelihoods finite at (np.float64(-9.920818753952375), 0.5, 0.05, 0.07)",PASS,critical,sum 2964.78
+Likelihood,"Sherman–Morrison = dense MVN (galaxy 0, params (-10.2, 0.62, 0.11, 0.02))",PASS,critical,-53.616767 vs -53.616767
+Likelihood,covariance positive-definite (galaxy 0),PASS,critical,min eig 1.95e-02
+Likelihood,"Sherman–Morrison = dense MVN (galaxy 76, params (-10.2, 0.62, 0.11, 0.02))",PASS,critical,35.172928 vs 35.172928
+Likelihood,covariance positive-definite (galaxy 76),PASS,critical,min eig 1.22e-02
+Likelihood,"Sherman–Morrison = dense MVN (galaxy 152, params (-10.2, 0.62, 0.11, 0.02))",PASS,critical,15.195231 vs 15.195231
+Likelihood,covariance positive-definite (galaxy 152),PASS,critical,min eig 2.50e-02
+Likelihood,"all galaxy log-likelihoods finite at (-10.2, 0.62, 0.11, 0.02)",PASS,critical,sum 1755.71
+Likelihood,Model A: finite log-density and gradient at initial values,PASS,critical,log p = 2804.47
+Likelihood,Model B: finite log-density and gradient at initial values,PASS,critical,log p = 2804.24
+Likelihood,Model C: finite log-density and gradient at initial values,PASS,critical,log p = 2165.65
+Pilot,"pilot meets R-hat, ESS and divergence criteria",PASS,warning,"max R-hat 1.0021, min ESS 2554, divergences 0"
+Pilot,pilot per-galaxy log-likelihoods finite for all draws,PASS,critical,"(4000, 12)"

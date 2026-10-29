@@ -1,0 +1,13 @@
+file,bytes
+config/06_injection_config.json,1866
+config/06_package_versions.csv,181
+diagnostics/06_integrity_checks.csv,5133
+figures/06_null_vs_real_slopes.png,101924
+figures/06_recovery.png,84100
+logs/06_injection_20261028T075632Z.log,7858
+tables/06_Injection_Recovery_Report.md,8510
+tables/06_false_positive_rates.csv,3888
+tables/06_family_wise_rates.csv,191
+tables/06_mock_fit_results.csv,88237
+tables/06_real_slopes_noise_calibrated.csv,4245
+tables/06_recovery.csv,2233

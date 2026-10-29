@@ -1,0 +1,370 @@
+{
+  "run_id": "20261027T161151Z",
+  "created_utc": "2026-10-27T16:11:51Z",
+  "versions": {
+    "python": "3.13.16",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.16.3",
+    "jax": "0.11.1",
+    "numpyro": "0.22.0",
+    "xarray": "2025.12.0",
+    "matplotlib": "3.10.0",
+    "cpu_count": 2,
+    "jax_devices": 2,
+    "jax_backend": "cpu",
+    "x64": true
+  },
+  "seed": 20261027,
+  "notebook03_run_id": "20261022T095735Z",
+  "covariates": {
+    "logMbar": [
+      "log10 baryonic mass [Msun] = log10(1.33 M_HI + 0.5 L[3.6]); Notebook 01 fiducial definition",
+      "sparc_galaxy_audit.csv"
+    ],
+    "logSB0": [
+      "log10 central disk surface brightness at 3.6 um [Lsun/pc^2] (SPARC SBdisk)",
+      "sparc_rar_galaxies_baseline.csv"
+    ],
+    "fgas": [
+      "gas fraction 1.33 M_HI / Mbar (Notebook 01 fiducial definition)",
+      "sparc_galaxy_audit.csv"
+    ]
+  },
+  "covariate_mean": {
+    "logMbar": 9.827318435790469,
+    "logSB0": 2.642165272310244,
+    "fgas": 0.44996997852130616
+  },
+  "covariate_sd": {
+    "logMbar": 0.9461746364094091,
+    "logSB0": 0.6867555820330767,
+    "fgas": 0.2705823106615736
+  },
+  "vif": {
+    "logMbar": 2.5550958993596122,
+    "logSB0": 2.322257268366044,
+    "fgas": 3.2110133033540404
+  },
+  "pop_params": [
+    "log10_a0",
+    "beta",
+    "log_sigma_int",
+    "log_tau"
+  ],
+  "slope_prior_sd_per_SD": {
+    "log10_a0": 0.25,
+    "beta": 0.1,
+    "log_sigma_int": 0.5,
+    "log_tau": 0.5
+  },
+  "intercept_priors_from_nb03": {
+    "log10_a0": {
+      "dist": "Uniform",
+      "low": -11.5,
+      "high": -8.5,
+      "unit": "log10(m s^-2)",
+      "kind": "computational support (broad)"
+    },
+    "beta": {
+      "dist": "Uniform",
+      "low": 0.05,
+      "high": 1.0,
+      "unit": "-",
+      "kind": "computational support; keeps low-g slope 1-beta in [0, 0.95]"
+    },
+    "sigma_int": {
+      "dist": "HalfNormal",
+      "scale": 0.1,
+      "unit": "dex",
+      "kind": "proposal: half-normal including zero; scale is a regularisation choice"
+    },
+    "tau": {
+      "dist": "HalfNormal",
+      "scale": 0.1,
+      "unit": "dex",
+      "kind": "proposal: half-normal including zero; scale is a regularisation choice"
+    }
+  },
+  "beta_floor": 0.01,
+  "test_family": {
+    "n": 12,
+    "family_alpha": 0.05,
+    "per_test_alpha": 0.004166666666666667,
+    "normal_critical_z": 2.8652602385321346,
+    "definition": "12 slopes from the one-at-a-time fits"
+  },
+  "sampler": {
+    "target_accept": 0.9,
+    "max_tree_depth": 10,
+    "chains": 4,
+    "warmup": 1000,
+    "samples": 1500
+  },
+  "integrated_loo": {
+    "post_draws": 300,
+    "mc": 64
+  },
+  "convergence_criteria": {
+    "r_hat": 1.01,
+    "ess_bulk": 400,
+    "ess_tail": 400,
+    "divergences": 0,
+    "bfmi": 0.3,
+    "tree_depth_hits": 0
+  },
+  "fits": {
+    "baseline": {
+      "covariates": [],
+      "slope_prior_mult": 1.0,
+      "seconds": 378.89364743232727,
+      "stats": {
+        "divergences": 0,
+        "divergences_per_chain": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_tree_depth_hits": 0,
+        "mean_accept_prob": 0.9132973846249024,
+        "bfmi_per_chain": [
+          0.9224625542089122,
+          0.9154352090229781,
+          0.9503719794489844,
+          0.9018287628207083
+        ],
+        "max_r_hat_all": 1.0050652671296127,
+        "min_ess_bulk_all": 3811.50661307404,
+        "min_ess_tail_all": 1836.4491113130744,
+        "converged_by_all_criteria": true
+      },
+      "netcdf": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Population_Dependence/20261027T161151Z/posterior/05_pop_baseline_posterior.nc",
+      "error": null
+    },
+    "one_logMbar": {
+      "covariates": [
+        "logMbar"
+      ],
+      "slope_prior_mult": 1.0,
+      "seconds": 540.827493429184,
+      "stats": {
+        "divergences": 0,
+        "divergences_per_chain": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_tree_depth_hits": 0,
+        "mean_accept_prob": 0.9299698189720754,
+        "bfmi_per_chain": [
+          0.8523642134737687,
+          0.8304639779542098,
+          0.8689523079000162,
+          0.887231556975851
+        ],
+        "max_r_hat_all": 1.0037922782341584,
+        "min_ess_bulk_all": 1513.9090191738273,
+        "min_ess_tail_all": 660.509569484836,
+        "converged_by_all_criteria": true
+      },
+      "netcdf": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Population_Dependence/20261027T161151Z/posterior/05_pop_one_logMbar_posterior.nc",
+      "error": null
+    },
+    "one_logSB0": {
+      "covariates": [
+        "logSB0"
+      ],
+      "slope_prior_mult": 1.0,
+      "seconds": 522.0669405460358,
+      "stats": {
+        "divergences": 0,
+        "divergences_per_chain": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_tree_depth_hits": 0,
+        "mean_accept_prob": 0.9123061296719276,
+        "bfmi_per_chain": [
+          0.8811368024660747,
+          0.9267140492120027,
+          0.9116871519208983,
+          0.8440849692024811
+        ],
+        "max_r_hat_all": 1.004209590246083,
+        "min_ess_bulk_all": 2767.004090723324,
+        "min_ess_tail_all": 1626.1403755582799,
+        "converged_by_all_criteria": true
+      },
+      "netcdf": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Population_Dependence/20261027T161151Z/posterior/05_pop_one_logSB0_posterior.nc",
+      "error": null
+    },
+    "one_fgas": {
+      "covariates": [
+        "fgas"
+      ],
+      "slope_prior_mult": 1.0,
+      "seconds": 528.0857532024384,
+      "stats": {
+        "divergences": 0,
+        "divergences_per_chain": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_tree_depth_hits": 0,
+        "mean_accept_prob": 0.9213899899573604,
+        "bfmi_per_chain": [
+          0.8403231537907064,
+          0.8854888629232989,
+          0.9401279093052494,
+          0.9544448637491295
+        ],
+        "max_r_hat_all": 1.0053016983702834,
+        "min_ess_bulk_all": 3033.540186897279,
+        "min_ess_tail_all": 1090.4458835507992,
+        "converged_by_all_criteria": true
+      },
+      "netcdf": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Population_Dependence/20261027T161151Z/posterior/05_pop_one_fgas_posterior.nc",
+      "error": null
+    },
+    "joint": {
+      "covariates": [
+        "logMbar",
+        "logSB0",
+        "fgas"
+      ],
+      "slope_prior_mult": 1.0,
+      "seconds": 885.0069308280945,
+      "stats": {
+        "divergences": 0,
+        "divergences_per_chain": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_tree_depth_hits": 0,
+        "mean_accept_prob": 0.9523008147302587,
+        "bfmi_per_chain": [
+          0.7444152236051356,
+          0.7529611541132906,
+          0.7469419153799999,
+          0.8101257511150733
+        ],
+        "max_r_hat_all": 1.0034564149615766,
+        "min_ess_bulk_all": 1164.1770219306784,
+        "min_ess_tail_all": 1632.7786635372968,
+        "converged_by_all_criteria": true
+      },
+      "netcdf": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Population_Dependence/20261027T161151Z/posterior/05_pop_joint_posterior.nc",
+      "error": null
+    },
+    "one_logMbar_priorx2": {
+      "covariates": [
+        "logMbar"
+      ],
+      "slope_prior_mult": 2.0,
+      "seconds": 535.1790874004364,
+      "stats": {
+        "divergences": 0,
+        "divergences_per_chain": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_tree_depth_hits": 0,
+        "mean_accept_prob": 0.9237320952235191,
+        "bfmi_per_chain": [
+          0.8872816820534953,
+          0.8628577767880999,
+          0.8904464920384461,
+          0.8685280008229721
+        ],
+        "max_r_hat_all": 1.0044815877039643,
+        "min_ess_bulk_all": 1280.1106185854294,
+        "min_ess_tail_all": 1737.6816969548372,
+        "converged_by_all_criteria": true
+      },
+      "netcdf": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Population_Dependence/20261027T161151Z/posterior/05_pop_one_logMbar_priorx2_posterior.nc",
+      "error": null
+    },
+    "one_logSB0_priorx2": {
+      "covariates": [
+        "logSB0"
+      ],
+      "slope_prior_mult": 2.0,
+      "seconds": 523.4214096069336,
+      "stats": {
+        "divergences": 0,
+        "divergences_per_chain": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_tree_depth_hits": 0,
+        "mean_accept_prob": 0.9130347137161925,
+        "bfmi_per_chain": [
+          0.9800198711576754,
+          0.9845301541557199,
+          0.8862635765580934,
+          0.9066845224479878
+        ],
+        "max_r_hat_all": 1.0042641866782602,
+        "min_ess_bulk_all": 2849.852145900247,
+        "min_ess_tail_all": 1857.214015321439,
+        "converged_by_all_criteria": true
+      },
+      "netcdf": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Population_Dependence/20261027T161151Z/posterior/05_pop_one_logSB0_priorx2_posterior.nc",
+      "error": null
+    },
+    "one_fgas_priorx2": {
+      "covariates": [
+        "fgas"
+      ],
+      "slope_prior_mult": 2.0,
+      "seconds": 522.3927483558655,
+      "stats": {
+        "divergences": 0,
+        "divergences_per_chain": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_tree_depth_hits": 0,
+        "mean_accept_prob": 0.9264321665081423,
+        "bfmi_per_chain": [
+          0.9451265456174301,
+          0.9234301840751584,
+          0.8997626577200675,
+          0.9249045757538654
+        ],
+        "max_r_hat_all": 1.004026468912073,
+        "min_ess_bulk_all": 3215.2660917807407,
+        "min_ess_tail_all": 1857.4397349944184,
+        "converged_by_all_criteria": true
+      },
+      "netcdf": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Population_Dependence/20261027T161151Z/posterior/05_pop_one_fgas_priorx2_posterior.nc",
+      "error": null
+    }
+  },
+  "regression": {
+    "max_abs_diff_vs_saved_NB03": 2.3732127374387346e-12,
+    "max_abs_diff_vs_C": 0.0
+  },
+  "data_checksums": {
+    "sparc_rar_points_baseline.csv": "00d6c70a16f198118ebdeac366e60bfccb4ea1fc8abb278b40faf98151d5d04d",
+    "sparc_rar_galaxies_baseline.csv": "6ab7205b2a5f70d8196f7ed87926c4b9d5fcda9a6a90f10d47de363632d205c6",
+    "sparc_rar_model_inputs.npz": "7d56b9edeb02a50abcbcde2363d3834e2517e879c98738ceba73cea59a035a65"
+  },
+  "n_points": 3164,
+  "n_galaxies": 153,
+  "not_applicable": "survey offsets and cross-survey comparisons (Sec. 4.5 items 5-6): cross-survey feasibility gate did not pass (Notebook 01B)"
+}

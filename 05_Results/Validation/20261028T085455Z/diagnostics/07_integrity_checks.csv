@@ -1,0 +1,47 @@
+section,check,status,severity,detail
+NB03,a Notebook 03 run with a completed full Model C exists,PASS,critical,1 candidate runs
+NB03,Model C posterior file exists,PASS,critical,/content/drive/MyDrive/RAR_Universality_Research/05_Results/Posterior_Samples/03_bayesian_full_modelC_posterior.nc
+NB03,Model C posterior carries run ID 20261022T095735Z,PASS,critical,file run_id 20261022T095735Z
+NB03,Model C met all convergence criteria in Notebook 03,PASS,critical,"max R-hat 1.0014, min ESS 2962, divergences 0"
+NB03,Model A posterior file exists,PASS,critical,/content/drive/MyDrive/RAR_Universality_Research/05_Results/Posterior_Samples/03_bayesian_full_modelA_posterior.nc
+NB03,Model A posterior carries run ID 20261022T095735Z,PASS,critical,file run_id 20261022T095735Z
+NB03,Model A met all convergence criteria in Notebook 03,PASS,critical,"max R-hat 1.0026, min ESS 1913, divergences 0"
+NB03,Model B posterior file exists,PASS,critical,/content/drive/MyDrive/RAR_Universality_Research/05_Results/Posterior_Samples/03_bayesian_full_modelB_posterior.nc
+NB03,Model B posterior carries run ID 20261022T095735Z,PASS,critical,file run_id 20261022T095735Z
+NB03,Model B met all convergence criteria in Notebook 03,PASS,critical,"max R-hat 1.0002, min ESS 2012, divergences 0"
+NB03,Notebook 03 check register has no FAIL rows,PASS,critical,"03_bayesian_integrity_checks_20261022T095735Z.csv: 43 checks, 0 FAIL, 1 WARN"
+NB03,Notebook 03 galaxy-level PSIS-LOO reliable (Pareto k > 0.7 in < 10% of galaxies),WARN,warning,"[['PILOT (validation only)', 'C', 5], ['FULL', 'C', 88]]"
+NB03,shared priors in this notebook equal Notebook 03's saved priors,PASS,critical,"log10_a0, beta, sigma_int, tau, Upsilon, inclination bounds"
+NB03,Sigma_x convention unchanged (0: no documented baryonic-component errors),PASS,critical,0.0
+Sample,sparc_rar_points_baseline.csv unchanged since Notebook 03,PASS,critical,SHA-256 compared
+Sample,sparc_rar_galaxies_baseline.csv unchanged since Notebook 03,PASS,critical,SHA-256 compared
+Sample,sparc_rar_model_inputs.npz unchanged since Notebook 03,PASS,critical,SHA-256 compared
+Sample,point set reproduces Notebook 03 (3164 points),PASS,critical,3164
+Sample,excluded points identical to Notebook 03,PASS,critical,"[('DDO064', 0), ('UGC01281', 0), ('UGC01281', 1), ('UGC07577', 0)]"
+Covariates,Mbar reproduces 1.33 M_HI + 0.5 L[3.6] (Notebook 01 definition),PASS,critical,
+Covariates,galaxy order equals the model-input order,PASS,critical,153 galaxies
+Covariates,logMbar finite for all 153 galaxies,PASS,critical,0 non-finite
+Covariates,logSB0 finite for all 153 galaxies,PASS,critical,0 non-finite
+Covariates,fgas finite for all 153 galaxies,PASS,critical,0 non-finite
+Regression,Notebook 03 Model C galaxy order equals this notebook's,PASS,critical,153 galaxies
+Regression,"zero-slope likelihood = Notebook 03 saved Model C log-likelihoods (10 draws, all galaxies)",PASS,critical,max |diff| = 2.37e-12
+Regression,zero-slope likelihood = Notebook 03 galaxy_loglik_C,PASS,critical,max |diff| = 0.00e+00
+Model,Sigma_x is zero for all points (mean derivative not needed),PASS,critical,Notebook 03 convention
+Forms,generalised RAR via the general code = Notebook 05 likelihood,PASS,critical,max |diff| 0.0e+00
+Forms,simple IF code = direct formula,PASS,critical,
+Forms,double power law code = direct formula (Lelli et al. 2017 eq.),PASS,critical,
+Forms,generalised RAR with beta = 0.5 equals the standard RAR IF of Lelli et al. 2017,PASS,critical,
+Forms,gen_baseline: log density finite at initial values,PASS,critical,2037.5
+Forms,gen_dep_logMbar: log density finite at initial values,PASS,critical,2038.9
+Forms,dpl_baseline: log density finite at initial values,PASS,critical,1791.2
+Forms,dpl_dep_logMbar: log density finite at initial values,PASS,critical,1792.6
+Forms,simple_baseline: log density finite at initial values,PASS,critical,2105.3
+Forms,simple_dep_logMbar: log density finite at initial values,PASS,critical,2105.3
+Convergence,FULL gen_baseline meets all convergence criteria,PASS,warning,"{""max_r_hat_all"": 1.0045258458314705, ""min_ess_bulk_all"": 3627.569725794483, ""divergences"": 0}"
+Convergence,FULL gen_dep_logMbar meets all convergence criteria,PASS,warning,"{""max_r_hat_all"": 1.0044874903921197, ""min_ess_bulk_all"": 1555.6957609309936, ""divergences"": 0}"
+Convergence,FULL dpl_baseline meets all convergence criteria,PASS,warning,"{""max_r_hat_all"": 1.005894630085983, ""min_ess_bulk_all"": 1958.551650222283, ""divergences"": 0}"
+Convergence,FULL dpl_dep_logMbar meets all convergence criteria,PASS,warning,"{""max_r_hat_all"": 1.0045376786204134, ""min_ess_bulk_all"": 1369.89176668929, ""divergences"": 0}"
+Convergence,FULL simple_baseline meets all convergence criteria,PASS,warning,"{""max_r_hat_all"": 1.003932067588038, ""min_ess_bulk_all"": 3940.3266340953637, ""divergences"": 0}"
+Convergence,FULL simple_dep_logMbar meets all convergence criteria,PASS,warning,"{""max_r_hat_all"": 1.0042847247501336, ""min_ess_bulk_all"": 1544.6001685618928, ""divergences"": 0}"
+CV,CV training fits: 0 divergences and key R-hat < 1.05,PASS,warning,all fine
+CV,every galaxy scored by every CV model,PASS,warning,153/153 galaxies complete

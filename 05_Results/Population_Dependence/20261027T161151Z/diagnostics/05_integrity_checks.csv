@@ -1,0 +1,41 @@
+section,check,status,severity,detail
+NB03,a Notebook 03 run with a completed full Model C exists,PASS,critical,1 candidate runs
+NB03,Model C posterior file exists,PASS,critical,/content/drive/MyDrive/RAR_Universality_Research/05_Results/Posterior_Samples/03_bayesian_full_modelC_posterior.nc
+NB03,Model C posterior carries run ID 20261022T095735Z,PASS,critical,file run_id 20261022T095735Z
+NB03,Model C met all convergence criteria in Notebook 03,PASS,critical,"max R-hat 1.0014, min ESS 2962, divergences 0"
+NB03,Model A posterior file exists,PASS,critical,/content/drive/MyDrive/RAR_Universality_Research/05_Results/Posterior_Samples/03_bayesian_full_modelA_posterior.nc
+NB03,Model A posterior carries run ID 20261022T095735Z,PASS,critical,file run_id 20261022T095735Z
+NB03,Model A met all convergence criteria in Notebook 03,PASS,critical,"max R-hat 1.0026, min ESS 1913, divergences 0"
+NB03,Model B posterior file exists,PASS,critical,/content/drive/MyDrive/RAR_Universality_Research/05_Results/Posterior_Samples/03_bayesian_full_modelB_posterior.nc
+NB03,Model B posterior carries run ID 20261022T095735Z,PASS,critical,file run_id 20261022T095735Z
+NB03,Model B met all convergence criteria in Notebook 03,PASS,critical,"max R-hat 1.0002, min ESS 2012, divergences 0"
+NB03,Notebook 03 check register has no FAIL rows,PASS,critical,"03_bayesian_integrity_checks_20261022T095735Z.csv: 43 checks, 0 FAIL, 1 WARN"
+NB03,Notebook 03 galaxy-level PSIS-LOO reliable (Pareto k > 0.7 in < 10% of galaxies),WARN,warning,"[['PILOT (validation only)', 'C', 5], ['FULL', 'C', 88]]"
+NB03,shared priors in this notebook equal Notebook 03's saved priors,PASS,critical,"log10_a0, beta, sigma_int, tau, Upsilon, inclination bounds"
+NB03,Sigma_x convention unchanged (0: no documented baryonic-component errors),PASS,critical,0.0
+Sample,sparc_rar_points_baseline.csv unchanged since Notebook 03,PASS,critical,SHA-256 compared
+Sample,sparc_rar_galaxies_baseline.csv unchanged since Notebook 03,PASS,critical,SHA-256 compared
+Sample,sparc_rar_model_inputs.npz unchanged since Notebook 03,PASS,critical,SHA-256 compared
+Sample,point set reproduces Notebook 03 (3164 points),PASS,critical,3164
+Sample,excluded points identical to Notebook 03,PASS,critical,"[('DDO064', 0), ('UGC01281', 0), ('UGC01281', 1), ('UGC07577', 0)]"
+Covariates,Mbar reproduces 1.33 M_HI + 0.5 L[3.6] (Notebook 01 definition),PASS,critical,
+Covariates,galaxy order equals the model-input order,PASS,critical,153 galaxies
+Covariates,logMbar finite for all 153 galaxies,PASS,critical,0 non-finite
+Covariates,logSB0 finite for all 153 galaxies,PASS,critical,0 non-finite
+Covariates,fgas finite for all 153 galaxies,PASS,critical,0 non-finite
+Regression,Notebook 03 Model C galaxy order equals this notebook's,PASS,critical,153 galaxies
+Regression,"zero-slope likelihood = Notebook 03 saved Model C log-likelihoods (10 draws, all galaxies)",PASS,critical,max |diff| = 2.37e-12
+Regression,zero-slope likelihood = Notebook 03 galaxy_loglik_C,PASS,critical,max |diff| = 0.00e+00
+Model,baseline (no slopes) log density finite at the initial values,PASS,critical,2037.50
+Model,zero slopes give the baseline likelihood exactly,PASS,critical,joint vs baseline loglik factor
+Convergence,FIT baseline meets all convergence criteria,PASS,warning,"{""max_r_hat_all"": 1.0050652671296127, ""min_ess_bulk_all"": 3811.50661307404, ""min_ess_tail_all"": 1836.4491113130744, ""divergences"": 0}"
+Convergence,FIT one_logMbar meets all convergence criteria,PASS,warning,"{""max_r_hat_all"": 1.0037922782341584, ""min_ess_bulk_all"": 1513.9090191738273, ""min_ess_tail_all"": 660.509569484836, ""divergences"": 0}"
+Convergence,FIT one_logSB0 meets all convergence criteria,PASS,warning,"{""max_r_hat_all"": 1.004209590246083, ""min_ess_bulk_all"": 2767.004090723324, ""min_ess_tail_all"": 1626.1403755582799, ""divergences"": 0}"
+Convergence,FIT one_fgas meets all convergence criteria,PASS,warning,"{""max_r_hat_all"": 1.0053016983702834, ""min_ess_bulk_all"": 3033.540186897279, ""min_ess_tail_all"": 1090.4458835507992, ""divergences"": 0}"
+Convergence,FIT joint meets all convergence criteria,PASS,warning,"{""max_r_hat_all"": 1.0034564149615766, ""min_ess_bulk_all"": 1164.1770219306784, ""min_ess_tail_all"": 1632.7786635372968, ""divergences"": 0}"
+Convergence,FIT one_logMbar_priorx2 meets all convergence criteria,PASS,warning,"{""max_r_hat_all"": 1.0044815877039643, ""min_ess_bulk_all"": 1280.1106185854294, ""min_ess_tail_all"": 1737.6816969548372, ""divergences"": 0}"
+Convergence,FIT one_logSB0_priorx2 meets all convergence criteria,PASS,warning,"{""max_r_hat_all"": 1.0042641866782602, ""min_ess_bulk_all"": 2849.852145900247, ""min_ess_tail_all"": 1857.214015321439, ""divergences"": 0}"
+Convergence,FIT one_fgas_priorx2 meets all convergence criteria,PASS,warning,"{""max_r_hat_all"": 1.004026468912073, ""min_ess_bulk_all"": 3215.2660917807407, ""min_ess_tail_all"": 1857.4397349944184, ""divergences"": 0}"
+Baseline,baseline re-fit agrees with Notebook 03 Model C (|median shift| < 0.25 posterior SD),PASS,warning,"[{'parameter': 'log10_a0', 'baseline_median': -10.048, 'NB03_median': -10.048, 'shift_in_NB03_sd': 0.028}, {'parameter': 'beta', 'baseline_median': 0.514, 'NB03_median': 0.514, 'shift_in_NB03_sd': -0.02}, {'parameter': 'sigma_int', 'baseline_median': 0.036, 'NB03_median': 0.036, 'shift_in_NB03_sd': 0.001}, {'parameter': 'tau', 'baseline_median': 0.122, 'NB03_median': 0.122, 'shift_in_NB03_sd': 0.019}]"
+Prior sensitivity,slope medians move < 0.5 posterior SD when the slope prior SD is doubled,PASS,warning,max shift 0.07 SD
+Model,joint fit: beta_i stays clear of the 0.01 floor (P(min beta_i < 0.05) < 1%),PASS,warning,0.0000

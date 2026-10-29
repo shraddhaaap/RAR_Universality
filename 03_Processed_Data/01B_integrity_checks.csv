@@ -1,0 +1,51 @@
+section,check,status,severity,detail
+Files,THINGS folder inspected,PASS,critical,empty
+LT ReadMe,byte-by-byte description found for table1.dat,PASS,critical,22 columns
+LT ReadMe,byte-by-byte description found for table2.dat,PASS,critical,29 columns
+LT ReadMe,byte-by-byte description found for rotdmbar.dat,PASS,critical,7 columns
+LT files,table1.dat: record count matches ReadMe,PASS,critical,26 lines vs ReadMe 26.0
+LT files,table1.dat: no line longer than Lrecl,PASS,critical,max 105 vs Lrecl 105
+LT files,table1.dat: Astropy CDS reader succeeded,PASS,warning,ok
+LT files,table1.dat: Astropy and independent reader agree,PASS,critical,identical
+LT files,table2.dat: record count matches ReadMe,PASS,critical,26 lines vs ReadMe 26.0
+LT files,table2.dat: no line longer than Lrecl,PASS,critical,max 171 vs Lrecl 171
+LT files,table2.dat: Astropy CDS reader succeeded,WARN,warning,"[""Can't find table table2.dat in /content/drive/MyDrive/RAR_Universality_Research/01_Datasets/LITTLE_THINGS/ReadMe""]"
+LT files,rotdmbar.dat: record count matches ReadMe,PASS,critical,1716 lines vs ReadMe 1716.0
+LT files,rotdmbar.dat: no line longer than Lrecl,PASS,critical,max 63 vs Lrecl 63
+LT files,rotdmbar.dat: Astropy CDS reader succeeded,PASS,warning,ok
+LT files,rotdmbar.dat: Astropy and independent reader agree,PASS,critical,identical
+LT units,table1.dat: Dist documented in Mpc,PASS,critical,"label 'Dist', ReadMe unit 'Mpc'"
+LT units,table1.dat: i documented in deg,PASS,critical,"label 'i', ReadMe unit 'deg'"
+LT units,table1.dat: e_i documented in deg,PASS,critical,"label 'e_i', ReadMe unit 'deg'"
+LT units,table2.dat: Rmax documented in kpc,PASS,critical,"label 'Rmax', ReadMe unit 'kpc'"
+LT units,table2.dat: R0.3 documented in kpc,PASS,critical,"label 'R0.3', ReadMe unit 'kpc'"
+LT units,rotdmbar.dat: R0.3 documented in kpc,PASS,critical,"label 'R0.3', ReadMe unit 'kpc'"
+LT units,rotdmbar.dat: V0.3 documented in km/s,PASS,critical,"label 'V0.3', ReadMe unit 'km/s'"
+LT units,rotdmbar.dat: R documented in ---,PASS,critical,"label 'R', ReadMe unit '---'"
+LT units,rotdmbar.dat: V documented in ---,PASS,critical,"label 'V', ReadMe unit '---'"
+LT units,rotdmbar.dat: e_V documented in ---,PASS,critical,"label 'e_V', ReadMe unit '---'"
+LT IDs,table1 names unique,PASS,critical,26 galaxies
+LT IDs,table2 names unique,PASS,critical,26 galaxies
+LT IDs,table1 and table2 list the same galaxies,PASS,critical,t1 only []; t2 only []
+LT IDs,every rotdmbar galaxy is in table1,PASS,critical,[]
+LT IDs,every table1 galaxy has rotdmbar rows,PASS,warning,[]
+LT values,distances positive,PASS,critical,range 0.7–10.3 Mpc
+LT values,"inclinations within [0, 90] deg",PASS,critical,range 22.6–82.5
+LT values,inclination uncertainties >= 1 deg,WARN,warning,"16 galaxies with e_i < 1 deg (likely fixed in the tilted-ring fit; not a realistic error): ['DDO_43', 'DDO_46', 'DDO_52', 'DDO_53', 'DDO_70', 'DDO_126', 'DDO_133', 'DDO_168', 'DDO_210', 'IC_1613', 'NGC_1569', 'NGC_2366', 'NGC_3738', 'UGC_8508', 'WLM', 'HARO_36']"
+LT content,rotdmbar Type values are documented in the ReadMe notes,PASS,warning,"types ['Data', 'Model']"
+LT scaling,R0.3 constant within each galaxy,PASS,critical,ok
+LT scaling,rotdmbar R0.3 equals table2 R0.3 (to table precision 0.01 kpc),WARN,warning,max |diff| 3.4400 kpc
+LT scaling,scaled Data velocity at R = 1 is ~1 (median |V(1) - 1| < 0.1),PASS,warning,median |V(1)-1| = 0.000
+LT scaling,largest Data radius matches table2 Rmax within 10% for most galaxies,PASS,warning,median rel. diff 0.000
+LT content,Data rows have positive uncertainties,WARN,warning,1 rows without positive e_V
+LT content,no gas/stellar velocity-profile columns in the LITTLE THINGS files read,PASS,warning,none found
+Corpus provenance,corpus LITTLE THINGS points contain no CDS halo-Model rows,WARN,warning,"25 galaxies have corpus points matching only Model rows: ['CVnIdwA', 'DDO_210', 'DDO_216', 'DDO_53', 'DDO_70', 'IC_10', 'IC_1613', 'UGC_8508', 'WLM', 'DDO_50']"
+Matching,every CDS LITTLE THINGS galaxy found in the corpus by name,PASS,warning,all found
+Matching,CDS and corpus LITTLE THINGS positions agree within 30 arcsec,PASS,warning,max 0.0 arcsec
+Integrity,category B or C never counted toward the gate,PASS,critical,ok
+Integrity,duplicates never counted as independent,PASS,critical,ok
+Integrity,no galaxy upgraded to A without verified numeric gas and disk profiles,PASS,critical,ok
+Integrity,every external galaxy has a category,PASS,critical,60 galaxies
+Integrity,Phase 1 duplicate rows preserved,PASS,critical,26 rows
+Integrity,input files unchanged during the run,PASS,critical,all re-hashed
+Integrity,no output overwrites a Notebook 01/02 file,PASS,critical,ok

@@ -1,0 +1,601 @@
+galaxy,survey,quantity,status,source,note
+CVnIdwA,LITTLE_THINGS,radius,verified_numeric,rotdmbar.dat (R x R0.3),"kpc, derived from documented scaling"
+CVnIdwA,LITTLE_THINGS,observed_rotation_velocity,verified_numeric,rotdmbar.dat Type=Data (V x V0.3),"total curve, asymmetric-drift corrected"
+CVnIdwA,LITTLE_THINGS,velocity_uncertainty,verified_numeric,rotdmbar.dat e_V x V0.3,
+CVnIdwA,LITTLE_THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,mass models in Oh et al. 2015; no gas velocity profile in the CDS files read; table2 gives total Mgas only
+CVnIdwA,LITTLE_THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,no stellar velocity profile in the CDS files read; table2 gives total stellar masses only
+CVnIdwA,LITTLE_THINGS,bulge_velocity_contribution,not_applicable,corpus has_bulge,dwarf galaxy; per corpus flag
+CVnIdwA,LITTLE_THINGS,distance,verified_numeric,table1.dat Dist,Mpc (Hunter+2012)
+CVnIdwA,LITTLE_THINGS,inclination,verified_numeric,"table1.dat i, e_i",e_i = 5.2 deg
+CVnIdwA,LITTLE_THINGS,stellar_mass_to_light,literature_only,table2.dat MstarK/MstarSED; Oh et al. 2015 Sec. 3.3,only total stellar masses are tabulated; no Upsilon profile
+CVnIdwA,LITTLE_THINGS,radii_compatibility,not_assessable,,no component profiles exist to align with the observed radii
+DDO_43,LITTLE_THINGS,radius,verified_numeric,rotdmbar.dat (R x R0.3),"kpc, derived from documented scaling"
+DDO_43,LITTLE_THINGS,observed_rotation_velocity,verified_numeric,rotdmbar.dat Type=Data (V x V0.3),"total curve, asymmetric-drift corrected"
+DDO_43,LITTLE_THINGS,velocity_uncertainty,verified_numeric,rotdmbar.dat e_V x V0.3,
+DDO_43,LITTLE_THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,mass models in Oh et al. 2015; no gas velocity profile in the CDS files read; table2 gives total Mgas only
+DDO_43,LITTLE_THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,no stellar velocity profile in the CDS files read; table2 gives total stellar masses only
+DDO_43,LITTLE_THINGS,bulge_velocity_contribution,not_applicable,corpus has_bulge,dwarf galaxy; per corpus flag
+DDO_43,LITTLE_THINGS,distance,verified_numeric,table1.dat Dist,Mpc (Hunter+2012)
+DDO_43,LITTLE_THINGS,inclination,verified_numeric,"table1.dat i, e_i",e_i = 0.1 deg
+DDO_43,LITTLE_THINGS,stellar_mass_to_light,literature_only,table2.dat MstarK/MstarSED; Oh et al. 2015 Sec. 3.3,only total stellar masses are tabulated; no Upsilon profile
+DDO_43,LITTLE_THINGS,radii_compatibility,not_assessable,,no component profiles exist to align with the observed radii
+DDO_46,LITTLE_THINGS,radius,verified_numeric,rotdmbar.dat (R x R0.3),"kpc, derived from documented scaling"
+DDO_46,LITTLE_THINGS,observed_rotation_velocity,verified_numeric,rotdmbar.dat Type=Data (V x V0.3),"total curve, asymmetric-drift corrected"
+DDO_46,LITTLE_THINGS,velocity_uncertainty,verified_numeric,rotdmbar.dat e_V x V0.3,
+DDO_46,LITTLE_THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,mass models in Oh et al. 2015; no gas velocity profile in the CDS files read; table2 gives total Mgas only
+DDO_46,LITTLE_THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,no stellar velocity profile in the CDS files read; table2 gives total stellar masses only
+DDO_46,LITTLE_THINGS,bulge_velocity_contribution,not_applicable,corpus has_bulge,dwarf galaxy; per corpus flag
+DDO_46,LITTLE_THINGS,distance,verified_numeric,table1.dat Dist,Mpc (Hunter+2012)
+DDO_46,LITTLE_THINGS,inclination,verified_numeric,"table1.dat i, e_i",e_i = 0.1 deg
+DDO_46,LITTLE_THINGS,stellar_mass_to_light,literature_only,table2.dat MstarK/MstarSED; Oh et al. 2015 Sec. 3.3,only total stellar masses are tabulated; no Upsilon profile
+DDO_46,LITTLE_THINGS,radii_compatibility,not_assessable,,no component profiles exist to align with the observed radii
+DDO_47,LITTLE_THINGS,radius,verified_numeric,rotdmbar.dat (R x R0.3),"kpc, derived from documented scaling"
+DDO_47,LITTLE_THINGS,observed_rotation_velocity,verified_numeric,rotdmbar.dat Type=Data (V x V0.3),"total curve, asymmetric-drift corrected"
+DDO_47,LITTLE_THINGS,velocity_uncertainty,verified_numeric,rotdmbar.dat e_V x V0.3,
+DDO_47,LITTLE_THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,mass models in Oh et al. 2015; no gas velocity profile in the CDS files read; table2 gives total Mgas only
+DDO_47,LITTLE_THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,no stellar velocity profile in the CDS files read; table2 gives total stellar masses only
+DDO_47,LITTLE_THINGS,bulge_velocity_contribution,not_applicable,corpus has_bulge,dwarf galaxy; per corpus flag
+DDO_47,LITTLE_THINGS,distance,verified_numeric,table1.dat Dist,Mpc (Hunter+2012)
+DDO_47,LITTLE_THINGS,inclination,verified_numeric,"table1.dat i, e_i",e_i = 9.0 deg
+DDO_47,LITTLE_THINGS,stellar_mass_to_light,literature_only,table2.dat MstarK/MstarSED; Oh et al. 2015 Sec. 3.3,only total stellar masses are tabulated; no Upsilon profile
+DDO_47,LITTLE_THINGS,radii_compatibility,not_assessable,,no component profiles exist to align with the observed radii
+DDO_50,LITTLE_THINGS,radius,verified_numeric,rotdmbar.dat (R x R0.3),"kpc, derived from documented scaling"
+DDO_50,LITTLE_THINGS,observed_rotation_velocity,verified_numeric,rotdmbar.dat Type=Data (V x V0.3),"total curve, asymmetric-drift corrected"
+DDO_50,LITTLE_THINGS,velocity_uncertainty,missing,rotdmbar.dat e_V x V0.3,
+DDO_50,LITTLE_THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,mass models in Oh et al. 2015; no gas velocity profile in the CDS files read; table2 gives total Mgas only
+DDO_50,LITTLE_THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,no stellar velocity profile in the CDS files read; table2 gives total stellar masses only
+DDO_50,LITTLE_THINGS,bulge_velocity_contribution,not_applicable,corpus has_bulge,dwarf galaxy; per corpus flag
+DDO_50,LITTLE_THINGS,distance,verified_numeric,table1.dat Dist,Mpc (Hunter+2012)
+DDO_50,LITTLE_THINGS,inclination,verified_numeric,"table1.dat i, e_i",e_i = 6.0 deg
+DDO_50,LITTLE_THINGS,stellar_mass_to_light,literature_only,table2.dat MstarK/MstarSED; Oh et al. 2015 Sec. 3.3,only total stellar masses are tabulated; no Upsilon profile
+DDO_50,LITTLE_THINGS,radii_compatibility,not_assessable,,no component profiles exist to align with the observed radii
+DDO_52,LITTLE_THINGS,radius,verified_numeric,rotdmbar.dat (R x R0.3),"kpc, derived from documented scaling"
+DDO_52,LITTLE_THINGS,observed_rotation_velocity,verified_numeric,rotdmbar.dat Type=Data (V x V0.3),"total curve, asymmetric-drift corrected"
+DDO_52,LITTLE_THINGS,velocity_uncertainty,verified_numeric,rotdmbar.dat e_V x V0.3,
+DDO_52,LITTLE_THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,mass models in Oh et al. 2015; no gas velocity profile in the CDS files read; table2 gives total Mgas only
+DDO_52,LITTLE_THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,no stellar velocity profile in the CDS files read; table2 gives total stellar masses only
+DDO_52,LITTLE_THINGS,bulge_velocity_contribution,not_applicable,corpus has_bulge,dwarf galaxy; per corpus flag
+DDO_52,LITTLE_THINGS,distance,verified_numeric,table1.dat Dist,Mpc (Hunter+2012)
+DDO_52,LITTLE_THINGS,inclination,verified_numeric,"table1.dat i, e_i",e_i = 0.0 deg
+DDO_52,LITTLE_THINGS,stellar_mass_to_light,literature_only,table2.dat MstarK/MstarSED; Oh et al. 2015 Sec. 3.3,only total stellar masses are tabulated; no Upsilon profile
+DDO_52,LITTLE_THINGS,radii_compatibility,not_assessable,,no component profiles exist to align with the observed radii
+DDO_53,LITTLE_THINGS,radius,verified_numeric,rotdmbar.dat (R x R0.3),"kpc, derived from documented scaling"
+DDO_53,LITTLE_THINGS,observed_rotation_velocity,verified_numeric,rotdmbar.dat Type=Data (V x V0.3),"total curve, asymmetric-drift corrected"
+DDO_53,LITTLE_THINGS,velocity_uncertainty,verified_numeric,rotdmbar.dat e_V x V0.3,
+DDO_53,LITTLE_THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,mass models in Oh et al. 2015; no gas velocity profile in the CDS files read; table2 gives total Mgas only
+DDO_53,LITTLE_THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,no stellar velocity profile in the CDS files read; table2 gives total stellar masses only
+DDO_53,LITTLE_THINGS,bulge_velocity_contribution,not_applicable,corpus has_bulge,dwarf galaxy; per corpus flag
+DDO_53,LITTLE_THINGS,distance,verified_numeric,table1.dat Dist,Mpc (Hunter+2012)
+DDO_53,LITTLE_THINGS,inclination,verified_numeric,"table1.dat i, e_i",e_i = 0.0 deg
+DDO_53,LITTLE_THINGS,stellar_mass_to_light,literature_only,table2.dat MstarK/MstarSED; Oh et al. 2015 Sec. 3.3,only total stellar masses are tabulated; no Upsilon profile
+DDO_53,LITTLE_THINGS,radii_compatibility,not_assessable,,no component profiles exist to align with the observed radii
+DDO_70,LITTLE_THINGS,radius,verified_numeric,rotdmbar.dat (R x R0.3),"kpc, derived from documented scaling"
+DDO_70,LITTLE_THINGS,observed_rotation_velocity,verified_numeric,rotdmbar.dat Type=Data (V x V0.3),"total curve, asymmetric-drift corrected"
+DDO_70,LITTLE_THINGS,velocity_uncertainty,verified_numeric,rotdmbar.dat e_V x V0.3,
+DDO_70,LITTLE_THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,mass models in Oh et al. 2015; no gas velocity profile in the CDS files read; table2 gives total Mgas only
+DDO_70,LITTLE_THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,no stellar velocity profile in the CDS files read; table2 gives total stellar masses only
+DDO_70,LITTLE_THINGS,bulge_velocity_contribution,not_applicable,corpus has_bulge,dwarf galaxy; per corpus flag
+DDO_70,LITTLE_THINGS,distance,verified_numeric,table1.dat Dist,Mpc (Hunter+2012)
+DDO_70,LITTLE_THINGS,inclination,verified_numeric,"table1.dat i, e_i",e_i = 0.0 deg
+DDO_70,LITTLE_THINGS,stellar_mass_to_light,literature_only,table2.dat MstarK/MstarSED; Oh et al. 2015 Sec. 3.3,only total stellar masses are tabulated; no Upsilon profile
+DDO_70,LITTLE_THINGS,radii_compatibility,not_assessable,,no component profiles exist to align with the observed radii
+DDO_87,LITTLE_THINGS,radius,verified_numeric,rotdmbar.dat (R x R0.3),"kpc, derived from documented scaling"
+DDO_87,LITTLE_THINGS,observed_rotation_velocity,verified_numeric,rotdmbar.dat Type=Data (V x V0.3),"total curve, asymmetric-drift corrected"
+DDO_87,LITTLE_THINGS,velocity_uncertainty,verified_numeric,rotdmbar.dat e_V x V0.3,
+DDO_87,LITTLE_THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,mass models in Oh et al. 2015; no gas velocity profile in the CDS files read; table2 gives total Mgas only
+DDO_87,LITTLE_THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,no stellar velocity profile in the CDS files read; table2 gives total stellar masses only
+DDO_87,LITTLE_THINGS,bulge_velocity_contribution,not_applicable,corpus has_bulge,dwarf galaxy; per corpus flag
+DDO_87,LITTLE_THINGS,distance,verified_numeric,table1.dat Dist,Mpc (Hunter+2012)
+DDO_87,LITTLE_THINGS,inclination,verified_numeric,"table1.dat i, e_i",e_i = 4.8 deg
+DDO_87,LITTLE_THINGS,stellar_mass_to_light,literature_only,table2.dat MstarK/MstarSED; Oh et al. 2015 Sec. 3.3,only total stellar masses are tabulated; no Upsilon profile
+DDO_87,LITTLE_THINGS,radii_compatibility,not_assessable,,no component profiles exist to align with the observed radii
+DDO_101,LITTLE_THINGS,radius,verified_numeric,rotdmbar.dat (R x R0.3),"kpc, derived from documented scaling"
+DDO_101,LITTLE_THINGS,observed_rotation_velocity,verified_numeric,rotdmbar.dat Type=Data (V x V0.3),"total curve, asymmetric-drift corrected"
+DDO_101,LITTLE_THINGS,velocity_uncertainty,verified_numeric,rotdmbar.dat e_V x V0.3,
+DDO_101,LITTLE_THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,mass models in Oh et al. 2015; no gas velocity profile in the CDS files read; table2 gives total Mgas only
+DDO_101,LITTLE_THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,no stellar velocity profile in the CDS files read; table2 gives total stellar masses only
+DDO_101,LITTLE_THINGS,bulge_velocity_contribution,not_applicable,corpus has_bulge,dwarf galaxy; per corpus flag
+DDO_101,LITTLE_THINGS,distance,verified_numeric,table1.dat Dist,Mpc (Hunter+2012)
+DDO_101,LITTLE_THINGS,inclination,verified_numeric,"table1.dat i, e_i",e_i = 7.1 deg
+DDO_101,LITTLE_THINGS,stellar_mass_to_light,literature_only,table2.dat MstarK/MstarSED; Oh et al. 2015 Sec. 3.3,only total stellar masses are tabulated; no Upsilon profile
+DDO_101,LITTLE_THINGS,radii_compatibility,not_assessable,,no component profiles exist to align with the observed radii
+DDO_126,LITTLE_THINGS,radius,verified_numeric,rotdmbar.dat (R x R0.3),"kpc, derived from documented scaling"
+DDO_126,LITTLE_THINGS,observed_rotation_velocity,verified_numeric,rotdmbar.dat Type=Data (V x V0.3),"total curve, asymmetric-drift corrected"
+DDO_126,LITTLE_THINGS,velocity_uncertainty,verified_numeric,rotdmbar.dat e_V x V0.3,
+DDO_126,LITTLE_THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,mass models in Oh et al. 2015; no gas velocity profile in the CDS files read; table2 gives total Mgas only
+DDO_126,LITTLE_THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,no stellar velocity profile in the CDS files read; table2 gives total stellar masses only
+DDO_126,LITTLE_THINGS,bulge_velocity_contribution,not_applicable,corpus has_bulge,dwarf galaxy; per corpus flag
+DDO_126,LITTLE_THINGS,distance,verified_numeric,table1.dat Dist,Mpc (Hunter+2012)
+DDO_126,LITTLE_THINGS,inclination,verified_numeric,"table1.dat i, e_i",e_i = 0.0 deg
+DDO_126,LITTLE_THINGS,stellar_mass_to_light,literature_only,table2.dat MstarK/MstarSED; Oh et al. 2015 Sec. 3.3,only total stellar masses are tabulated; no Upsilon profile
+DDO_126,LITTLE_THINGS,radii_compatibility,not_assessable,,no component profiles exist to align with the observed radii
+DDO_133,LITTLE_THINGS,radius,verified_numeric,rotdmbar.dat (R x R0.3),"kpc, derived from documented scaling"
+DDO_133,LITTLE_THINGS,observed_rotation_velocity,verified_numeric,rotdmbar.dat Type=Data (V x V0.3),"total curve, asymmetric-drift corrected"
+DDO_133,LITTLE_THINGS,velocity_uncertainty,verified_numeric,rotdmbar.dat e_V x V0.3,
+DDO_133,LITTLE_THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,mass models in Oh et al. 2015; no gas velocity profile in the CDS files read; table2 gives total Mgas only
+DDO_133,LITTLE_THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,no stellar velocity profile in the CDS files read; table2 gives total stellar masses only
+DDO_133,LITTLE_THINGS,bulge_velocity_contribution,not_applicable,corpus has_bulge,dwarf galaxy; per corpus flag
+DDO_133,LITTLE_THINGS,distance,verified_numeric,table1.dat Dist,Mpc (Hunter+2012)
+DDO_133,LITTLE_THINGS,inclination,verified_numeric,"table1.dat i, e_i",e_i = 0.1 deg
+DDO_133,LITTLE_THINGS,stellar_mass_to_light,literature_only,table2.dat MstarK/MstarSED; Oh et al. 2015 Sec. 3.3,only total stellar masses are tabulated; no Upsilon profile
+DDO_133,LITTLE_THINGS,radii_compatibility,not_assessable,,no component profiles exist to align with the observed radii
+DDO_154,LITTLE_THINGS,radius,verified_numeric,rotdmbar.dat (R x R0.3),"kpc, derived from documented scaling"
+DDO_154,LITTLE_THINGS,observed_rotation_velocity,verified_numeric,rotdmbar.dat Type=Data (V x V0.3),"total curve, asymmetric-drift corrected"
+DDO_154,LITTLE_THINGS,velocity_uncertainty,verified_numeric,rotdmbar.dat e_V x V0.3,
+DDO_154,LITTLE_THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,mass models in Oh et al. 2015; no gas velocity profile in the CDS files read; table2 gives total Mgas only
+DDO_154,LITTLE_THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,no stellar velocity profile in the CDS files read; table2 gives total stellar masses only
+DDO_154,LITTLE_THINGS,bulge_velocity_contribution,not_applicable,corpus has_bulge,dwarf galaxy; per corpus flag
+DDO_154,LITTLE_THINGS,distance,verified_numeric,table1.dat Dist,Mpc (Hunter+2012)
+DDO_154,LITTLE_THINGS,inclination,verified_numeric,"table1.dat i, e_i",e_i = 3.1 deg
+DDO_154,LITTLE_THINGS,stellar_mass_to_light,literature_only,table2.dat MstarK/MstarSED; Oh et al. 2015 Sec. 3.3,only total stellar masses are tabulated; no Upsilon profile
+DDO_154,LITTLE_THINGS,radii_compatibility,not_assessable,,no component profiles exist to align with the observed radii
+DDO_168,LITTLE_THINGS,radius,verified_numeric,rotdmbar.dat (R x R0.3),"kpc, derived from documented scaling"
+DDO_168,LITTLE_THINGS,observed_rotation_velocity,verified_numeric,rotdmbar.dat Type=Data (V x V0.3),"total curve, asymmetric-drift corrected"
+DDO_168,LITTLE_THINGS,velocity_uncertainty,verified_numeric,rotdmbar.dat e_V x V0.3,
+DDO_168,LITTLE_THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,mass models in Oh et al. 2015; no gas velocity profile in the CDS files read; table2 gives total Mgas only
+DDO_168,LITTLE_THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,no stellar velocity profile in the CDS files read; table2 gives total stellar masses only
+DDO_168,LITTLE_THINGS,bulge_velocity_contribution,not_applicable,corpus has_bulge,dwarf galaxy; per corpus flag
+DDO_168,LITTLE_THINGS,distance,verified_numeric,table1.dat Dist,Mpc (Hunter+2012)
+DDO_168,LITTLE_THINGS,inclination,verified_numeric,"table1.dat i, e_i",e_i = 0.1 deg
+DDO_168,LITTLE_THINGS,stellar_mass_to_light,literature_only,table2.dat MstarK/MstarSED; Oh et al. 2015 Sec. 3.3,only total stellar masses are tabulated; no Upsilon profile
+DDO_168,LITTLE_THINGS,radii_compatibility,not_assessable,,no component profiles exist to align with the observed radii
+DDO_210,LITTLE_THINGS,radius,verified_numeric,rotdmbar.dat (R x R0.3),"kpc, derived from documented scaling"
+DDO_210,LITTLE_THINGS,observed_rotation_velocity,verified_numeric,rotdmbar.dat Type=Data (V x V0.3),"total curve, asymmetric-drift corrected"
+DDO_210,LITTLE_THINGS,velocity_uncertainty,verified_numeric,rotdmbar.dat e_V x V0.3,
+DDO_210,LITTLE_THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,mass models in Oh et al. 2015; no gas velocity profile in the CDS files read; table2 gives total Mgas only
+DDO_210,LITTLE_THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,no stellar velocity profile in the CDS files read; table2 gives total stellar masses only
+DDO_210,LITTLE_THINGS,bulge_velocity_contribution,not_applicable,corpus has_bulge,dwarf galaxy; per corpus flag
+DDO_210,LITTLE_THINGS,distance,verified_numeric,table1.dat Dist,Mpc (Hunter+2012)
+DDO_210,LITTLE_THINGS,inclination,verified_numeric,"table1.dat i, e_i",e_i = 0.1 deg
+DDO_210,LITTLE_THINGS,stellar_mass_to_light,literature_only,table2.dat MstarK/MstarSED; Oh et al. 2015 Sec. 3.3,only total stellar masses are tabulated; no Upsilon profile
+DDO_210,LITTLE_THINGS,radii_compatibility,not_assessable,,no component profiles exist to align with the observed radii
+DDO_216,LITTLE_THINGS,radius,verified_numeric,rotdmbar.dat (R x R0.3),"kpc, derived from documented scaling"
+DDO_216,LITTLE_THINGS,observed_rotation_velocity,verified_numeric,rotdmbar.dat Type=Data (V x V0.3),"total curve, asymmetric-drift corrected"
+DDO_216,LITTLE_THINGS,velocity_uncertainty,verified_numeric,rotdmbar.dat e_V x V0.3,
+DDO_216,LITTLE_THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,mass models in Oh et al. 2015; no gas velocity profile in the CDS files read; table2 gives total Mgas only
+DDO_216,LITTLE_THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,no stellar velocity profile in the CDS files read; table2 gives total stellar masses only
+DDO_216,LITTLE_THINGS,bulge_velocity_contribution,not_applicable,corpus has_bulge,dwarf galaxy; per corpus flag
+DDO_216,LITTLE_THINGS,distance,verified_numeric,table1.dat Dist,Mpc (Hunter+2012)
+DDO_216,LITTLE_THINGS,inclination,verified_numeric,"table1.dat i, e_i",e_i = 4.6 deg
+DDO_216,LITTLE_THINGS,stellar_mass_to_light,literature_only,table2.dat MstarK/MstarSED; Oh et al. 2015 Sec. 3.3,only total stellar masses are tabulated; no Upsilon profile
+DDO_216,LITTLE_THINGS,radii_compatibility,not_assessable,,no component profiles exist to align with the observed radii
+F564-V3,LITTLE_THINGS,radius,verified_numeric,rotdmbar.dat (R x R0.3),"kpc, derived from documented scaling"
+F564-V3,LITTLE_THINGS,observed_rotation_velocity,verified_numeric,rotdmbar.dat Type=Data (V x V0.3),"total curve, asymmetric-drift corrected"
+F564-V3,LITTLE_THINGS,velocity_uncertainty,verified_numeric,rotdmbar.dat e_V x V0.3,
+F564-V3,LITTLE_THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,mass models in Oh et al. 2015; no gas velocity profile in the CDS files read; table2 gives total Mgas only
+F564-V3,LITTLE_THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,no stellar velocity profile in the CDS files read; table2 gives total stellar masses only
+F564-V3,LITTLE_THINGS,bulge_velocity_contribution,not_applicable,corpus has_bulge,dwarf galaxy; per corpus flag
+F564-V3,LITTLE_THINGS,distance,verified_numeric,table1.dat Dist,Mpc (Hunter+2012)
+F564-V3,LITTLE_THINGS,inclination,verified_numeric,"table1.dat i, e_i",e_i = 9.9 deg
+F564-V3,LITTLE_THINGS,stellar_mass_to_light,literature_only,table2.dat MstarK/MstarSED; Oh et al. 2015 Sec. 3.3,only total stellar masses are tabulated; no Upsilon profile
+F564-V3,LITTLE_THINGS,radii_compatibility,not_assessable,,no component profiles exist to align with the observed radii
+IC_10,LITTLE_THINGS,radius,verified_numeric,rotdmbar.dat (R x R0.3),"kpc, derived from documented scaling"
+IC_10,LITTLE_THINGS,observed_rotation_velocity,verified_numeric,rotdmbar.dat Type=Data (V x V0.3),"total curve, asymmetric-drift corrected"
+IC_10,LITTLE_THINGS,velocity_uncertainty,verified_numeric,rotdmbar.dat e_V x V0.3,
+IC_10,LITTLE_THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,mass models in Oh et al. 2015; no gas velocity profile in the CDS files read; table2 gives total Mgas only
+IC_10,LITTLE_THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,no stellar velocity profile in the CDS files read; table2 gives total stellar masses only
+IC_10,LITTLE_THINGS,bulge_velocity_contribution,not_applicable,corpus has_bulge,dwarf galaxy; per corpus flag
+IC_10,LITTLE_THINGS,distance,verified_numeric,table1.dat Dist,Mpc (Hunter+2012)
+IC_10,LITTLE_THINGS,inclination,verified_numeric,"table1.dat i, e_i",e_i = 15.6 deg
+IC_10,LITTLE_THINGS,stellar_mass_to_light,literature_only,table2.dat MstarK/MstarSED; Oh et al. 2015 Sec. 3.3,only total stellar masses are tabulated; no Upsilon profile
+IC_10,LITTLE_THINGS,radii_compatibility,not_assessable,,no component profiles exist to align with the observed radii
+IC_1613,LITTLE_THINGS,radius,verified_numeric,rotdmbar.dat (R x R0.3),"kpc, derived from documented scaling"
+IC_1613,LITTLE_THINGS,observed_rotation_velocity,verified_numeric,rotdmbar.dat Type=Data (V x V0.3),"total curve, asymmetric-drift corrected"
+IC_1613,LITTLE_THINGS,velocity_uncertainty,verified_numeric,rotdmbar.dat e_V x V0.3,
+IC_1613,LITTLE_THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,mass models in Oh et al. 2015; no gas velocity profile in the CDS files read; table2 gives total Mgas only
+IC_1613,LITTLE_THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,no stellar velocity profile in the CDS files read; table2 gives total stellar masses only
+IC_1613,LITTLE_THINGS,bulge_velocity_contribution,not_applicable,corpus has_bulge,dwarf galaxy; per corpus flag
+IC_1613,LITTLE_THINGS,distance,verified_numeric,table1.dat Dist,Mpc (Hunter+2012)
+IC_1613,LITTLE_THINGS,inclination,verified_numeric,"table1.dat i, e_i",e_i = 0.0 deg
+IC_1613,LITTLE_THINGS,stellar_mass_to_light,literature_only,table2.dat MstarK/MstarSED; Oh et al. 2015 Sec. 3.3,only total stellar masses are tabulated; no Upsilon profile
+IC_1613,LITTLE_THINGS,radii_compatibility,not_assessable,,no component profiles exist to align with the observed radii
+NGC_1569,LITTLE_THINGS,radius,verified_numeric,rotdmbar.dat (R x R0.3),"kpc, derived from documented scaling"
+NGC_1569,LITTLE_THINGS,observed_rotation_velocity,verified_numeric,rotdmbar.dat Type=Data (V x V0.3),"total curve, asymmetric-drift corrected"
+NGC_1569,LITTLE_THINGS,velocity_uncertainty,verified_numeric,rotdmbar.dat e_V x V0.3,
+NGC_1569,LITTLE_THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,mass models in Oh et al. 2015; no gas velocity profile in the CDS files read; table2 gives total Mgas only
+NGC_1569,LITTLE_THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,no stellar velocity profile in the CDS files read; table2 gives total stellar masses only
+NGC_1569,LITTLE_THINGS,bulge_velocity_contribution,not_applicable,corpus has_bulge,dwarf galaxy; per corpus flag
+NGC_1569,LITTLE_THINGS,distance,verified_numeric,table1.dat Dist,Mpc (Hunter+2012)
+NGC_1569,LITTLE_THINGS,inclination,verified_numeric,"table1.dat i, e_i",e_i = 0.1 deg
+NGC_1569,LITTLE_THINGS,stellar_mass_to_light,literature_only,table2.dat MstarK/MstarSED; Oh et al. 2015 Sec. 3.3,only total stellar masses are tabulated; no Upsilon profile
+NGC_1569,LITTLE_THINGS,radii_compatibility,not_assessable,,no component profiles exist to align with the observed radii
+NGC_2366,LITTLE_THINGS,radius,verified_numeric,rotdmbar.dat (R x R0.3),"kpc, derived from documented scaling"
+NGC_2366,LITTLE_THINGS,observed_rotation_velocity,verified_numeric,rotdmbar.dat Type=Data (V x V0.3),"total curve, asymmetric-drift corrected"
+NGC_2366,LITTLE_THINGS,velocity_uncertainty,verified_numeric,rotdmbar.dat e_V x V0.3,
+NGC_2366,LITTLE_THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,mass models in Oh et al. 2015; no gas velocity profile in the CDS files read; table2 gives total Mgas only
+NGC_2366,LITTLE_THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,no stellar velocity profile in the CDS files read; table2 gives total stellar masses only
+NGC_2366,LITTLE_THINGS,bulge_velocity_contribution,not_applicable,corpus has_bulge,dwarf galaxy; per corpus flag
+NGC_2366,LITTLE_THINGS,distance,verified_numeric,table1.dat Dist,Mpc (Hunter+2012)
+NGC_2366,LITTLE_THINGS,inclination,verified_numeric,"table1.dat i, e_i",e_i = 0.8 deg
+NGC_2366,LITTLE_THINGS,stellar_mass_to_light,literature_only,table2.dat MstarK/MstarSED; Oh et al. 2015 Sec. 3.3,only total stellar masses are tabulated; no Upsilon profile
+NGC_2366,LITTLE_THINGS,radii_compatibility,not_assessable,,no component profiles exist to align with the observed radii
+NGC_3738,LITTLE_THINGS,radius,verified_numeric,rotdmbar.dat (R x R0.3),"kpc, derived from documented scaling"
+NGC_3738,LITTLE_THINGS,observed_rotation_velocity,verified_numeric,rotdmbar.dat Type=Data (V x V0.3),"total curve, asymmetric-drift corrected"
+NGC_3738,LITTLE_THINGS,velocity_uncertainty,verified_numeric,rotdmbar.dat e_V x V0.3,
+NGC_3738,LITTLE_THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,mass models in Oh et al. 2015; no gas velocity profile in the CDS files read; table2 gives total Mgas only
+NGC_3738,LITTLE_THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,no stellar velocity profile in the CDS files read; table2 gives total stellar masses only
+NGC_3738,LITTLE_THINGS,bulge_velocity_contribution,not_applicable,corpus has_bulge,dwarf galaxy; per corpus flag
+NGC_3738,LITTLE_THINGS,distance,verified_numeric,table1.dat Dist,Mpc (Hunter+2012)
+NGC_3738,LITTLE_THINGS,inclination,verified_numeric,"table1.dat i, e_i",e_i = 0.1 deg
+NGC_3738,LITTLE_THINGS,stellar_mass_to_light,literature_only,table2.dat MstarK/MstarSED; Oh et al. 2015 Sec. 3.3,only total stellar masses are tabulated; no Upsilon profile
+NGC_3738,LITTLE_THINGS,radii_compatibility,not_assessable,,no component profiles exist to align with the observed radii
+UGC_8508,LITTLE_THINGS,radius,verified_numeric,rotdmbar.dat (R x R0.3),"kpc, derived from documented scaling"
+UGC_8508,LITTLE_THINGS,observed_rotation_velocity,verified_numeric,rotdmbar.dat Type=Data (V x V0.3),"total curve, asymmetric-drift corrected"
+UGC_8508,LITTLE_THINGS,velocity_uncertainty,verified_numeric,rotdmbar.dat e_V x V0.3,
+UGC_8508,LITTLE_THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,mass models in Oh et al. 2015; no gas velocity profile in the CDS files read; table2 gives total Mgas only
+UGC_8508,LITTLE_THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,no stellar velocity profile in the CDS files read; table2 gives total stellar masses only
+UGC_8508,LITTLE_THINGS,bulge_velocity_contribution,not_applicable,corpus has_bulge,dwarf galaxy; per corpus flag
+UGC_8508,LITTLE_THINGS,distance,verified_numeric,table1.dat Dist,Mpc (Hunter+2012)
+UGC_8508,LITTLE_THINGS,inclination,verified_numeric,"table1.dat i, e_i",e_i = 0.1 deg
+UGC_8508,LITTLE_THINGS,stellar_mass_to_light,literature_only,table2.dat MstarK/MstarSED; Oh et al. 2015 Sec. 3.3,only total stellar masses are tabulated; no Upsilon profile
+UGC_8508,LITTLE_THINGS,radii_compatibility,not_assessable,,no component profiles exist to align with the observed radii
+WLM,LITTLE_THINGS,radius,verified_numeric,rotdmbar.dat (R x R0.3),"kpc, derived from documented scaling"
+WLM,LITTLE_THINGS,observed_rotation_velocity,verified_numeric,rotdmbar.dat Type=Data (V x V0.3),"total curve, asymmetric-drift corrected"
+WLM,LITTLE_THINGS,velocity_uncertainty,verified_numeric,rotdmbar.dat e_V x V0.3,
+WLM,LITTLE_THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,mass models in Oh et al. 2015; no gas velocity profile in the CDS files read; table2 gives total Mgas only
+WLM,LITTLE_THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,no stellar velocity profile in the CDS files read; table2 gives total stellar masses only
+WLM,LITTLE_THINGS,bulge_velocity_contribution,not_applicable,corpus has_bulge,dwarf galaxy; per corpus flag
+WLM,LITTLE_THINGS,distance,verified_numeric,table1.dat Dist,Mpc (Hunter+2012)
+WLM,LITTLE_THINGS,inclination,verified_numeric,"table1.dat i, e_i",e_i = 0.1 deg
+WLM,LITTLE_THINGS,stellar_mass_to_light,literature_only,table2.dat MstarK/MstarSED; Oh et al. 2015 Sec. 3.3,only total stellar masses are tabulated; no Upsilon profile
+WLM,LITTLE_THINGS,radii_compatibility,not_assessable,,no component profiles exist to align with the observed radii
+HARO_29,LITTLE_THINGS,radius,verified_numeric,rotdmbar.dat (R x R0.3),"kpc, derived from documented scaling"
+HARO_29,LITTLE_THINGS,observed_rotation_velocity,verified_numeric,rotdmbar.dat Type=Data (V x V0.3),"total curve, asymmetric-drift corrected"
+HARO_29,LITTLE_THINGS,velocity_uncertainty,verified_numeric,rotdmbar.dat e_V x V0.3,
+HARO_29,LITTLE_THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,mass models in Oh et al. 2015; no gas velocity profile in the CDS files read; table2 gives total Mgas only
+HARO_29,LITTLE_THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,no stellar velocity profile in the CDS files read; table2 gives total stellar masses only
+HARO_29,LITTLE_THINGS,bulge_velocity_contribution,not_applicable,corpus has_bulge,dwarf galaxy; per corpus flag
+HARO_29,LITTLE_THINGS,distance,verified_numeric,table1.dat Dist,Mpc (Hunter+2012)
+HARO_29,LITTLE_THINGS,inclination,verified_numeric,"table1.dat i, e_i",e_i = 4.0 deg
+HARO_29,LITTLE_THINGS,stellar_mass_to_light,literature_only,table2.dat MstarK/MstarSED; Oh et al. 2015 Sec. 3.3,only total stellar masses are tabulated; no Upsilon profile
+HARO_29,LITTLE_THINGS,radii_compatibility,not_assessable,,no component profiles exist to align with the observed radii
+HARO_36,LITTLE_THINGS,radius,verified_numeric,rotdmbar.dat (R x R0.3),"kpc, derived from documented scaling"
+HARO_36,LITTLE_THINGS,observed_rotation_velocity,verified_numeric,rotdmbar.dat Type=Data (V x V0.3),"total curve, asymmetric-drift corrected"
+HARO_36,LITTLE_THINGS,velocity_uncertainty,verified_numeric,rotdmbar.dat e_V x V0.3,
+HARO_36,LITTLE_THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,mass models in Oh et al. 2015; no gas velocity profile in the CDS files read; table2 gives total Mgas only
+HARO_36,LITTLE_THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/1502.01281,no stellar velocity profile in the CDS files read; table2 gives total stellar masses only
+HARO_36,LITTLE_THINGS,bulge_velocity_contribution,not_applicable,corpus has_bulge,dwarf galaxy; per corpus flag
+HARO_36,LITTLE_THINGS,distance,verified_numeric,table1.dat Dist,Mpc (Hunter+2012)
+HARO_36,LITTLE_THINGS,inclination,verified_numeric,"table1.dat i, e_i",e_i = 0.0 deg
+HARO_36,LITTLE_THINGS,stellar_mass_to_light,literature_only,table2.dat MstarK/MstarSED; Oh et al. 2015 Sec. 3.3,only total stellar masses are tabulated; no Upsilon profile
+HARO_36,LITTLE_THINGS,radii_compatibility,not_assessable,,no component profiles exist to align with the observed radii
+NGC628,THINGS,radius,missing,unified corpus (de Blok et al. 2008 curves),
+NGC628,THINGS,observed_rotation_velocity,missing,unified corpus,
+NGC628,THINGS,velocity_uncertainty,missing,unified corpus,
+NGC628,THINGS,gas_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+NGC628,THINGS,stellar_disk_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+NGC628,THINGS,bulge_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+NGC628,THINGS,distance,verified_numeric,unified corpus,
+NGC628,THINGS,inclination,verified_numeric,unified corpus,
+NGC628,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+NGC628,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+NGC925,THINGS,radius,verified_numeric,unified corpus (de Blok et al. 2008 curves),
+NGC925,THINGS,observed_rotation_velocity,verified_numeric,unified corpus,
+NGC925,THINGS,velocity_uncertainty,verified_numeric,unified corpus,
+NGC925,THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+NGC925,THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+NGC925,THINGS,bulge_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+NGC925,THINGS,distance,verified_numeric,unified corpus,
+NGC925,THINGS,inclination,verified_numeric,unified corpus,
+NGC925,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+NGC925,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+NGC1569,THINGS,radius,missing,unified corpus (de Blok et al. 2008 curves),
+NGC1569,THINGS,observed_rotation_velocity,missing,unified corpus,
+NGC1569,THINGS,velocity_uncertainty,missing,unified corpus,
+NGC1569,THINGS,gas_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+NGC1569,THINGS,stellar_disk_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+NGC1569,THINGS,bulge_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+NGC1569,THINGS,distance,verified_numeric,unified corpus,
+NGC1569,THINGS,inclination,verified_numeric,unified corpus,
+NGC1569,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+NGC1569,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+NGC2366,THINGS,radius,verified_numeric,unified corpus (de Blok et al. 2008 curves),
+NGC2366,THINGS,observed_rotation_velocity,verified_numeric,unified corpus,
+NGC2366,THINGS,velocity_uncertainty,verified_numeric,unified corpus,
+NGC2366,THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+NGC2366,THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+NGC2366,THINGS,bulge_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+NGC2366,THINGS,distance,verified_numeric,unified corpus,
+NGC2366,THINGS,inclination,verified_numeric,unified corpus,
+NGC2366,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+NGC2366,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+NGC2403,THINGS,radius,verified_numeric,unified corpus (de Blok et al. 2008 curves),
+NGC2403,THINGS,observed_rotation_velocity,verified_numeric,unified corpus,
+NGC2403,THINGS,velocity_uncertainty,verified_numeric,unified corpus,
+NGC2403,THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+NGC2403,THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+NGC2403,THINGS,bulge_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+NGC2403,THINGS,distance,verified_numeric,unified corpus,
+NGC2403,THINGS,inclination,verified_numeric,unified corpus,
+NGC2403,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+NGC2403,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+HoII,THINGS,radius,missing,unified corpus (de Blok et al. 2008 curves),
+HoII,THINGS,observed_rotation_velocity,missing,unified corpus,
+HoII,THINGS,velocity_uncertainty,missing,unified corpus,
+HoII,THINGS,gas_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+HoII,THINGS,stellar_disk_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+HoII,THINGS,bulge_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+HoII,THINGS,distance,verified_numeric,unified corpus,
+HoII,THINGS,inclination,verified_numeric,unified corpus,
+HoII,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+HoII,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+M81DwA,THINGS,radius,missing,unified corpus (de Blok et al. 2008 curves),
+M81DwA,THINGS,observed_rotation_velocity,missing,unified corpus,
+M81DwA,THINGS,velocity_uncertainty,missing,unified corpus,
+M81DwA,THINGS,gas_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+M81DwA,THINGS,stellar_disk_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+M81DwA,THINGS,bulge_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+M81DwA,THINGS,distance,verified_numeric,unified corpus,
+M81DwA,THINGS,inclination,verified_numeric,unified corpus,
+M81DwA,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+M81DwA,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+DDO53,THINGS,radius,missing,unified corpus (de Blok et al. 2008 curves),
+DDO53,THINGS,observed_rotation_velocity,missing,unified corpus,
+DDO53,THINGS,velocity_uncertainty,missing,unified corpus,
+DDO53,THINGS,gas_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+DDO53,THINGS,stellar_disk_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+DDO53,THINGS,bulge_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+DDO53,THINGS,distance,verified_numeric,unified corpus,
+DDO53,THINGS,inclination,verified_numeric,unified corpus,
+DDO53,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+DDO53,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+NGC2841,THINGS,radius,verified_numeric,unified corpus (de Blok et al. 2008 curves),
+NGC2841,THINGS,observed_rotation_velocity,verified_numeric,unified corpus,
+NGC2841,THINGS,velocity_uncertainty,verified_numeric,unified corpus,
+NGC2841,THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+NGC2841,THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+NGC2841,THINGS,bulge_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+NGC2841,THINGS,distance,verified_numeric,unified corpus,
+NGC2841,THINGS,inclination,verified_numeric,unified corpus,
+NGC2841,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+NGC2841,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+NGC2903,THINGS,radius,verified_numeric,unified corpus (de Blok et al. 2008 curves),
+NGC2903,THINGS,observed_rotation_velocity,verified_numeric,unified corpus,
+NGC2903,THINGS,velocity_uncertainty,verified_numeric,unified corpus,
+NGC2903,THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+NGC2903,THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+NGC2903,THINGS,bulge_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+NGC2903,THINGS,distance,verified_numeric,unified corpus,
+NGC2903,THINGS,inclination,verified_numeric,unified corpus,
+NGC2903,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+NGC2903,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+HoI,THINGS,radius,missing,unified corpus (de Blok et al. 2008 curves),
+HoI,THINGS,observed_rotation_velocity,missing,unified corpus,
+HoI,THINGS,velocity_uncertainty,missing,unified corpus,
+HoI,THINGS,gas_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+HoI,THINGS,stellar_disk_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+HoI,THINGS,bulge_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+HoI,THINGS,distance,verified_numeric,unified corpus,
+HoI,THINGS,inclination,verified_numeric,unified corpus,
+HoI,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+HoI,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+NGC2976,THINGS,radius,verified_numeric,unified corpus (de Blok et al. 2008 curves),
+NGC2976,THINGS,observed_rotation_velocity,verified_numeric,unified corpus,
+NGC2976,THINGS,velocity_uncertainty,verified_numeric,unified corpus,
+NGC2976,THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+NGC2976,THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+NGC2976,THINGS,bulge_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+NGC2976,THINGS,distance,verified_numeric,unified corpus,
+NGC2976,THINGS,inclination,verified_numeric,unified corpus,
+NGC2976,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+NGC2976,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+NGC3031,THINGS,radius,verified_numeric,unified corpus (de Blok et al. 2008 curves),
+NGC3031,THINGS,observed_rotation_velocity,verified_numeric,unified corpus,
+NGC3031,THINGS,velocity_uncertainty,verified_numeric,unified corpus,
+NGC3031,THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+NGC3031,THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+NGC3031,THINGS,bulge_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+NGC3031,THINGS,distance,verified_numeric,unified corpus,
+NGC3031,THINGS,inclination,verified_numeric,unified corpus,
+NGC3031,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+NGC3031,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+NGC3077,THINGS,radius,missing,unified corpus (de Blok et al. 2008 curves),
+NGC3077,THINGS,observed_rotation_velocity,missing,unified corpus,
+NGC3077,THINGS,velocity_uncertainty,missing,unified corpus,
+NGC3077,THINGS,gas_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+NGC3077,THINGS,stellar_disk_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+NGC3077,THINGS,bulge_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+NGC3077,THINGS,distance,verified_numeric,unified corpus,
+NGC3077,THINGS,inclination,verified_numeric,unified corpus,
+NGC3077,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+NGC3077,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+M81DwB,THINGS,radius,missing,unified corpus (de Blok et al. 2008 curves),
+M81DwB,THINGS,observed_rotation_velocity,missing,unified corpus,
+M81DwB,THINGS,velocity_uncertainty,missing,unified corpus,
+M81DwB,THINGS,gas_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+M81DwB,THINGS,stellar_disk_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+M81DwB,THINGS,bulge_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+M81DwB,THINGS,distance,verified_numeric,unified corpus,
+M81DwB,THINGS,inclination,verified_numeric,unified corpus,
+M81DwB,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+M81DwB,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+NGC3184,THINGS,radius,missing,unified corpus (de Blok et al. 2008 curves),
+NGC3184,THINGS,observed_rotation_velocity,missing,unified corpus,
+NGC3184,THINGS,velocity_uncertainty,missing,unified corpus,
+NGC3184,THINGS,gas_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+NGC3184,THINGS,stellar_disk_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+NGC3184,THINGS,bulge_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+NGC3184,THINGS,distance,verified_numeric,unified corpus,
+NGC3184,THINGS,inclination,verified_numeric,unified corpus,
+NGC3184,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+NGC3184,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+NGC3198,THINGS,radius,verified_numeric,unified corpus (de Blok et al. 2008 curves),
+NGC3198,THINGS,observed_rotation_velocity,verified_numeric,unified corpus,
+NGC3198,THINGS,velocity_uncertainty,verified_numeric,unified corpus,
+NGC3198,THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+NGC3198,THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+NGC3198,THINGS,bulge_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+NGC3198,THINGS,distance,verified_numeric,unified corpus,
+NGC3198,THINGS,inclination,verified_numeric,unified corpus,
+NGC3198,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+NGC3198,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+IC2574,THINGS,radius,verified_numeric,unified corpus (de Blok et al. 2008 curves),
+IC2574,THINGS,observed_rotation_velocity,verified_numeric,unified corpus,
+IC2574,THINGS,velocity_uncertainty,verified_numeric,unified corpus,
+IC2574,THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+IC2574,THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+IC2574,THINGS,bulge_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+IC2574,THINGS,distance,verified_numeric,unified corpus,
+IC2574,THINGS,inclination,verified_numeric,unified corpus,
+IC2574,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+IC2574,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+NGC3351,THINGS,radius,missing,unified corpus (de Blok et al. 2008 curves),
+NGC3351,THINGS,observed_rotation_velocity,missing,unified corpus,
+NGC3351,THINGS,velocity_uncertainty,missing,unified corpus,
+NGC3351,THINGS,gas_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+NGC3351,THINGS,stellar_disk_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+NGC3351,THINGS,bulge_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+NGC3351,THINGS,distance,verified_numeric,unified corpus,
+NGC3351,THINGS,inclination,verified_numeric,unified corpus,
+NGC3351,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+NGC3351,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+NGC3521,THINGS,radius,verified_numeric,unified corpus (de Blok et al. 2008 curves),
+NGC3521,THINGS,observed_rotation_velocity,verified_numeric,unified corpus,
+NGC3521,THINGS,velocity_uncertainty,verified_numeric,unified corpus,
+NGC3521,THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+NGC3521,THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+NGC3521,THINGS,bulge_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+NGC3521,THINGS,distance,verified_numeric,unified corpus,
+NGC3521,THINGS,inclination,verified_numeric,unified corpus,
+NGC3521,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+NGC3521,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+NGC3621,THINGS,radius,verified_numeric,unified corpus (de Blok et al. 2008 curves),
+NGC3621,THINGS,observed_rotation_velocity,verified_numeric,unified corpus,
+NGC3621,THINGS,velocity_uncertainty,verified_numeric,unified corpus,
+NGC3621,THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+NGC3621,THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+NGC3621,THINGS,bulge_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+NGC3621,THINGS,distance,verified_numeric,unified corpus,
+NGC3621,THINGS,inclination,verified_numeric,unified corpus,
+NGC3621,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+NGC3621,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+NGC3627,THINGS,radius,verified_numeric,unified corpus (de Blok et al. 2008 curves),
+NGC3627,THINGS,observed_rotation_velocity,verified_numeric,unified corpus,
+NGC3627,THINGS,velocity_uncertainty,verified_numeric,unified corpus,
+NGC3627,THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+NGC3627,THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+NGC3627,THINGS,bulge_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+NGC3627,THINGS,distance,verified_numeric,unified corpus,
+NGC3627,THINGS,inclination,verified_numeric,unified corpus,
+NGC3627,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+NGC3627,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+NGC4214,THINGS,radius,missing,unified corpus (de Blok et al. 2008 curves),
+NGC4214,THINGS,observed_rotation_velocity,missing,unified corpus,
+NGC4214,THINGS,velocity_uncertainty,missing,unified corpus,
+NGC4214,THINGS,gas_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+NGC4214,THINGS,stellar_disk_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+NGC4214,THINGS,bulge_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+NGC4214,THINGS,distance,verified_numeric,unified corpus,
+NGC4214,THINGS,inclination,verified_numeric,unified corpus,
+NGC4214,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+NGC4214,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+NGC4449,THINGS,radius,missing,unified corpus (de Blok et al. 2008 curves),
+NGC4449,THINGS,observed_rotation_velocity,missing,unified corpus,
+NGC4449,THINGS,velocity_uncertainty,missing,unified corpus,
+NGC4449,THINGS,gas_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+NGC4449,THINGS,stellar_disk_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+NGC4449,THINGS,bulge_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+NGC4449,THINGS,distance,verified_numeric,unified corpus,
+NGC4449,THINGS,inclination,verified_numeric,unified corpus,
+NGC4449,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+NGC4449,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+NGC4736,THINGS,radius,verified_numeric,unified corpus (de Blok et al. 2008 curves),
+NGC4736,THINGS,observed_rotation_velocity,verified_numeric,unified corpus,
+NGC4736,THINGS,velocity_uncertainty,verified_numeric,unified corpus,
+NGC4736,THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+NGC4736,THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+NGC4736,THINGS,bulge_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+NGC4736,THINGS,distance,verified_numeric,unified corpus,
+NGC4736,THINGS,inclination,verified_numeric,unified corpus,
+NGC4736,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+NGC4736,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+DDO154,THINGS,radius,verified_numeric,unified corpus (de Blok et al. 2008 curves),
+DDO154,THINGS,observed_rotation_velocity,verified_numeric,unified corpus,
+DDO154,THINGS,velocity_uncertainty,verified_numeric,unified corpus,
+DDO154,THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+DDO154,THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+DDO154,THINGS,bulge_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+DDO154,THINGS,distance,verified_numeric,unified corpus,
+DDO154,THINGS,inclination,verified_numeric,unified corpus,
+DDO154,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+DDO154,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+NGC4826,THINGS,radius,verified_numeric,unified corpus (de Blok et al. 2008 curves),
+NGC4826,THINGS,observed_rotation_velocity,verified_numeric,unified corpus,
+NGC4826,THINGS,velocity_uncertainty,verified_numeric,unified corpus,
+NGC4826,THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+NGC4826,THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+NGC4826,THINGS,bulge_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+NGC4826,THINGS,distance,verified_numeric,unified corpus,
+NGC4826,THINGS,inclination,verified_numeric,unified corpus,
+NGC4826,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+NGC4826,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+NGC5055,THINGS,radius,verified_numeric,unified corpus (de Blok et al. 2008 curves),
+NGC5055,THINGS,observed_rotation_velocity,verified_numeric,unified corpus,
+NGC5055,THINGS,velocity_uncertainty,verified_numeric,unified corpus,
+NGC5055,THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+NGC5055,THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+NGC5055,THINGS,bulge_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+NGC5055,THINGS,distance,verified_numeric,unified corpus,
+NGC5055,THINGS,inclination,verified_numeric,unified corpus,
+NGC5055,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+NGC5055,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+NGC5194,THINGS,radius,missing,unified corpus (de Blok et al. 2008 curves),
+NGC5194,THINGS,observed_rotation_velocity,missing,unified corpus,
+NGC5194,THINGS,velocity_uncertainty,missing,unified corpus,
+NGC5194,THINGS,gas_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+NGC5194,THINGS,stellar_disk_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+NGC5194,THINGS,bulge_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+NGC5194,THINGS,distance,verified_numeric,unified corpus,
+NGC5194,THINGS,inclination,verified_numeric,unified corpus,
+NGC5194,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+NGC5194,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+NGC5236,THINGS,radius,missing,unified corpus (de Blok et al. 2008 curves),
+NGC5236,THINGS,observed_rotation_velocity,missing,unified corpus,
+NGC5236,THINGS,velocity_uncertainty,missing,unified corpus,
+NGC5236,THINGS,gas_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+NGC5236,THINGS,stellar_disk_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+NGC5236,THINGS,bulge_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+NGC5236,THINGS,distance,verified_numeric,unified corpus,
+NGC5236,THINGS,inclination,verified_numeric,unified corpus,
+NGC5236,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+NGC5236,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+NGC5457,THINGS,radius,missing,unified corpus (de Blok et al. 2008 curves),
+NGC5457,THINGS,observed_rotation_velocity,missing,unified corpus,
+NGC5457,THINGS,velocity_uncertainty,missing,unified corpus,
+NGC5457,THINGS,gas_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+NGC5457,THINGS,stellar_disk_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+NGC5457,THINGS,bulge_velocity_contribution,missing,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+NGC5457,THINGS,distance,verified_numeric,unified corpus,
+NGC5457,THINGS,inclination,verified_numeric,unified corpus,
+NGC5457,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+NGC5457,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+NGC6946,THINGS,radius,verified_numeric,unified corpus (de Blok et al. 2008 curves),
+NGC6946,THINGS,observed_rotation_velocity,verified_numeric,unified corpus,
+NGC6946,THINGS,velocity_uncertainty,verified_numeric,unified corpus,
+NGC6946,THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+NGC6946,THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+NGC6946,THINGS,bulge_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+NGC6946,THINGS,distance,verified_numeric,unified corpus,
+NGC6946,THINGS,inclination,verified_numeric,unified corpus,
+NGC6946,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+NGC6946,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+NGC7331,THINGS,radius,verified_numeric,unified corpus (de Blok et al. 2008 curves),
+NGC7331,THINGS,observed_rotation_velocity,verified_numeric,unified corpus,
+NGC7331,THINGS,velocity_uncertainty,verified_numeric,unified corpus,
+NGC7331,THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+NGC7331,THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+NGC7331,THINGS,bulge_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+NGC7331,THINGS,distance,verified_numeric,unified corpus,
+NGC7331,THINGS,inclination,verified_numeric,unified corpus,
+NGC7331,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+NGC7331,THINGS,radii_compatibility,not_assessable,,no component profiles available locally
+NGC7793,THINGS,radius,verified_numeric,unified corpus (de Blok et al. 2008 curves),
+NGC7793,THINGS,observed_rotation_velocity,verified_numeric,unified corpus,
+NGC7793,THINGS,velocity_uncertainty,verified_numeric,unified corpus,
+NGC7793,THINGS,gas_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,mass models shown in de Blok et al. 2008; no public numerical profile located
+NGC7793,THINGS,stellar_disk_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,3.6 um disk models in the paper; no public numerical profile located
+NGC7793,THINGS,bulge_velocity_contribution,literature_only,https://arxiv.org/abs/0810.2100,bulge components modelled for some THINGS galaxies in the paper
+NGC7793,THINGS,distance,verified_numeric,unified corpus,
+NGC7793,THINGS,inclination,verified_numeric,unified corpus,
+NGC7793,THINGS,stellar_mass_to_light,literature_only,https://arxiv.org/abs/0810.2100,Upsilon_3.6 from J-K colours; diet-Salpeter and Kroupa variants (Tables 3-4 of the paper)
+NGC7793,THINGS,radii_compatibility,not_assessable,,no component profiles available locally

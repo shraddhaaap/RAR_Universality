@@ -1,0 +1,243 @@
+{
+  "run_id": "20261028T085455Z",
+  "created_utc": "2026-10-28T08:54:55Z",
+  "versions": {
+    "python": "3.13.18",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.16.3",
+    "jax": "0.11.1",
+    "numpyro": "0.22.0",
+    "xarray": "2025.12.0",
+    "matplotlib": "3.10.0",
+    "cpu_count": 2,
+    "jax_devices": 2,
+    "jax_backend": "cpu",
+    "x64": true
+  },
+  "notebook03_run_id": "20261022T095735Z",
+  "forms": [
+    "gen",
+    "dpl",
+    "simple"
+  ],
+  "alt_priors": {
+    "log10_g0": [
+      -11.5,
+      -8.5
+    ],
+    "log10_t0": [
+      -11.5,
+      -8.5
+    ],
+    "c_dpl": [
+      -1.0,
+      1.0
+    ],
+    "t2_dpl": [
+      0.5,
+      1.5
+    ],
+    "t3_dpl": [
+      0.0,
+      1.0
+    ]
+  },
+  "slope_prior_sd": {
+    "loc": 0.25,
+    "shape": 0.1,
+    "log_sigma_int": 0.5,
+    "log_tau": 0.5
+  },
+  "dependence_covariate": "logMbar",
+  "full_fit_budget": {
+    "chains": 4,
+    "warmup": 1000,
+    "samples": 1500
+  },
+  "cv": {
+    "folds": 5,
+    "seed": 20261028,
+    "models": [
+      [
+        "gen",
+        false
+      ],
+      [
+        "gen",
+        true
+      ],
+      [
+        "dpl",
+        false
+      ],
+      [
+        "simple",
+        false
+      ]
+    ],
+    "fit": {
+      "chains": 2,
+      "warmup": 500,
+      "samples": 750
+    },
+    "pred": {
+      "post_draws": 300,
+      "mc": 48
+    }
+  },
+  "full_fits": {
+    "gen_baseline": {
+      "stats": {
+        "divergences": 0,
+        "divergences_per_chain": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_tree_depth_hits": 0,
+        "mean_accept_prob": 0.910798054254208,
+        "bfmi_per_chain": [
+          0.8778461286197627,
+          0.9722223143163986,
+          0.9631222466627835,
+          0.9351603258145914
+        ],
+        "max_r_hat_all": 1.0045258458314705,
+        "min_ess_bulk_all": 3627.569725794483,
+        "min_ess_tail_all": 1674.1804625851553,
+        "converged_by_all_criteria": true
+      },
+      "seconds": 332.870329618454,
+      "error": null
+    },
+    "gen_dep_logMbar": {
+      "stats": {
+        "divergences": 0,
+        "divergences_per_chain": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_tree_depth_hits": 0,
+        "mean_accept_prob": 0.9382335326928504,
+        "bfmi_per_chain": [
+          0.8235362880930162,
+          0.8169042744026848,
+          0.8807048086636954,
+          0.8638230437020612
+        ],
+        "max_r_hat_all": 1.0044874903921197,
+        "min_ess_bulk_all": 1555.6957609309936,
+        "min_ess_tail_all": 1199.0911187367437,
+        "converged_by_all_criteria": true
+      },
+      "seconds": 480.17744755744934,
+      "error": null
+    },
+    "dpl_baseline": {
+      "stats": {
+        "divergences": 0,
+        "divergences_per_chain": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_tree_depth_hits": 0,
+        "mean_accept_prob": 0.9500151824349283,
+        "bfmi_per_chain": [
+          0.9590132665995378,
+          0.8553854960791843,
+          0.962729026149484,
+          0.8920603741313031
+        ],
+        "max_r_hat_all": 1.005894630085983,
+        "min_ess_bulk_all": 1958.551650222283,
+        "min_ess_tail_all": 1502.724486920009,
+        "converged_by_all_criteria": true
+      },
+      "seconds": 605.801851272583,
+      "error": null
+    },
+    "dpl_dep_logMbar": {
+      "stats": {
+        "divergences": 0,
+        "divergences_per_chain": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_tree_depth_hits": 0,
+        "mean_accept_prob": 0.9483631188294024,
+        "bfmi_per_chain": [
+          0.9062309277677266,
+          0.8222952744896568,
+          0.8620910754843408,
+          0.8520638795663169
+        ],
+        "max_r_hat_all": 1.0045376786204134,
+        "min_ess_bulk_all": 1369.89176668929,
+        "min_ess_tail_all": 1647.1844140459355,
+        "converged_by_all_criteria": true
+      },
+      "seconds": 828.4661548137665,
+      "error": null
+    },
+    "simple_baseline": {
+      "stats": {
+        "divergences": 0,
+        "divergences_per_chain": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_tree_depth_hits": 0,
+        "mean_accept_prob": 0.918946703194448,
+        "bfmi_per_chain": [
+          0.9117318461613828,
+          0.9059581844283443,
+          0.9041683116068737,
+          0.8951795983611702
+        ],
+        "max_r_hat_all": 1.003932067588038,
+        "min_ess_bulk_all": 3940.3266340953637,
+        "min_ess_tail_all": 2119.1935321644164,
+        "converged_by_all_criteria": true
+      },
+      "seconds": 314.0310423374176,
+      "error": null
+    },
+    "simple_dep_logMbar": {
+      "stats": {
+        "divergences": 0,
+        "divergences_per_chain": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_tree_depth_hits": 0,
+        "mean_accept_prob": 0.9182295701279063,
+        "bfmi_per_chain": [
+          0.8395610223655591,
+          0.87115176383182,
+          0.8006792289202453,
+          0.8466370085031545
+        ],
+        "max_r_hat_all": 1.0042847247501336,
+        "min_ess_bulk_all": 1544.6001685618928,
+        "min_ess_tail_all": 1719.0429338411884,
+        "converged_by_all_criteria": true
+      },
+      "seconds": 399.4087736606598,
+      "error": null
+    }
+  },
+  "resume_from": "",
+  "reference": "Desmond, Bartlett & Ferreira 2023, MNRAS (arXiv:2301.04368): compares the simple/standard/RAR IFs and a double power law; no single form recommended"
+}

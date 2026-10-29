@@ -1,0 +1,96 @@
+{
+ "D": {
+  "model": "D",
+  "chains": 4,
+  "draws_per_chain": 750,
+  "divergences": 1,
+  "divergences_per_chain": [
+   0,
+   0,
+   1,
+   0
+  ],
+  "tree_depth_hits": 0,
+  "mean_steps": 78.94166666666666,
+  "accept_per_chain": [
+   0.932,
+   0.949,
+   0.93,
+   0.925
+  ],
+  "step_size_per_chain": [
+   0.0463,
+   0.0803,
+   0.0765,
+   0.0815
+  ],
+  "bfmi_per_chain": [
+   0.685,
+   0.691,
+   0.564,
+   0.624
+  ],
+  "global_params_failing": [
+   "beta",
+   "tau",
+   "mu_u",
+   "sigma_u"
+  ],
+  "n_galaxies_failing": 4,
+  "galaxies_failing": [
+   "UGC00128",
+   "UGC11455",
+   "UGC02953",
+   "UGC06787"
+  ],
+  "n_failing_with_chains_in_different_places": 1,
+  "those_galaxies": [
+   "UGC00128"
+  ]
+ },
+ "E": {
+  "model": "E",
+  "chains": 4,
+  "draws_per_chain": 750,
+  "divergences": 0,
+  "divergences_per_chain": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "tree_depth_hits": 0,
+  "mean_steps": 106.75466666666667,
+  "accept_per_chain": [
+   0.975,
+   0.954,
+   0.889,
+   0.964
+  ],
+  "step_size_per_chain": [
+   0.0252,
+   0.0397,
+   0.082,
+   0.0535
+  ],
+  "bfmi_per_chain": [
+   0.381,
+   0.461,
+   0.535,
+   0.573
+  ],
+  "global_params_failing": [
+   "log10_a0",
+   "beta",
+   "tau",
+   "sigma_lnA"
+  ],
+  "n_galaxies_failing": 2,
+  "galaxies_failing": [
+   "UGC02953",
+   "UGC03580"
+  ],
+  "n_failing_with_chains_in_different_places": 0,
+  "those_galaxies": []
+ }
+}

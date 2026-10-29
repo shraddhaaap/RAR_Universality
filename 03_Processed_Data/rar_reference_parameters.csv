@@ -1,0 +1,8 @@
+parameter,value,unit,role,source
+a0,1.2e-10,m s^-2,REFERENCE (not fitted),"McGaugh, Lelli & Schombert 2016, PRL 117, 201101 (g-dagger = 1.20 +/- 0.02 rand +/- 0.24 syst x 1e-10)"
+beta,0.5,-,REFERENCE (not fitted),Proposal Sec. 4.1: beta = 0.5 recovers the standard RAR form
+Upsilon_disk_3.6um,0.5,Msun/Lsun,REFERENCE (not fitted),McGaugh et al. 2016; Lelli et al. 2016 (SPARC)
+Upsilon_bulge_3.6um,0.7,Msun/Lsun,REFERENCE (not fitted),McGaugh et al. 2016; Lelli et al. 2016 (SPARC)
+literature_n_points,2693.0,-,LITERATURE CONTEXT,McGaugh et al. 2016 sample after additional point-level cuts (not applied in this project)
+literature_n_galaxies,153.0,-,LITERATURE CONTEXT,McGaugh et al. 2016
+literature_observed_scatter,0.13,dex,LITERATURE CONTEXT,McGaugh et al. 2016 (observed scatter about the relation)

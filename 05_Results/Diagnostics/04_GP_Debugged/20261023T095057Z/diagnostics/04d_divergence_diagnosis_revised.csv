@@ -1,0 +1,4 @@
+stage,hypothesis,n_divergent,n_div_meeting_condition,expected_if_random,binomial_p_one_sided,detail
+PILOT D_base (debugged),none (no divergences),0,0,0.0,,no divergent transitions
+PILOT E_base (debugged),none (no divergences),0,0,0.0,,no divergent transitions
+PILOT D_bounds_narrow (debugged),none (no divergences),0,0,0.0,,no divergent transitions

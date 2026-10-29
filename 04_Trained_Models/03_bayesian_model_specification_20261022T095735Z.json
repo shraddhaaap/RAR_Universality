@@ -1,0 +1,16 @@
+{
+  "likelihood": "y_ij = f(x_ij; a0, beta) + delta_i + eps_ij; delta_i ~ N(0, tau^2) marginalised (Sherman-Morrison); C_i = diag(s^2 sigma_V^2 + f'^2 sigma_x^2 + sigma_int^2) + tau^2 11^T",
+  "models": {
+    "A": "fixed catalogue D, i; Upsilon = 0.5/0.7; s = 1",
+    "B": "as A with free s",
+    "C": "D, i, Upsilon sampled; s = 1"
+  },
+  "nuisance_scaling": "R \u221d D, V_k \u221d sqrt(D), V_obs and errV \u221d sin(i0)/sin(i); Vgas signed (Vgas|Vgas|)",
+  "excluded_from_this_notebook": [
+    "GP covariance J K J",
+    "population terms",
+    "survey offsets",
+    "injection-recovery",
+    "5-fold CV"
+  ]
+}

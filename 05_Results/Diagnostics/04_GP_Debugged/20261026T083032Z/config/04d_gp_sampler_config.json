@@ -1,0 +1,496 @@
+{
+  "run_id": "20261026T083032Z",
+  "created_utc": "2026-10-26T08:30:32Z",
+  "versions": {
+    "python": "3.13.15",
+    "numpy": "2.1.3",
+    "pandas": "2.3.3",
+    "scipy": "1.16.3",
+    "jax": "0.11.1",
+    "numpyro": "0.22.0",
+    "xarray": "2025.12.0",
+    "matplotlib": "3.10.0",
+    "cpu_count": 4,
+    "jax_devices": 4,
+    "jax_backend": "cpu",
+    "x64": true
+  },
+  "seed": 20261023,
+  "notebook03_run_id": "20261022T095735Z",
+  "notebook03_posteriors": {
+    "C": "/kaggle/working/RAR_Universality_Research/05_Results/Posterior_Samples/03_bayesian_full_modelC_posterior.nc",
+    "A": "/kaggle/working/RAR_Universality_Research/05_Results/Posterior_Samples/03_bayesian_full_modelA_posterior.nc",
+    "B": "/kaggle/working/RAR_Universality_Research/05_Results/Posterior_Samples/03_bayesian_full_modelB_posterior.nc"
+  },
+  "gp": {
+    "kernel": "SE",
+    "pooling": "partial",
+    "mode": "additive",
+    "lmin_mult": 1.0,
+    "lmax_frac": 0.5,
+    "jitter_dex2": 0.0
+  },
+  "bound_variants": {
+    "base": [
+      1.0,
+      0.5
+    ],
+    "narrow": [
+      1.0,
+      0.25
+    ],
+    "wide": [
+      0.5,
+      1.0
+    ]
+  },
+  "gp_priors": {
+    "mu_lnA": {
+      "dist": "Normal",
+      "loc": 1.6094379124341003,
+      "scale": 1.0,
+      "unit": "ln(km/s)",
+      "note": "population median amplitude; 95% prior range ~0.7-35 km/s, broad enough to include amplitudes reported as upper limits by Chase et al. 2025 (~20 km/s) and Oman & Riley 2024 (<10 km/s, Milky Way). A choice, not a measurement."
+    },
+    "sigma_lnA": {
+      "dist": "HalfNormal",
+      "scale": 0.5,
+      "unit": "ln(km/s)",
+      "note": "galaxy-to-galaxy spread of ln A; regularisation choice"
+    },
+    "mu_u": {
+      "dist": "Normal",
+      "loc": 0.0,
+      "scale": 1.5,
+      "unit": "logit",
+      "note": "population position of ln l between each galaxy's bounds"
+    },
+    "sigma_u": {
+      "dist": "HalfNormal",
+      "scale": 1.0,
+      "unit": "logit",
+      "note": "galaxy-to-galaxy spread; regularisation choice"
+    },
+    "phi": {
+      "dist": "Uniform",
+      "low": 0.0,
+      "high": 1.0,
+      "unit": "-",
+      "note": "decomposition variant only: correlated fraction of published variance"
+    }
+  },
+  "ups_sigma_dex": {
+    "D": 0.1,
+    "E": 0.2
+  },
+  "shared_priors_from_nb03": {
+    "log10_a0": {
+      "dist": "Uniform",
+      "low": -11.5,
+      "high": -8.5,
+      "unit": "log10(m s^-2)",
+      "kind": "computational support (broad)"
+    },
+    "beta": {
+      "dist": "Uniform",
+      "low": 0.05,
+      "high": 1.0,
+      "unit": "-",
+      "kind": "computational support; keeps low-g slope 1-beta in [0, 0.95]"
+    },
+    "sigma_int": {
+      "dist": "HalfNormal",
+      "scale": 0.1,
+      "unit": "dex",
+      "kind": "proposal: half-normal including zero; scale is a regularisation choice"
+    },
+    "tau": {
+      "dist": "HalfNormal",
+      "scale": 0.1,
+      "unit": "dex",
+      "kind": "proposal: half-normal including zero; scale is a regularisation choice"
+    },
+    "error_inflation_s": {
+      "dist": "LogNormal",
+      "loc": 0.0,
+      "scale": 0.5,
+      "unit": "-",
+      "kind": "Model B only; regularisation choice (median 1)"
+    },
+    "distance": {
+      "dist": "LogNormal per galaxy",
+      "loc": "ln D_SPARC",
+      "scale": "e_D / D_SPARC",
+      "unit": "Mpc",
+      "kind": "physical: proposal (log-normal, catalogue errors)"
+    },
+    "inclination": {
+      "dist": "TruncatedNormal per galaxy",
+      "loc": "i_SPARC",
+      "scale": "e_i",
+      "low": 1.0,
+      "high": 90.0,
+      "unit": "deg",
+      "kind": "physical: proposal (Gaussian, catalogue errors); bounds 0<i<=90 as in Li et al. 2018"
+    },
+    "upsilon_disk": {
+      "dist": "LogNormal per galaxy",
+      "median": 0.5,
+      "sigma_dex": 0.1,
+      "unit": "Msun/Lsun",
+      "kind": "physical: proposal (log-normal about SPARC value 0.5); 0.1 dex width as in Li et al. 2018, Sec. 2.2"
+    },
+    "upsilon_bulge": {
+      "dist": "LogNormal per bulge galaxy",
+      "median": 0.7,
+      "sigma_dex": 0.1,
+      "unit": "Msun/Lsun",
+      "kind": "physical: as above; only galaxies with Vbul > 0 get this parameter"
+    }
+  },
+  "target_accept": 0.95,
+  "max_tree_depth": 10,
+  "sampler_revised": {
+    "target_accept": 0.95,
+    "max_tree_depth": 10,
+    "dense_mass_globals": true,
+    "init_jitter": 0.5
+  },
+  "sampler_original": {
+    "target_accept": 0.9,
+    "max_tree_depth": 10,
+    "dense_mass_globals": false,
+    "init_jitter": 0.0,
+    "pilot_warmup": 1000
+  },
+  "reparameterisation": {
+    "inclination": "noncentred",
+    "upsilon_wall": "log_offset",
+    "gp_hierarchy": "noncentred",
+    "scales": "folded"
+  },
+  "bfmi_min": 0.3,
+  "stage_switches": {
+    "RUN_PILOT": true,
+    "RUN_FULL_D": true,
+    "RUN_FULL_E": true,
+    "RUN_SENSITIVITY_PILOTS": false,
+    "RUN_TARGET_098_TEST": false,
+    "RUN_ORIGINAL_SETTINGS_REPLAY": false
+  },
+  "original_nb04_run_id": "20261022T124247Z",
+  "equivalence_tests": [
+    {
+      "test": "log-likelihood original vs revised at identical physical parameters (full data)",
+      "model": "D",
+      "max_abs_deviation": 1.8189894035458565e-12,
+      "tolerance": 1e-09,
+      "unit": "nats",
+      "pass": true
+    },
+    {
+      "test": "joint log density: log p_rev(T^-1 theta) - log|J| = log p_orig(theta)",
+      "model": "D",
+      "max_abs_deviation": 7.736241269705558e-15,
+      "tolerance": 1e-08,
+      "unit": "relative",
+      "pass": true
+    },
+    {
+      "test": "log-likelihood original vs revised at identical physical parameters (full data)",
+      "model": "E",
+      "max_abs_deviation": 1.8189894035458565e-12,
+      "tolerance": 1e-09,
+      "unit": "nats",
+      "pass": true
+    },
+    {
+      "test": "joint log density: log p_rev(T^-1 theta) - log|J| = log p_orig(theta)",
+      "model": "E",
+      "max_abs_deviation": 6.024152748655278e-16,
+      "tolerance": 1e-08,
+      "unit": "relative",
+      "pass": true
+    },
+    {
+      "test": "inclination quantile map = exact TruncatedNormal quantile (50-digit mpmath; 153 galaxies, z = -6..6)",
+      "model": "D/E",
+      "max_abs_deviation": 1.5765166949677223e-14,
+      "tolerance": 1e-10,
+      "unit": "deg",
+      "pass": true
+    },
+    {
+      "test": "inclination prior KS",
+      "model": "D/E",
+      "max_abs_deviation": 0.0019614851218214824,
+      "tolerance": NaN,
+      "unit": "p=0.424",
+      "pass": "True"
+    }
+  ],
+  "output_root": "/kaggle/working/RAR_Universality_Research/05_Results/Diagnostics/04_GP_Debugged/20261026T083032Z",
+  "pilot": {
+    "chains": 4,
+    "warmup": 1000,
+    "samples": 750,
+    "galaxies": [
+      "F571-8",
+      "NGC0289",
+      "NGC0300",
+      "NGC3953",
+      "NGC5005",
+      "NGC7793",
+      "UGC00891",
+      "UGC02487",
+      "UGC05716",
+      "UGC06446",
+      "UGC07577",
+      "UGC08837"
+    ],
+    "variants": {
+      "D_base": {
+        "cfg": {
+          "model": "D",
+          "ups_sig": 0.1,
+          "pooling": "partial",
+          "mode": "additive",
+          "kernel": "SE",
+          "bounds": "base",
+          "name": "D_base",
+          "reparam": {
+            "inclination": "noncentred",
+            "upsilon_wall": "log_offset",
+            "gp_hierarchy": "noncentred",
+            "scales": "folded"
+          }
+        },
+        "seconds": 326.4197824001312,
+        "stats": {
+          "divergences": 0,
+          "divergences_per_chain": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "max_tree_depth_hits": 0,
+          "mean_num_steps": 56.06666666666667,
+          "max_num_steps": 63,
+          "step_size_per_chain": [
+            0.06943439569705433,
+            0.08176885125363843,
+            0.10261467807547744,
+            0.07989666858028865
+          ],
+          "bfmi_per_chain": [
+            0.8216956091943569,
+            0.7450430189539706,
+            0.8336953077538946,
+            0.8438973918856252
+          ],
+          "mean_accept_prob": 0.9599121290253667,
+          "accept_prob_per_chain": [
+            0.9821156892282698,
+            0.9658423745456788,
+            0.9310465304418746,
+            0.9606439218856443
+          ],
+          "max_r_hat_all": 1.0057540774473706,
+          "min_ess_bulk_all": 809.9461367159977,
+          "min_ess_tail_all": 978.2874316908325,
+          "converged_by_all_criteria": true
+        },
+        "error": null,
+        "netcdf": "/kaggle/working/RAR_Universality_Research/05_Results/Diagnostics/04_GP_Debugged/20261026T083032Z/posterior/04d_gp_pilot_D_base_posterior.nc",
+        "warnings": []
+      },
+      "E_base": {
+        "cfg": {
+          "model": "E",
+          "ups_sig": 0.2,
+          "pooling": "partial",
+          "mode": "additive",
+          "kernel": "SE",
+          "bounds": "base",
+          "name": "E_base",
+          "reparam": {
+            "inclination": "noncentred",
+            "upsilon_wall": "log_offset",
+            "gp_hierarchy": "noncentred",
+            "scales": "folded"
+          }
+        },
+        "seconds": 348.88143372535706,
+        "stats": {
+          "divergences": 0,
+          "divergences_per_chain": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "max_tree_depth_hits": 0,
+          "mean_num_steps": 53.624,
+          "max_num_steps": 127,
+          "step_size_per_chain": [
+            0.11093398427295151,
+            0.0887723816127329,
+            0.06451975006426255,
+            0.08364377879183774
+          ],
+          "bfmi_per_chain": [
+            0.7316435173315445,
+            0.6870304202347477,
+            0.75828808174563,
+            0.7838491136440074
+          ],
+          "mean_accept_prob": 0.9443192002884043,
+          "accept_prob_per_chain": [
+            0.924264426438006,
+            0.928275869809691,
+            0.9760990576412063,
+            0.9486374472647138
+          ],
+          "max_r_hat_all": 1.0052955155878274,
+          "min_ess_bulk_all": 569.9401531494168,
+          "min_ess_tail_all": 941.5686459073528,
+          "converged_by_all_criteria": true
+        },
+        "error": null,
+        "netcdf": "/kaggle/working/RAR_Universality_Research/05_Results/Diagnostics/04_GP_Debugged/20261026T083032Z/posterior/04d_gp_pilot_E_base_posterior.nc",
+        "warnings": []
+      }
+    }
+  },
+  "run_full": true,
+  "forced_full": false,
+  "full": {
+    "models": [
+      "D",
+      "E"
+    ],
+    "chains": 4,
+    "warmup": 1000,
+    "samples": 750,
+    "completed": {
+      "D": {
+        "seconds": 14959.562967300415,
+        "stats": {
+          "divergences": 1,
+          "divergences_per_chain": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "max_tree_depth_hits": 0,
+          "mean_num_steps": 78.94166666666666,
+          "max_num_steps": 127,
+          "step_size_per_chain": [
+            0.04630806457601909,
+            0.08028805303123121,
+            0.07650459511002267,
+            0.08151475179206649
+          ],
+          "bfmi_per_chain": [
+            0.6846515663298083,
+            0.6910026395417234,
+            0.5638024099435927,
+            0.6238913058362615
+          ],
+          "mean_accept_prob": 0.9341000827564585,
+          "accept_prob_per_chain": [
+            0.9322850640760671,
+            0.9488948264209557,
+            0.9302482930244543,
+            0.9249721475043574
+          ],
+          "max_r_hat_all": 1.2449748066719502,
+          "min_ess_bulk_all": 17.832330427590378,
+          "min_ess_tail_all": 31.8394705239582,
+          "converged_by_all_criteria": false
+        },
+        "netcdf": "/kaggle/working/RAR_Universality_Research/05_Results/Diagnostics/04_GP_Debugged/20261026T083032Z/posterior/04d_gp_full_model_D_posterior.nc",
+        "error": null
+      },
+      "E": {
+        "seconds": 16905.797832012177,
+        "stats": {
+          "divergences": 0,
+          "divergences_per_chain": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "max_tree_depth_hits": 0,
+          "mean_num_steps": 106.75466666666667,
+          "max_num_steps": 255,
+          "step_size_per_chain": [
+            0.025236042646867372,
+            0.03970631885016898,
+            0.0820465852604147,
+            0.053528427887666895
+          ],
+          "bfmi_per_chain": [
+            0.3810255087323629,
+            0.4611093745080042,
+            0.534553658909475,
+            0.5725636284062342
+          ],
+          "mean_accept_prob": 0.9455319938243913,
+          "accept_prob_per_chain": [
+            0.9749225633937617,
+            0.9544228575598509,
+            0.8887760813106645,
+            0.964006473033288
+          ],
+          "max_r_hat_all": 1.1303994676812836,
+          "min_ess_bulk_all": 25.80061115439277,
+          "min_ess_tail_all": 24.195233825905635,
+          "converged_by_all_criteria": false
+        },
+        "netcdf": "/kaggle/working/RAR_Universality_Research/05_Results/Diagnostics/04_GP_Debugged/20261026T083032Z/posterior/04d_gp_full_model_E_posterior.nc",
+        "error": null
+      }
+    }
+  },
+  "convergence_criteria": {
+    "rank_r_hat_max": 1.01,
+    "ess_bulk_min": 400,
+    "ess_tail_min": 400,
+    "divergences_max": 0,
+    "tree_depth_hits_max": 0,
+    "bfmi_min": 0.3
+  },
+  "integrated_loo": {
+    "post_draws": 200,
+    "mc": 48
+  },
+  "ppc_draws": 200,
+  "benchmark": {
+    "device": "cpu",
+    "log_density_finite": true,
+    "compile_seconds": 11.260965347290039,
+    "seconds_per_grad_eval": 0.022242307662963867,
+    "pilot_mean_leapfrog_steps": 56.06666666666667,
+    "estimated_full_hours_per_model": 2.424823429849413,
+    "dense_covariance_storage_MB": 1.087536,
+    "peak_rss_MB_so_far": 1881.83203125
+  },
+  "regression_test": {
+    "max_abs_diff_vs_saved_NB03": 1.1795009413617663e-12,
+    "max_abs_diff_vs_SM": 8.242295734817162e-13,
+    "n_draws": 10
+  },
+  "data_checksums": {
+    "sparc_rar_points_baseline.csv": "00d6c70a16f198118ebdeac366e60bfccb4ea1fc8abb278b40faf98151d5d04d",
+    "sparc_rar_galaxies_baseline.csv": "6ab7205b2a5f70d8196f7ed87926c4b9d5fcda9a6a90f10d47de363632d205c6",
+    "sparc_rar_model_inputs.npz": "7d56b9edeb02a50abcbcde2363d3834e2517e879c98738ceba73cea59a035a65"
+  },
+  "n_points": 3164,
+  "n_galaxies": 153,
+  "beam_sizes": "not available for SPARC in the project files; correlation-length bounds use radial spacing and extent only",
+  "resume_note": "No sampler-state checkpointing; interrupted chains cannot be resumed."
+}

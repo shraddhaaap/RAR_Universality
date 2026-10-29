@@ -1,0 +1,22 @@
+# Checkpoints & Bytecode
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Environment & Secrets
+.env
+*.log
+
+# Archives & Large Compressed Files
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+# Posterior Samples & MCMC Checkpoints (Stored externally on Google Drive)
+*.nc
+*.npz
+*.pkl
+*.h5
+*.fits

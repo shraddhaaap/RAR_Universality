@@ -1,0 +1,3 @@
+scenario,n_mocks,n_with_any_supported,family_wise_rate,fw_95_low,fw_95_high,nominal
+A1_null_correlated,15,15,1.0,0.7961107336956521,1.0,0.05
+A2_null_white,6,0,0.0,0.0,0.3903430336530645,0.05

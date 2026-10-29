@@ -1,0 +1,501 @@
+{
+  "run_id": "20261023T095057Z",
+  "created_utc": "2026-10-23T09:50:57Z",
+  "versions": {
+    "python": "3.13.16",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.16.3",
+    "jax": "0.11.1",
+    "numpyro": "0.22.0",
+    "xarray": "2025.12.0",
+    "matplotlib": "3.10.0",
+    "cpu_count": 2,
+    "jax_devices": 2,
+    "jax_backend": "cpu",
+    "x64": true
+  },
+  "seed": 20261023,
+  "notebook03_run_id": "20261022T095735Z",
+  "notebook03_posteriors": {
+    "C": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Posterior_Samples/03_bayesian_full_modelC_posterior.nc",
+    "A": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Posterior_Samples/03_bayesian_full_modelA_posterior.nc",
+    "B": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Posterior_Samples/03_bayesian_full_modelB_posterior.nc"
+  },
+  "gp": {
+    "kernel": "SE",
+    "pooling": "partial",
+    "mode": "additive",
+    "lmin_mult": 1.0,
+    "lmax_frac": 0.5,
+    "jitter_dex2": 0.0
+  },
+  "bound_variants": {
+    "base": [
+      1.0,
+      0.5
+    ],
+    "narrow": [
+      1.0,
+      0.25
+    ],
+    "wide": [
+      0.5,
+      1.0
+    ]
+  },
+  "gp_priors": {
+    "mu_lnA": {
+      "dist": "Normal",
+      "loc": 1.6094379124341003,
+      "scale": 1.0,
+      "unit": "ln(km/s)",
+      "note": "population median amplitude; 95% prior range ~0.7-35 km/s, broad enough to include amplitudes reported as upper limits by Chase et al. 2025 (~20 km/s) and Oman & Riley 2024 (<10 km/s, Milky Way). A choice, not a measurement."
+    },
+    "sigma_lnA": {
+      "dist": "HalfNormal",
+      "scale": 0.5,
+      "unit": "ln(km/s)",
+      "note": "galaxy-to-galaxy spread of ln A; regularisation choice"
+    },
+    "mu_u": {
+      "dist": "Normal",
+      "loc": 0.0,
+      "scale": 1.5,
+      "unit": "logit",
+      "note": "population position of ln l between each galaxy's bounds"
+    },
+    "sigma_u": {
+      "dist": "HalfNormal",
+      "scale": 1.0,
+      "unit": "logit",
+      "note": "galaxy-to-galaxy spread; regularisation choice"
+    },
+    "phi": {
+      "dist": "Uniform",
+      "low": 0.0,
+      "high": 1.0,
+      "unit": "-",
+      "note": "decomposition variant only: correlated fraction of published variance"
+    }
+  },
+  "ups_sigma_dex": {
+    "D": 0.1,
+    "E": 0.2
+  },
+  "shared_priors_from_nb03": {
+    "log10_a0": {
+      "dist": "Uniform",
+      "low": -11.5,
+      "high": -8.5,
+      "unit": "log10(m s^-2)",
+      "kind": "computational support (broad)"
+    },
+    "beta": {
+      "dist": "Uniform",
+      "low": 0.05,
+      "high": 1.0,
+      "unit": "-",
+      "kind": "computational support; keeps low-g slope 1-beta in [0, 0.95]"
+    },
+    "sigma_int": {
+      "dist": "HalfNormal",
+      "scale": 0.1,
+      "unit": "dex",
+      "kind": "proposal: half-normal including zero; scale is a regularisation choice"
+    },
+    "tau": {
+      "dist": "HalfNormal",
+      "scale": 0.1,
+      "unit": "dex",
+      "kind": "proposal: half-normal including zero; scale is a regularisation choice"
+    },
+    "error_inflation_s": {
+      "dist": "LogNormal",
+      "loc": 0.0,
+      "scale": 0.5,
+      "unit": "-",
+      "kind": "Model B only; regularisation choice (median 1)"
+    },
+    "distance": {
+      "dist": "LogNormal per galaxy",
+      "loc": "ln D_SPARC",
+      "scale": "e_D / D_SPARC",
+      "unit": "Mpc",
+      "kind": "physical: proposal (log-normal, catalogue errors)"
+    },
+    "inclination": {
+      "dist": "TruncatedNormal per galaxy",
+      "loc": "i_SPARC",
+      "scale": "e_i",
+      "low": 1.0,
+      "high": 90.0,
+      "unit": "deg",
+      "kind": "physical: proposal (Gaussian, catalogue errors); bounds 0<i<=90 as in Li et al. 2018"
+    },
+    "upsilon_disk": {
+      "dist": "LogNormal per galaxy",
+      "median": 0.5,
+      "sigma_dex": 0.1,
+      "unit": "Msun/Lsun",
+      "kind": "physical: proposal (log-normal about SPARC value 0.5); 0.1 dex width as in Li et al. 2018, Sec. 2.2"
+    },
+    "upsilon_bulge": {
+      "dist": "LogNormal per bulge galaxy",
+      "median": 0.7,
+      "sigma_dex": 0.1,
+      "unit": "Msun/Lsun",
+      "kind": "physical: as above; only galaxies with Vbul > 0 get this parameter"
+    }
+  },
+  "target_accept": 0.95,
+  "max_tree_depth": 10,
+  "sampler_revised": {
+    "target_accept": 0.95,
+    "max_tree_depth": 10,
+    "dense_mass_globals": true,
+    "init_jitter": 0.5
+  },
+  "sampler_original": {
+    "target_accept": 0.9,
+    "max_tree_depth": 10,
+    "dense_mass_globals": false,
+    "init_jitter": 0.0,
+    "pilot_warmup": 1000
+  },
+  "reparameterisation": {
+    "inclination": "noncentred",
+    "upsilon_wall": "log_offset",
+    "gp_hierarchy": "noncentred",
+    "scales": "folded"
+  },
+  "bfmi_min": 0.3,
+  "stage_switches": {
+    "RUN_PILOT": true,
+    "RUN_FULL_D": false,
+    "RUN_FULL_E": false,
+    "RUN_SENSITIVITY_PILOTS": false,
+    "RUN_TARGET_098_TEST": false,
+    "RUN_ORIGINAL_SETTINGS_REPLAY": false
+  },
+  "original_nb04_run_id": "20261022T124247Z",
+  "equivalence_tests": [
+    {
+      "test": "log-likelihood original vs revised at identical physical parameters (full data)",
+      "model": "D",
+      "max_abs_deviation": 1.8189894035458565e-12,
+      "tolerance": 1e-09,
+      "unit": "nats",
+      "pass": true
+    },
+    {
+      "test": "joint log density: log p_rev(T^-1 theta) - log|J| = log p_orig(theta)",
+      "model": "D",
+      "max_abs_deviation": 7.736241269705558e-15,
+      "tolerance": 1e-08,
+      "unit": "relative",
+      "pass": true
+    },
+    {
+      "test": "log-likelihood original vs revised at identical physical parameters (full data)",
+      "model": "E",
+      "max_abs_deviation": 1.8189894035458565e-12,
+      "tolerance": 1e-09,
+      "unit": "nats",
+      "pass": true
+    },
+    {
+      "test": "joint log density: log p_rev(T^-1 theta) - log|J| = log p_orig(theta)",
+      "model": "E",
+      "max_abs_deviation": 6.024152748655278e-16,
+      "tolerance": 1e-08,
+      "unit": "relative",
+      "pass": true
+    },
+    {
+      "test": "inclination quantile map = exact TruncatedNormal quantile (50-digit mpmath; 153 galaxies, z = -6..6)",
+      "model": "D/E",
+      "max_abs_deviation": 1.5765166949677223e-14,
+      "tolerance": 1e-10,
+      "unit": "deg",
+      "pass": true
+    },
+    {
+      "test": "inclination prior KS",
+      "model": "D/E",
+      "max_abs_deviation": 0.0019614851218214824,
+      "tolerance": NaN,
+      "unit": "p=0.424",
+      "pass": "True"
+    }
+  ],
+  "output_root": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Diagnostics/04_GP_Debugged/20261023T095057Z",
+  "pilot": {
+    "chains": 4,
+    "warmup": 2000,
+    "samples": 1000,
+    "galaxies": [
+      "F571-8",
+      "NGC0289",
+      "NGC0300",
+      "NGC3953",
+      "NGC5005",
+      "NGC7793",
+      "UGC00891",
+      "UGC02487",
+      "UGC05716",
+      "UGC06446",
+      "UGC07577",
+      "UGC08837"
+    ],
+    "variants": {
+      "D_base": {
+        "cfg": {
+          "model": "D",
+          "ups_sig": 0.1,
+          "pooling": "partial",
+          "mode": "additive",
+          "kernel": "SE",
+          "bounds": "base",
+          "name": "D_base",
+          "reparam": {
+            "inclination": "noncentred",
+            "upsilon_wall": "log_offset",
+            "gp_hierarchy": "noncentred",
+            "scales": "folded"
+          }
+        },
+        "seconds": 1325.271436214447,
+        "stats": {
+          "divergences": 0,
+          "divergences_per_chain": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "max_tree_depth_hits": 0,
+          "mean_num_steps": 56.144,
+          "max_num_steps": 63,
+          "step_size_per_chain": [
+            0.08417638168751299,
+            0.0837832967244024,
+            0.09093108397097871,
+            0.0961021848148314
+          ],
+          "bfmi_per_chain": [
+            0.7500540891126906,
+            0.7956556085100117,
+            0.7835486801845208,
+            0.7159422534018094
+          ],
+          "mean_accept_prob": 0.9552238885366064,
+          "accept_prob_per_chain": [
+            0.9620739846947245,
+            0.9576446383427812,
+            0.9539276949236555,
+            0.9472492361852644
+          ],
+          "max_r_hat_all": 1.0042290546371782,
+          "min_ess_bulk_all": 980.2668916580404,
+          "min_ess_tail_all": 1327.9666613346037,
+          "converged_by_all_criteria": true
+        },
+        "error": null,
+        "netcdf": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Diagnostics/04_GP_Debugged/20261023T095057Z/posterior/04d_gp_pilot_D_base_posterior.nc",
+        "warnings": [
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC)."
+        ]
+      },
+      "E_base": {
+        "cfg": {
+          "model": "E",
+          "ups_sig": 0.2,
+          "pooling": "partial",
+          "mode": "additive",
+          "kernel": "SE",
+          "bounds": "base",
+          "name": "E_base",
+          "reparam": {
+            "inclination": "noncentred",
+            "upsilon_wall": "log_offset",
+            "gp_hierarchy": "noncentred",
+            "scales": "folded"
+          }
+        },
+        "seconds": 1374.4111890792847,
+        "stats": {
+          "divergences": 0,
+          "divergences_per_chain": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "max_tree_depth_hits": 0,
+          "mean_num_steps": 58.72,
+          "max_num_steps": 127,
+          "step_size_per_chain": [
+            0.09793139032702455,
+            0.058754352630479484,
+            0.07348013830992668,
+            0.07066470985836812
+          ],
+          "bfmi_per_chain": [
+            0.7772158818873317,
+            0.7684797012925758,
+            0.6753467352449387,
+            0.7479274346580365
+          ],
+          "mean_accept_prob": 0.9640964791853135,
+          "accept_prob_per_chain": [
+            0.9303570297361793,
+            0.9831669552166021,
+            0.9713906888798627,
+            0.9714712429086099
+          ],
+          "max_r_hat_all": 1.0048842138805907,
+          "min_ess_bulk_all": 883.9097645113243,
+          "min_ess_tail_all": 1291.1518029577865,
+          "converged_by_all_criteria": true
+        },
+        "error": null,
+        "netcdf": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Diagnostics/04_GP_Debugged/20261023T095057Z/posterior/04d_gp_pilot_E_base_posterior.nc",
+        "warnings": [
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC)."
+        ]
+      },
+      "D_bounds_narrow": {
+        "cfg": {
+          "model": "D",
+          "ups_sig": 0.1,
+          "pooling": "partial",
+          "mode": "additive",
+          "kernel": "SE",
+          "bounds": "narrow",
+          "name": "D_bounds_narrow",
+          "reparam": {
+            "inclination": "noncentred",
+            "upsilon_wall": "log_offset",
+            "gp_hierarchy": "noncentred",
+            "scales": "folded"
+          }
+        },
+        "seconds": 1291.7208302021027,
+        "stats": {
+          "divergences": 0,
+          "divergences_per_chain": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "max_tree_depth_hits": 0,
+          "mean_num_steps": 60.304,
+          "max_num_steps": 63,
+          "step_size_per_chain": [
+            0.063592575445189,
+            0.09329428041337318,
+            0.06908530437653822,
+            0.07095474532227265
+          ],
+          "bfmi_per_chain": [
+            0.802143722662782,
+            0.781639140475392,
+            0.7721367195896692,
+            0.7260340490848236
+          ],
+          "mean_accept_prob": 0.9649391438220255,
+          "accept_prob_per_chain": [
+            0.9776250557582205,
+            0.9351082034463801,
+            0.9720751286408451,
+            0.9749481874426565
+          ],
+          "max_r_hat_all": 1.0051466445816895,
+          "min_ess_bulk_all": 619.9458750320233,
+          "min_ess_tail_all": 1654.245855749947,
+          "converged_by_all_criteria": true
+        },
+        "error": null,
+        "netcdf": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Diagnostics/04_GP_Debugged/20261023T095057Z/posterior/04d_gp_pilot_D_bounds_narrow_posterior.nc",
+        "warnings": [
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC)."
+        ]
+      }
+    }
+  },
+  "run_full": false,
+  "forced_full": false,
+  "full": {
+    "models": [],
+    "chains": 4,
+    "warmup": 1500,
+    "samples": 1000,
+    "completed": {}
+  },
+  "convergence_criteria": {
+    "rank_r_hat_max": 1.01,
+    "ess_bulk_min": 400,
+    "ess_tail_min": 400,
+    "divergences_max": 0,
+    "tree_depth_hits_max": 0,
+    "bfmi_min": 0.3
+  },
+  "integrated_loo": {
+    "post_draws": 400,
+    "mc": 64
+  },
+  "ppc_draws": 300,
+  "benchmark": {
+    "device": "cpu",
+    "log_density_finite": true,
+    "compile_seconds": 23.65097427368164,
+    "seconds_per_grad_eval": 0.2879663944244385,
+    "pilot_mean_leapfrog_steps": 56.144,
+    "estimated_full_hours_per_model": 44.90995902379355,
+    "dense_covariance_storage_MB": 1.087536,
+    "peak_rss_MB_so_far": 2527.92578125
+  },
+  "regression_test": {
+    "max_abs_diff_vs_saved_NB03": 1.1795009413617663e-12,
+    "max_abs_diff_vs_SM": 8.242295734817162e-13,
+    "n_draws": 10
+  },
+  "data_checksums": {
+    "sparc_rar_points_baseline.csv": "00d6c70a16f198118ebdeac366e60bfccb4ea1fc8abb278b40faf98151d5d04d",
+    "sparc_rar_galaxies_baseline.csv": "6ab7205b2a5f70d8196f7ed87926c4b9d5fcda9a6a90f10d47de363632d205c6",
+    "sparc_rar_model_inputs.npz": "7d56b9edeb02a50abcbcde2363d3834e2517e879c98738ceba73cea59a035a65"
+  },
+  "n_points": 3164,
+  "n_galaxies": 153,
+  "beam_sizes": "not available for SPARC in the project files; correlation-length bounds use radial spacing and extent only",
+  "resume_note": "No sampler-state checkpointing; interrupted chains cannot be resumed."
+}

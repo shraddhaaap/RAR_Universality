@@ -1,0 +1,63 @@
+section,check,status,severity,detail
+SPARC MRT,required columns present,PASS,critical,all present
+SPARC MRT,declared units match documentation,PASS,critical,all match
+SPARC MRT,data rows follow the declared byte positions,WARN,warning,whitespace_tokens (declared byte positions did not fit the rows); every row had exactly 19 tokens
+SPARC MRT,all numeric fields parsed,PASS,critical,no unparseable numeric values
+SPARC MRT,row count equals data-line count,PASS,critical,175 rows vs 175 lines
+SPARC MRT,no missing galaxy names,PASS,critical,0 missing
+SPARC MRT,galaxy names unique,PASS,critical,175 unique names
+SPARC MRT,galaxy names contain only expected characters,PASS,warning,ok
+SPARC MRT,physical validity: distance_mpc <= 0,PASS,critical,0 galaxies
+SPARC MRT,physical validity: e_distance_mpc < 0,PASS,critical,0 galaxies
+SPARC MRT,"physical validity: inc_deg outside [0, 90]",PASS,critical,0 galaxies
+SPARC MRT,physical validity: e_inc_deg < 0,PASS,critical,0 galaxies
+SPARC MRT,physical validity: L36 < 0,PASS,critical,0 galaxies
+SPARC MRT,physical validity: MHI < 0,PASS,critical,0 galaxies
+SPARC MRT,physical validity: SBdisk0 < 0,PASS,critical,0 galaxies
+SPARC MRT,"physical validity: Q not in {1,2,3} (Note 3)",PASS,critical,0 galaxies
+SPARC MRT,physical validity: T not in 0..11 (Note 1),PASS,critical,0 galaxies
+SPARC MRT,physical validity: f_D not in 1..5 (Note 2),PASS,critical,0 galaxies
+SPARC rotmod,all rotmod files parsed,PASS,critical,175 files
+SPARC rotmod,column names match the documented 8 columns,PASS,critical,"all files: Rad, Vobs, errV, Vgas, Vdisk, Vbul, SBdisk, SBbul"
+SPARC rotmod,declared units match documentation,PASS,critical,"kpc, km/s (x5), L/pc^2 (x2) in every file"
+SPARC rotmod,all numeric values parsed,PASS,critical,0 unparsed values
+SPARC rotmod,distance present in every file header,PASS,warning,present
+SPARC rotmod,no points with flag_any_missing,PASS,warning,0 points
+SPARC rotmod,no points with flag_rad_nonpositive,PASS,warning,0 points
+SPARC rotmod,no points with flag_vobs_nonpositive,PASS,warning,0 points
+SPARC rotmod,no points with flag_errv_nonpositive,PASS,warning,0 points
+SPARC rotmod,no points with flag_vdisk_negative,PASS,warning,0 points
+SPARC rotmod,no points with flag_vbul_negative,PASS,warning,0 points
+SPARC rotmod,radii strictly increasing within each galaxy,PASS,warning,0 points
+SPARC rotmod,g_obs within plausible range (unit check),PASS,critical,"0 of 3391 points outside [1e-14, 1e-07] m/s^2; median g_obs = 5.810e-11 m/s^2"
+SPARC IDs,every MRT galaxy has a rotmod file,PASS,warning,all matched
+SPARC IDs,every rotmod file has an MRT entry,PASS,warning,all matched
+SPARC IDs,no case-only identifier mismatches,PASS,critical,none
+SPARC IDs,rotmod header distance equals MRT distance,PASS,warning,0 galaxies differ by more than 0.011 Mpc
+SPARC cuts,final sample is non-empty,PASS,critical,153 galaxies
+SPARC cuts,point counts consistent (sum of per-galaxy counts),PASS,critical,3168 points
+Unified JSON,only the four documented surveys present,PASS,warning,ok
+Unified JSON,galaxy identifiers unique within each survey,PASS,critical,unique
+Unified JSON,n_points field equals length of data array,PASS,warning,0 mismatches
+Unified JSON,LITTLE_THINGS: observed per-ring columns match README,WARN,warning,"documented ['Rad', 'Vrot', 'errV']; observed ['Rad', 'Vobs', 'errV']"
+Unified JSON,SPARC: observed per-ring columns match README,PASS,warning,"documented ['Rad', 'SBbul', 'SBdisk', 'Vbul', 'Vdisk', 'Vgas', 'Vobs', 'errV']; observed ['Rad', 'SBbul', 'SBdisk', 'Vbul', 'Vdisk', 'Vgas', 'Vobs', 'errV']"
+Unified JSON,THINGS: observed per-ring columns match README,PASS,warning,"documented ['Rad', 'Vrot', 'e_Vrot']; observed ['Rad', 'Vrot', 'e_Vrot']"
+Unified JSON,WALLABY: observed per-ring columns match README,PASS,warning,"documented ['Rad', 'Vdisp', 'Vrot']; observed ['Rad', 'Vdisp', 'Vrot']"
+Unified CSV,column 'galaxy' present,PASS,critical,"['galaxy', 'survey', 'quality_tier', 'telescope', 'ra_deg', 'dec_deg', 'distance_mpc', 'e_distance_mpc', 'vsys_kms', 'inc_deg']"
+Unified CSV,column 'survey' present,PASS,critical,"['galaxy', 'survey', 'quality_tier', 'telescope', 'ra_deg', 'dec_deg', 'distance_mpc', 'e_distance_mpc', 'vsys_kms', 'inc_deg']"
+Unified CSV,"same (galaxy, survey) set as JSON",PASS,warning,JSON only: []; CSV only: []
+Unified CSV,n_points agrees with JSON data arrays,WARN,warning,"[['NGC628', 'THINGS', nan, 0], ['NGC1569', 'THINGS', nan, 0], ['HoII', 'THINGS', nan, 0], ['M81DwA', 'THINGS', nan, 0], ['DDO53', 'THINGS', nan, 0], ['HoI', 'THINGS', nan, 0], ['NGC3077', 'THINGS', nan, 0], ['M81DwB', 'THINGS', nan, 0], ['NGC3184', 'THINGS', nan, 0], ['NGC3351', 'THINGS', nan, 0]]"
+Unified CSV,column count matches README description,WARN,warning,"README says 38, file has 31 (v7.1 CSV vs v7.0 README)"
+Corpus vs SPARC,corpus SPARC names match rotmod names,PASS,warning,corpus only: []; rotmod only: []
+Corpus vs SPARC,corpus SPARC point counts match rotmod files,PASS,warning,175 galaxies compared
+Corpus vs SPARC,corpus has_bulge agrees with Vbul > 0 in rotmod files,PASS,warning,175 compared
+Integrity,input files unchanged during the run,PASS,critical,179 files re-hashed
+Integrity,outputs are not written inside 01_Datasets,PASS,critical,checked
+Integrity,sparc_galaxy_audit has required columns,PASS,critical,ok
+Integrity,sparc_rotation_points_audit has required columns,PASS,critical,ok
+Integrity,extension_feasibility_audit has required columns,PASS,critical,ok
+Integrity,unique galaxy IDs in SPARC galaxy audit,PASS,critical,175 unique
+Integrity,radial point total equals sum of per-galaxy counts,PASS,critical,3391 points
+Integrity,every extension record classified A/B/C,PASS,critical,263 records
+Integrity,category B never counted toward the gate,PASS,critical,ok
+Integrity,WALLABY never counted toward the gate,PASS,critical,ok

@@ -1,0 +1,48 @@
+stage,hypothesis,n_divergent,n_div_meeting_condition,expected_if_random,binomial_p_one_sided,detail
+ORIGINAL NB04 D_base,H1 positivity wall: g_bar margin < non-divergent 1% quantile,1,0,0.01,1.0,q01=0.444; divergent minima=[0.676]; galaxies={'UGC07577': 1}
+ORIGINAL NB04 D_base,H2 inclination within 1 deg of 90,1,0,0.07826956739184796,1.0,non-divergent rate 0.078
+ORIGINAL NB04 D_base,H3 GP length scale within 2% of a bound (any galaxy),1,0,0.1417854463615904,1.0,non-divergent rate 0.142
+ORIGINAL NB04 D_base,H4 small tau (beyond non-divergent 5% quantile),1,1,0.05,0.05,divergent values=[0.0]
+ORIGINAL NB04 D_base,H5 small sigma_int (beyond non-divergent 5% quantile),1,0,0.05,1.0,divergent values=[0.0073]
+ORIGINAL NB04 D_base,H6a funnel: small sigma_lnA (beyond non-divergent 5% quantile),1,0,0.05,1.0,divergent values=[0.721]
+ORIGINAL NB04 D_base,H6b funnel: small sigma_u (beyond non-divergent 5% quantile),1,0,0.05,1.0,divergent values=[1.3657]
+ORIGINAL NB04 D_base,H7 large A_pop (beyond non-divergent 95% quantile),1,0,0.05,1.0,divergent values=[7.6139]
+ORIGINAL NB04 D_base,H8 chain concentration (chi-square vs uniform),1,1,0.25,,"per chain [0, 1, 0, 0]"
+ORIGINAL NB04 D_bounds_narrow,H1 positivity wall: g_bar margin < non-divergent 1% quantile,9,0,0.09,1.0,"q01=0.424; divergent minima=[0.534, 0.546, 0.58, 0.589, 0.59]; galaxies={'UGC08837': 6, 'UGC07577': 3}"
+ORIGINAL NB04 D_bounds_narrow,H2 inclination within 1 deg of 90,9,0,0.7960410924580306,1.0,non-divergent rate 0.088
+ORIGINAL NB04 D_bounds_narrow,H3 GP length scale within 2% of a bound (any galaxy),9,2,2.408418942620897,0.7399724817011445,non-divergent rate 0.268
+ORIGINAL NB04 D_bounds_narrow,H4 small tau (beyond non-divergent 5% quantile),9,4,0.45,0.0006425746953124999,"divergent values=[0.0023, 0.0026, 0.0026, 0.0079, 0.0162, 0.0357]"
+ORIGINAL NB04 D_bounds_narrow,H5 small sigma_int (beyond non-divergent 5% quantile),9,0,0.45,1.0,"divergent values=[0.0002, 0.001, 0.0014, 0.0014, 0.0038, 0.0042]"
+ORIGINAL NB04 D_bounds_narrow,H6a funnel: small sigma_lnA (beyond non-divergent 5% quantile),9,1,0.45,0.36975059027539064,"divergent values=[0.3272, 0.3813, 0.4293, 0.4359, 0.4366, 0.493]"
+ORIGINAL NB04 D_bounds_narrow,H6b funnel: small sigma_u (beyond non-divergent 5% quantile),9,0,0.45,1.0,"divergent values=[0.2477, 0.387, 0.6913, 0.9126, 0.9333, 0.9977]"
+ORIGINAL NB04 D_bounds_narrow,H7 large A_pop (beyond non-divergent 95% quantile),9,0,0.45,1.0,"divergent values=[4.8252, 5.5532, 6.9185, 7.8922, 7.9309, 8.0611]"
+ORIGINAL NB04 D_bounds_narrow,H8 chain concentration (chi-square vs uniform),9,7,2.25,0.0022386822717255363,"per chain [2, 0, 7, 0]"
+ORIGINAL NB04 D_bounds_wide,H1 positivity wall: g_bar margin < non-divergent 1% quantile,2,0,0.02,1.0,"q01=0.453; divergent minima=[0.586, 0.668]; galaxies={'UGC08837': 1, 'UGC07577': 1}"
+ORIGINAL NB04 D_bounds_wide,H2 inclination within 1 deg of 90,2,0,0.16658329164582292,1.0,non-divergent rate 0.083
+ORIGINAL NB04 D_bounds_wide,H3 GP length scale within 2% of a bound (any galaxy),2,0,0.327663831915958,1.0,non-divergent rate 0.164
+ORIGINAL NB04 D_bounds_wide,H4 small tau (beyond non-divergent 5% quantile),2,0,0.1,1.0,"divergent values=[0.0057, 0.0282]"
+ORIGINAL NB04 D_bounds_wide,H5 small sigma_int (beyond non-divergent 5% quantile),2,0,0.1,1.0,"divergent values=[0.0009, 0.0022]"
+ORIGINAL NB04 D_bounds_wide,H6a funnel: small sigma_lnA (beyond non-divergent 5% quantile),2,0,0.1,1.0,"divergent values=[0.2977, 0.5228]"
+ORIGINAL NB04 D_bounds_wide,H6b funnel: small sigma_u (beyond non-divergent 5% quantile),2,0,0.1,1.0,"divergent values=[0.3176, 0.6746]"
+ORIGINAL NB04 D_bounds_wide,H7 large A_pop (beyond non-divergent 95% quantile),2,0,0.1,1.0,"divergent values=[5.3987, 11.1352]"
+ORIGINAL NB04 D_bounds_wide,H8 chain concentration (chi-square vs uniform),2,1,0.5,,"per chain [0, 1, 0, 1]"
+ORIGINAL NB04 D_matern32,H1 positivity wall: g_bar margin < non-divergent 1% quantile,4,0,0.04,1.0,"q01=0.428; divergent minima=[0.513, 0.55, 0.601, 0.605]; galaxies={'UGC08837': 3, 'UGC07577': 1}"
+ORIGINAL NB04 D_matern32,H2 inclination within 1 deg of 90,4,0,0.23023023023023023,1.0,non-divergent rate 0.058
+ORIGINAL NB04 D_matern32,H3 GP length scale within 2% of a bound (any galaxy),4,1,1.2612612612612613,0.7802330130392305,non-divergent rate 0.315
+ORIGINAL NB04 D_matern32,H4 small tau (beyond non-divergent 5% quantile),4,1,0.2,0.18549374999999999,"divergent values=[0.0012, 0.0057, 0.0153, 0.0801]"
+ORIGINAL NB04 D_matern32,H5 small sigma_int (beyond non-divergent 5% quantile),4,0,0.2,1.0,"divergent values=[0.0006, 0.0013, 0.0037, 0.0039]"
+ORIGINAL NB04 D_matern32,H6a funnel: small sigma_lnA (beyond non-divergent 5% quantile),4,0,0.2,1.0,"divergent values=[0.3878, 0.4663, 0.5969, 0.737]"
+ORIGINAL NB04 D_matern32,H6b funnel: small sigma_u (beyond non-divergent 5% quantile),4,0,0.2,1.0,"divergent values=[0.0702, 0.3727, 0.765, 1.4103]"
+ORIGINAL NB04 D_matern32,H7 large A_pop (beyond non-divergent 95% quantile),4,0,0.2,1.0,"divergent values=[6.5903, 6.6474, 11.4081, 11.75]"
+ORIGINAL NB04 D_matern32,H8 chain concentration (chi-square vs uniform),4,3,1.0,,"per chain [0, 1, 0, 3]"
+ORIGINAL NB04 D_complete_pooling,none (no divergences),0,0,0.0,,no divergent transitions
+ORIGINAL NB04 D_decomposition,none (no divergences),0,0,0.0,,no divergent transitions
+ORIGINAL NB04 E_base,H1 positivity wall: g_bar margin < non-divergent 1% quantile,33,3,0.33,0.004360338617880998,"q01=0.172; divergent minima=[0.062, 0.109, 0.169, 0.195, 0.297]; galaxies={'UGC08837': 22, 'UGC07577': 11}"
+ORIGINAL NB04 E_base,H2 inclination within 1 deg of 90,33,3,2.7867406100327705,0.5356996249548399,non-divergent rate 0.084
+ORIGINAL NB04 E_base,H3 GP length scale within 2% of a bound (any galaxy),33,6,5.041088984118982,0.39147319170166506,non-divergent rate 0.153
+ORIGINAL NB04 E_base,H4 small tau (beyond non-divergent 5% quantile),33,4,1.6500000000000001,0.08080949341436972,"divergent values=[0.0008, 0.0011, 0.0025, 0.0027, 0.0062, 0.0071]"
+ORIGINAL NB04 E_base,H5 small sigma_int (beyond non-divergent 5% quantile),33,1,1.6500000000000001,0.8159740897644239,"divergent values=[0.0001, 0.0002, 0.0004, 0.0004, 0.0004, 0.0005]"
+ORIGINAL NB04 E_base,H6a funnel: small sigma_lnA (beyond non-divergent 5% quantile),33,2,1.6500000000000001,0.496350140407896,"divergent values=[0.2332, 0.267, 0.2862, 0.3645, 0.3668, 0.3798]"
+ORIGINAL NB04 E_base,H6b funnel: small sigma_u (beyond non-divergent 5% quantile),33,4,1.6500000000000001,0.08080949341436972,"divergent values=[0.0143, 0.0405, 0.0632, 0.0989, 0.1765, 0.2125]"
+ORIGINAL NB04 E_base,H7 large A_pop (beyond non-divergent 95% quantile),33,0,1.6500000000000001,1.0,"divergent values=[4.2025, 4.7667, 5.1888, 5.5714, 5.8082, 5.8344]"
+ORIGINAL NB04 E_base,H8 chain concentration (chi-square vs uniform),33,18,8.25,0.0003863992805857271,"per chain [3, 3, 9, 18]"

@@ -1,0 +1,11 @@
+parameter,dist,low,high,unit,kind,scale,loc,median,sigma_dex
+log10_a0,Uniform,-11.5,-8.5,log10(m s^-2),computational support (broad),,,,
+beta,Uniform,0.05,1.0,-,"computational support; keeps low-g slope 1-beta in [0, 0.95]",,,,
+sigma_int,HalfNormal,,,dex,proposal: half-normal including zero; scale is a regularisation choice,0.1,,,
+tau,HalfNormal,,,dex,proposal: half-normal including zero; scale is a regularisation choice,0.1,,,
+error_inflation_s,LogNormal,,,-,Model B only; regularisation choice (median 1),0.5,0.0,,
+distance,LogNormal per galaxy,,,Mpc,"physical: proposal (log-normal, catalogue errors)",e_D / D_SPARC,ln D_SPARC,,
+inclination,TruncatedNormal per galaxy,1.0,90.0,deg,"physical: proposal (Gaussian, catalogue errors); bounds 0<i<=90 as in Li et al. 2018",e_i,i_SPARC,,
+upsilon_disk,LogNormal per galaxy,,,Msun/Lsun,"physical: proposal (log-normal about SPARC value 0.5); 0.1 dex width as in Li et al. 2018, Sec. 2.2",,,0.5,0.1
+upsilon_bulge,LogNormal per bulge galaxy,,,Msun/Lsun,physical: as above; only galaxies with Vbul > 0 get this parameter,,,0.7,0.1
+Sigma_x (log g_bar uncertainty),fixed 0,,,dex,documented omission: SPARC gives no Vgas/Vdisk/Vbul uncertainties; structure retained (SIGMA_X_LOG_GBAR),,,,

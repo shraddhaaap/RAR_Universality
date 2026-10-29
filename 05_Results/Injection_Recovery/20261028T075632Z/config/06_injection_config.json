@@ -1,0 +1,65 @@
+{
+  "run_id": "20261028T075632Z",
+  "created_utc": "2026-10-28T07:56:32Z",
+  "versions": {
+    "python": "3.13.18",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.16.3",
+    "jax": "0.11.1",
+    "numpyro": "0.22.0",
+    "xarray": "2025.12.0",
+    "matplotlib": "3.10.0",
+    "cpu_count": 2,
+    "jax_devices": 2,
+    "jax_backend": "cpu",
+    "x64": true
+  },
+  "notebook03_run_id": "20261022T095735Z",
+  "notebook04_D_posterior": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Diagnostics/04_GP_Debugged/20261026T083032Z/posterior/04d_gp_full_model_D_posterior.nc",
+  "notebook05_slopes": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Population_Dependence/20261027T161151Z/tables/05_slopes_all_fits.csv",
+  "truth_A1_correlated": {
+    "log10_a0": -9.88336686543359,
+    "beta": 0.49402115764515464,
+    "tau": 0.047576543310140856,
+    "sigma_int": 0.0004758951361835323
+  },
+  "truth_A2_B_white": {
+    "log10_a0": -10.048351187230347,
+    "beta": 0.5144186495060599,
+    "tau": 0.12195562936999849,
+    "sigma_int": 0.03556918666068139
+  },
+  "A_i_ell_i": "per-galaxy posterior medians of full Model D (Notebook 04)",
+  "corr_lnA_with_covariates": {
+    "logMbar": 0.6160560060589908,
+    "logSB0": 0.4181903312112723,
+    "fgas": -0.4702193253762195
+  },
+  "plan": {
+    "N_NULL_CORR": 16,
+    "N_NULL_WHITE": 6,
+    "INJ_AMPLITUDES": [
+      0.5,
+      1.0
+    ],
+    "N_INJ": 2,
+    "mock_seed": 20261028
+  },
+  "mock_fit": {
+    "chains": 2,
+    "warmup": 500,
+    "samples": 750
+  },
+  "mock_usability": {
+    "rhat_max": 1.05,
+    "ess_min": 100.0,
+    "divergences": 0
+  },
+  "decision_rule": {
+    "family": 12,
+    "per_test_alpha": 0.004166666666666667,
+    "z_crit": 2.8652602385321346
+  },
+  "resume_from": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Injection_Recovery/20261028T052341Z"
+}

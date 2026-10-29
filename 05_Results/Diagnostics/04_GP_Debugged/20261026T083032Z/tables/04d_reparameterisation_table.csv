@@ -1,0 +1,7 @@
+quantity,original coordinate,revised coordinate,prior on i,Jacobian
+inclination i,"i ~ TruncatedNormal(i0, e_i, 1, 90), sampled through NumPyro's interval transform","z_I ~ N(0,1); i = F^-1_TN(Phi(z_I))",identical (exact push-forward),implicit in push-forward; tested
+Upsilon_disk z,"z_U ~ N(0,1) on R; likelihood = 0 where any included g_bar <= 0","z_U = z_floor,i + exp(w_i) for galaxies with a positivity wall, z_U = w_i otherwise","N(0,1) density retained on the support where the likelihood is non-zero (posterior identical)",+w_i added explicitly
+"ln A_i, logit u_i",non-centred,non-centred (unchanged; centred option has identical prior),identical,n/a
+"sigma_int, tau","HalfNormal(0.1), sampled as log(scale)","s ~ N(0,1), scale = 0.1|s| (exact folded normal) if REPARAM['scales'] == 'folded'",identical HalfNormal(0.1) (exact),constant log(0.1/2) per scale (two-to-one map); likelihood depends on scale^2 only
+"sigma_lnA, sigma_u","HalfNormal, log transform",unchanged,identical,NumPyro (log)
+"D, Upsilon_bulge","non-centred N(0,1)",unchanged,identical,n/a

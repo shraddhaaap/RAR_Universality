@@ -1,0 +1,287 @@
+table,column,description,unit,origin
+sparc_galaxy_audit.csv,galaxy,Galaxy identifier as given in the source file,---,confirmed
+sparc_galaxy_audit.csv,hubble_type_T,Hubble type code (MRT label T; Note 1),---,confirmed: SPARC MRT
+sparc_galaxy_audit.csv,distance_mpc,Distance (MRT label D),Mpc,confirmed: SPARC MRT
+sparc_galaxy_audit.csv,e_distance_mpc,Mean error on distance (MRT e_D),Mpc,confirmed: SPARC MRT
+sparc_galaxy_audit.csv,distance_method_code,Distance method code (MRT f_D; Note 2),---,confirmed: SPARC MRT
+sparc_galaxy_audit.csv,inc_deg,Inclination (MRT Inc),deg,confirmed: SPARC MRT
+sparc_galaxy_audit.csv,e_inc_deg,Mean error on inclination (MRT e_Inc),deg,confirmed: SPARC MRT
+sparc_galaxy_audit.csv,L36_1e9Lsun,Total luminosity at 3.6 micron (MRT L[3.6]),1e9 Lsun,confirmed: SPARC MRT
+sparc_galaxy_audit.csv,e_L36_1e9Lsun,Mean error on L[3.6],1e9 Lsun,confirmed: SPARC MRT
+sparc_galaxy_audit.csv,Reff_kpc,Effective radius at 3.6 micron,kpc,confirmed: SPARC MRT
+sparc_galaxy_audit.csv,SBeff_Lsun_pc2,Effective surface brightness at 3.6 micron,Lsun/pc^2,confirmed: SPARC MRT
+sparc_galaxy_audit.csv,Rdisk_kpc,Disk scale length at 3.6 micron,kpc,confirmed: SPARC MRT
+sparc_galaxy_audit.csv,SBdisk0_Lsun_pc2,Disk central surface brightness at 3.6 micron (MRT SBdisk),Lsun/pc^2,confirmed: SPARC MRT
+sparc_galaxy_audit.csv,MHI_1e9Msun,Total HI mass,1e9 Msun,confirmed: SPARC MRT
+sparc_galaxy_audit.csv,RHI_kpc,HI radius at 1 Msun/pc^2,kpc,confirmed: SPARC MRT
+sparc_galaxy_audit.csv,Vflat_kms,Asymptotically flat rotation velocity,km/s,confirmed: SPARC MRT
+sparc_galaxy_audit.csv,e_Vflat_kms,Mean error on Vflat,km/s,confirmed: SPARC MRT
+sparc_galaxy_audit.csv,quality_flag_Q,"Quality flag (1 high, 2 medium, 3 low; Note 3)",---,confirmed: SPARC MRT
+sparc_galaxy_audit.csv,hi_halpha_references,References for HI and H-alpha data (Note 4),---,confirmed: SPARC MRT
+sparc_galaxy_audit.csv,flag_Vflat_zero,Validity flag: Vflat zero,---,audit flag
+sparc_galaxy_audit.csv,flag_RHI_zero,Validity flag: RHI zero,---,audit flag
+sparc_galaxy_audit.csv,Mgas_1e9Msun_derived,1.33 x MHI (helium-corrected gas mass; audit descriptor),1e9 Msun,derived
+sparc_galaxy_audit.csv,Mstar_1e9Msun_derived_fid,0.5 x L[3.6] (fiducial M/L applied to total luminosity; audit descriptor only),1e9 Msun,derived (fiducial assumption)
+sparc_galaxy_audit.csv,Mbar_1e9Msun_derived_fid,Mgas + Mstar (fiducial),1e9 Msun,derived (fiducial assumption)
+sparc_galaxy_audit.csv,fgas_derived_fid,Mgas / Mbar (fiducial),---,derived (fiducial assumption)
+sparc_galaxy_audit.csv,n_points_rotmod,Number of radial points in the rotmod file,---,derived (count)
+sparc_galaxy_audit.csv,r_min_kpc,Smallest radius,kpc,derived
+sparc_galaxy_audit.csv,r_max_kpc,Largest radius,kpc,derived
+sparc_galaxy_audit.csv,vobs_max_kms,Maximum Vobs,km/s,derived
+sparc_galaxy_audit.csv,median_errV_kms,Median errV,km/s,derived
+sparc_galaxy_audit.csv,has_bulge_component,True if Vbul > 0 at any radius,---,derived
+sparc_galaxy_audit.csv,n_vgas_negative,Points with Vgas < 0,---,derived (count)
+sparc_galaxy_audit.csv,n_flagged_points,Points with any critical validity flag,---,audit flag
+sparc_galaxy_audit.csv,header_distance_mpc,Distance stated in the rotmod file header,Mpc,confirmed: rotmod file header
+sparc_galaxy_audit.csv,in_mrt,Galaxy listed in the SPARC MRT,---,audit flag
+sparc_galaxy_audit.csv,has_rotmod_file,A rotmod file exists for the galaxy,---,audit flag
+sparc_galaxy_audit.csv,rotmod_parse_ok,The rotmod file was parsed without error,---,audit flag
+sparc_galaxy_audit.csv,distance_header_matches_mrt,rotmod header distance equals MRT distance within rounding,---,audit flag
+sparc_galaxy_audit.csv,exclusion_reasons,Why the galaxy fails the proposal cuts (empty if it passes),---,audit flag
+sparc_galaxy_audit.csv,passes_quality_cuts,"True if Q <= 2, inc >= 30 deg, and a parseable rotmod file exists",---,audit flag (proposal cuts)
+sparc_galaxy_audit.csv,fails_Q,Q > 2,---,audit flag (proposal cuts)
+sparc_galaxy_audit.csv,fails_inc,Inclination < 30 deg,---,audit flag (proposal cuts)
+sparc_rotation_points_audit.csv,galaxy,Galaxy identifier as given in the source file,---,confirmed
+sparc_rotation_points_audit.csv,point_index,Row order within the source file (0-based),---,audit bookkeeping
+sparc_rotation_points_audit.csv,Rad,Galactocentric radius,kpc,confirmed: rotmod file
+sparc_rotation_points_audit.csv,Vobs,Observed rotation velocity,km/s,confirmed: rotmod file
+sparc_rotation_points_audit.csv,errV,Uncertainty on Vobs,km/s,confirmed: rotmod file
+sparc_rotation_points_audit.csv,Vgas,Gas contribution to circular velocity (can be negative; enters as Vgas*|Vgas|),km/s,confirmed: rotmod file
+sparc_rotation_points_audit.csv,Vdisk,Stellar-disk contribution at M/L = 1,km/s,confirmed: rotmod file
+sparc_rotation_points_audit.csv,Vbul,Bulge contribution at M/L = 1 (0 at all radii = no bulge component),km/s,confirmed: rotmod file
+sparc_rotation_points_audit.csv,SBdisk,Disk surface brightness at this radius,L/pc^2,confirmed: rotmod file
+sparc_rotation_points_audit.csv,SBbul,Bulge surface brightness at this radius,L/pc^2,confirmed: rotmod file
+sparc_rotation_points_audit.csv,flag_any_missing,Validity flag: any missing,---,audit flag
+sparc_rotation_points_audit.csv,flag_rad_nonpositive,Validity flag: rad nonpositive,---,audit flag
+sparc_rotation_points_audit.csv,flag_rad_not_increasing,Validity flag: rad not increasing,---,audit flag
+sparc_rotation_points_audit.csv,flag_duplicate_rad,Validity flag: duplicate rad,---,audit flag
+sparc_rotation_points_audit.csv,flag_vobs_nonpositive,Validity flag: vobs nonpositive,---,audit flag
+sparc_rotation_points_audit.csv,flag_errv_nonpositive,Validity flag: errv nonpositive,---,audit flag
+sparc_rotation_points_audit.csv,flag_vdisk_negative,Validity flag: vdisk negative,---,audit flag
+sparc_rotation_points_audit.csv,flag_vbul_negative,Validity flag: vbul negative,---,audit flag
+sparc_rotation_points_audit.csv,flag_sb_negative,Validity flag: sb negative,---,audit flag
+sparc_rotation_points_audit.csv,info_vgas_negative,Validity flag: vgas negative,---,audit flag
+sparc_rotation_points_audit.csv,g_obs_ms2_derived,"Vobs^2 / Rad, unit-check only",m/s^2,derived
+sparc_rotation_points_audit.csv,Vbar2_kms2_derived_fid,Vgas|Vgas| + 0.5 Vdisk^2 + 0.7 Vbul^2 (fiducial M/L; unit check only),km^2/s^2,derived (fiducial assumption)
+sparc_rotation_points_audit.csv,g_bar_ms2_derived_fid,Vbar2 / Rad (fiducial M/L; unit check only),m/s^2,derived (fiducial assumption)
+sparc_rotation_points_audit.csv,flag_gbar_nonpositive_fid,Validity flag: gbar nonpositive fid,---,audit flag
+sparc_rotation_points_audit.csv,galaxy_passes_quality_cuts,Point belongs to a galaxy that passes the proposal cuts,---,audit flag
+sparc_quality_cut_summary.csv,step,Cut stage or exclusion category,---,audit field
+sparc_quality_cut_summary.csv,n_galaxies,Galaxies at this stage,---,derived (count)
+sparc_quality_cut_summary.csv,n_radial_points,Radial points at this stage,---,derived (count)
+sparc_quality_cut_summary.csv,criteria,Cuts applied (from the proposal),---,audit field
+unified_survey_summary.csv,survey,"Survey (canonical: SPARC, THINGS, LITTLE_THINGS, WALLABY)",---,confirmed (normalised spelling)
+unified_survey_summary.csv,n_entries,Count,---,derived (count)
+unified_survey_summary.csv,n_with_points,Count,---,derived (count)
+unified_survey_summary.csv,n_without_points,Count,---,derived (count)
+unified_survey_summary.csv,n_points_total,Count,---,derived (count)
+unified_survey_summary.csv,observed_point_columns,Per-ring columns observed in the JSON,---,audit field
+unified_survey_summary.csv,documented_point_columns,Per-ring columns documented in the README,---,confirmed: README
+unified_survey_summary.csv,frac_with_radius,Presence of this quantity in the available files (all points non-null),---,audit flag
+unified_survey_summary.csv,frac_with_velocity,Presence of this quantity in the available files (all points non-null),---,audit flag
+unified_survey_summary.csv,frac_with_velocity_error,Presence of this quantity in the available files (all points non-null),---,audit flag
+unified_survey_summary.csv,frac_with_vgas,Presence of this quantity in the available files (all points non-null),---,audit flag
+unified_survey_summary.csv,frac_with_vdisk,Presence of this quantity in the available files (all points non-null),---,audit flag
+unified_survey_summary.csv,frac_with_vbul,Presence of this quantity in the available files (all points non-null),---,audit flag
+unified_survey_summary.csv,frac_with_distance,Presence of this quantity in the available files (all points non-null),---,audit flag
+unified_survey_summary.csv,frac_with_inclination,Presence of this quantity in the available files (all points non-null),---,audit flag
+unified_survey_summary.csv,frac_with_coordinates,Presence of this quantity in the available files (all points non-null),---,audit flag
+unified_survey_summary.csv,frac_with_ml_info,Presence of this quantity in the available files (all points non-null),---,audit flag
+unified_survey_summary.csv,n_galaxies_with_duplicate_radii,Count,---,derived (count)
+unified_survey_summary.csv,n_null_point_values,Count,---,derived (count)
+unified_survey_summary.csv,n_points_field_mismatch,Count,---,derived (count)
+unified_survey_summary.csv,quality_tiers,Corpus quality tiers present,---,confirmed: unified JSON
+cross_survey_duplicate_candidates.csv,galaxy_a,Identifier of the first record,---,confirmed (as stored)
+cross_survey_duplicate_candidates.csv,survey_a,Survey of the first record (SPARC_MRT = original SPARC table),---,confirmed
+cross_survey_duplicate_candidates.csv,galaxy_b,Identifier of the second record,---,confirmed (as stored)
+cross_survey_duplicate_candidates.csv,survey_b,Survey of the second record,---,confirmed
+cross_survey_duplicate_candidates.csv,relation,cross_survey / within_survey_duplicate / sparc_corpus_vs_original,---,audit classification
+cross_survey_duplicate_candidates.csv,match_methods,"How the pair was found: normalised_name, alias_table, position",---,audit classification
+cross_survey_duplicate_candidates.csv,normalised_a,Normalised name used for matching,---,derived
+cross_survey_duplicate_candidates.csv,normalised_b,Normalised name used for matching,---,derived
+cross_survey_duplicate_candidates.csv,separation_arcsec,Angular separation between the two records,arcsec,derived
+cross_survey_duplicate_candidates.csv,match_status,Agreement between name and position evidence,---,audit classification
+cross_survey_duplicate_candidates.csv,needs_manual_review,"True for alias, position-only, conflicting or multiple matches",---,audit flag
+cross_survey_duplicate_candidates.csv,distance_a_mpc,Distance of record A as stored,Mpc,confirmed (as stored)
+cross_survey_duplicate_candidates.csv,distance_b_mpc,Distance of record B as stored,Mpc,confirmed (as stored)
+cross_survey_duplicate_candidates.csv,inc_a_deg,Inclination of record A as stored,deg,confirmed (as stored)
+cross_survey_duplicate_candidates.csv,inc_b_deg,Inclination of record B as stored,deg,confirmed (as stored)
+cross_survey_duplicate_candidates.csv,n_points_a,Radial points in record A,---,derived (count)
+cross_survey_duplicate_candidates.csv,n_points_b,Radial points in record B,---,derived (count)
+cross_survey_duplicate_candidates.csv,rc_overlap_points,Number of A's radii inside the radial range covered by both curves,---,derived (count)
+cross_survey_duplicate_candidates.csv,rc_median_abs_dV_kms,Median |V_a - V_b| over overlapping radii (B interpolated onto A's radii),km/s,derived
+cross_survey_duplicate_candidates.csv,rc_median_frac_dV,Median |V_a - V_b| / V_b over overlapping radii,---,derived
+cross_survey_duplicate_candidates.csv,abs_diff_distance_mpc,|distance_a - distance_b|,Mpc,derived
+cross_survey_duplicate_candidates.csv,abs_diff_inc_deg,|inc_a - inc_b|,deg,derived
+cross_survey_duplicate_candidates.csv,multiple_candidates,A record matched more than one record in the other survey,---,audit flag
+extension_feasibility_audit.csv,galaxy,Galaxy identifier as given in the source file,---,confirmed
+extension_feasibility_audit.csv,survey,"Survey (canonical: SPARC, THINGS, LITTLE_THINGS, WALLABY)",---,confirmed (normalised spelling)
+extension_feasibility_audit.csv,n_points,Number of radial points in the corpus record,---,derived (count)
+extension_feasibility_audit.csv,has_radii,All points have a radius,---,audit flag
+extension_feasibility_audit.csv,has_rotation_velocities,All points have a rotation velocity,---,audit flag
+extension_feasibility_audit.csv,has_velocity_uncertainties,All points have a velocity uncertainty,---,audit flag
+extension_feasibility_audit.csv,has_vgas,Gas velocity contribution present at all points,---,audit flag
+extension_feasibility_audit.csv,has_vdisk,Stellar-disk contribution present at all points,---,audit flag
+extension_feasibility_audit.csv,has_vbul,Bulge contribution present at all points,---,audit flag
+extension_feasibility_audit.csv,bulge_applicability,"required / not_applicable / unknown, from the corpus has_bulge field",---,audit classification
+extension_feasibility_audit.csv,has_distance,Galaxy-level distance present,---,audit flag
+extension_feasibility_audit.csv,has_inclination,Galaxy-level inclination present,---,audit flag
+extension_feasibility_audit.csv,has_ml_information,Mass-to-light value or stellar-mass decomposition flagged in the corpus,---,audit flag
+extension_feasibility_audit.csv,velocity_column,Per-ring column used as rotation velocity,---,audit bookkeeping
+extension_feasibility_audit.csv,velocity_error_column,Per-ring column used as velocity uncertainty,---,audit bookkeeping
+extension_feasibility_audit.csv,n_duplicate_radii,Repeated radius values (e.g. approaching/receding halves),---,derived (count)
+extension_feasibility_audit.csv,duplicates_sparc,"Record matches a SPARC galaxy (name, alias or position)",---,audit flag
+extension_feasibility_audit.csv,sparc_duplicate_detail,Match method(s) and SPARC partner(s),---,audit field
+extension_feasibility_audit.csv,independent_of_sparc,Not a SPARC duplicate; may count as independent data,---,audit flag
+extension_feasibility_audit.csv,feasibility_category,A ready / B needs external baryonic data / C not usable,---,audit classification
+extension_feasibility_audit.csv,missing_or_unverified,Required inputs not present in the available files,---,audit field
+extension_feasibility_audit.csv,counts_toward_gate,Independent (non-SPARC-duplicate) THINGS/LITTLE THINGS galaxy in category A,---,audit classification
+extension_feasibility_audit.csv,main_analysis_status,Role under the proposal's rules given current data,---,audit classification
+input_file_manifest.csv,component,Input dataset component,---,audit field
+input_file_manifest.csv,file,File name,---,audit field
+input_file_manifest.csv,relative_path,Path relative to the project folder,---,audit field
+input_file_manifest.csv,format,File extension,---,audit field
+input_file_manifest.csv,size_bytes,File size,bytes,derived
+input_file_manifest.csv,sha256,SHA-256 checksum of the file,---,derived
+sparc_excluded_galaxies_log.csv,galaxy,Galaxy identifier as given in the source file,---,confirmed
+sparc_excluded_galaxies_log.csv,quality_flag_Q,"Quality flag (1 high, 2 medium, 3 low; Note 3)",---,confirmed: SPARC MRT
+sparc_excluded_galaxies_log.csv,inc_deg,Inclination (MRT Inc),deg,confirmed: SPARC MRT
+sparc_excluded_galaxies_log.csv,has_rotmod_file,A rotmod file exists for the galaxy,---,audit flag
+sparc_excluded_galaxies_log.csv,n_points_rotmod,Number of radial points in the rotmod file,---,derived (count)
+sparc_excluded_galaxies_log.csv,exclusion_reasons,Why the galaxy fails the proposal cuts (empty if it passes),---,audit flag
+integrity_checks.csv,section,Notebook section of the check,---,audit field
+integrity_checks.csv,check,What was checked,---,audit field
+integrity_checks.csv,status,Retrieval or table status,---,audit field
+integrity_checks.csv,severity,critical or warning,---,audit field
+integrity_checks.csv,detail,Check result details,---,audit field
+unified_galaxy_inventory.csv,record_index,Position of the record in the JSON galaxy list,---,audit bookkeeping
+unified_galaxy_inventory.csv,galaxy,Galaxy identifier as given in the source file,---,confirmed
+unified_galaxy_inventory.csv,survey,"Survey (canonical: SPARC, THINGS, LITTLE_THINGS, WALLABY)",---,confirmed (normalised spelling)
+unified_galaxy_inventory.csv,data_key,JSON key holding the per-ring data,---,audit bookkeeping
+unified_galaxy_inventory.csv,n_points_actual,Length of the per-ring data array,---,derived (count)
+unified_galaxy_inventory.csv,point_columns,Per-ring columns present in this record,---,audit bookkeeping
+unified_galaxy_inventory.csv,json_galaxy,Galaxy-level field 'galaxy' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_survey,Galaxy-level field 'survey' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_reference,Galaxy-level field 'reference' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_n_points,Galaxy-level field 'n_points' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_has_bulge,Galaxy-level field 'has_bulge' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_vgas_negative_rows,Galaxy-level field 'vgas_negative_rows' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_inc_deg,Galaxy-level field 'inc_deg' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_e_inc_deg,Galaxy-level field 'e_inc_deg' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_distance_mpc,Galaxy-level field 'distance_mpc' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_e_distance_mpc,Galaxy-level field 'e_distance_mpc' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_hubble_type,Galaxy-level field 'hubble_type' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_m2l_disk,Galaxy-level field 'm2l_disk' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_quality_tier,Galaxy-level field 'quality_tier' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_vrot_mean_kms,Galaxy-level field 'vrot_mean_kms' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_r_min_kpc,Galaxy-level field 'r_min_kpc' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_r_max_kpc,Galaxy-level field 'r_max_kpc' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_vrot_max_kms,Galaxy-level field 'vrot_max_kms' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_ra_deg,Galaxy-level field 'ra_deg' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_dec_deg,Galaxy-level field 'dec_deg' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_vsys_kms,Galaxy-level field 'vsys_kms' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_pa_deg,Galaxy-level field 'pa_deg' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_beam_arcsec,Galaxy-level field 'beam_arcsec' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_corpus_version,Galaxy-level field 'corpus_version' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_corpus_source,Galaxy-level field 'corpus_source' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_quality_notes,Galaxy-level field 'quality_notes' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,gal_distance_key,Name of the JSON field used for this role (None if absent),---,audit bookkeeping
+unified_galaxy_inventory.csv,gal_distance,Value of the JSON field used for role 'distance',as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,gal_e_distance_key,Name of the JSON field used for this role (None if absent),---,audit bookkeeping
+unified_galaxy_inventory.csv,gal_e_distance,Value of the JSON field used for role 'e_distance',as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,gal_inclination_key,Name of the JSON field used for this role (None if absent),---,audit bookkeeping
+unified_galaxy_inventory.csv,gal_inclination,Value of the JSON field used for role 'inclination',as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,gal_e_inclination_key,Name of the JSON field used for this role (None if absent),---,audit bookkeeping
+unified_galaxy_inventory.csv,gal_e_inclination,Value of the JSON field used for role 'e_inclination',as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,gal_ra_key,Name of the JSON field used for this role (None if absent),---,audit bookkeeping
+unified_galaxy_inventory.csv,gal_ra,Value of the JSON field used for role 'ra',as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,gal_dec_key,Name of the JSON field used for this role (None if absent),---,audit bookkeeping
+unified_galaxy_inventory.csv,gal_dec,Value of the JSON field used for role 'dec',as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,gal_ml_info_key,Name of the JSON field used for this role (None if absent),---,audit bookkeeping
+unified_galaxy_inventory.csv,gal_ml_info,Value of the JSON field used for role 'ml_info',as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,gal_has_bulge_key,Name of the JSON field used for this role (None if absent),---,audit bookkeeping
+unified_galaxy_inventory.csv,gal_has_bulge,Value of the JSON field used for role 'has_bulge',as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,gal_has_stellar_mass_key,Name of the JSON field used for this role (None if absent),---,audit bookkeeping
+unified_galaxy_inventory.csv,gal_has_stellar_mass,Value of the JSON field used for role 'has_stellar_mass',as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,gal_has_vgas_profile_key,Name of the JSON field used for this role (None if absent),---,audit bookkeeping
+unified_galaxy_inventory.csv,gal_has_vgas_profile,Value of the JSON field used for role 'has_vgas_profile',as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,gal_quality_tier_key,Name of the JSON field used for this role (None if absent),---,audit bookkeeping
+unified_galaxy_inventory.csv,gal_quality_tier,Value of the JSON field used for role 'quality_tier',as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,gal_n_points_field_key,Name of the JSON field used for this role (None if absent),---,audit bookkeeping
+unified_galaxy_inventory.csv,gal_n_points_field,Value of the JSON field used for role 'n_points_field',as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,pt_radius_key,"Per-ring column used for this role, or count of valid values",---,audit bookkeeping
+unified_galaxy_inventory.csv,pt_radius_n_valid,"Per-ring column used for this role, or count of valid values",---,audit bookkeeping
+unified_galaxy_inventory.csv,has_radius,Presence of this quantity in the available files (all points non-null),---,audit flag
+unified_galaxy_inventory.csv,pt_velocity_key,"Per-ring column used for this role, or count of valid values",---,audit bookkeeping
+unified_galaxy_inventory.csv,pt_velocity_n_valid,"Per-ring column used for this role, or count of valid values",---,audit bookkeeping
+unified_galaxy_inventory.csv,has_velocity,Presence of this quantity in the available files (all points non-null),---,audit flag
+unified_galaxy_inventory.csv,pt_velocity_error_key,"Per-ring column used for this role, or count of valid values",---,audit bookkeeping
+unified_galaxy_inventory.csv,pt_velocity_error_n_valid,"Per-ring column used for this role, or count of valid values",---,audit bookkeeping
+unified_galaxy_inventory.csv,has_velocity_error,Presence of this quantity in the available files (all points non-null),---,audit flag
+unified_galaxy_inventory.csv,n_velocity_error_nonpositive,Count,---,derived (count)
+unified_galaxy_inventory.csv,pt_vgas_key,"Per-ring column used for this role, or count of valid values",---,audit bookkeeping
+unified_galaxy_inventory.csv,pt_vgas_n_valid,"Per-ring column used for this role, or count of valid values",---,audit bookkeeping
+unified_galaxy_inventory.csv,has_vgas,Gas velocity contribution present at all points,---,audit flag
+unified_galaxy_inventory.csv,pt_vdisk_key,"Per-ring column used for this role, or count of valid values",---,audit bookkeeping
+unified_galaxy_inventory.csv,pt_vdisk_n_valid,"Per-ring column used for this role, or count of valid values",---,audit bookkeeping
+unified_galaxy_inventory.csv,has_vdisk,Stellar-disk contribution present at all points,---,audit flag
+unified_galaxy_inventory.csv,pt_vbul_key,"Per-ring column used for this role, or count of valid values",---,audit bookkeeping
+unified_galaxy_inventory.csv,pt_vbul_n_valid,"Per-ring column used for this role, or count of valid values",---,audit bookkeeping
+unified_galaxy_inventory.csv,has_vbul,Bulge contribution present at all points,---,audit flag
+unified_galaxy_inventory.csv,pt_sbdisk_key,"Per-ring column used for this role, or count of valid values",---,audit bookkeeping
+unified_galaxy_inventory.csv,pt_sbdisk_n_valid,"Per-ring column used for this role, or count of valid values",---,audit bookkeeping
+unified_galaxy_inventory.csv,has_sbdisk,Presence of this quantity in the available files (all points non-null),---,audit flag
+unified_galaxy_inventory.csv,pt_sbbul_key,"Per-ring column used for this role, or count of valid values",---,audit bookkeeping
+unified_galaxy_inventory.csv,pt_sbbul_n_valid,"Per-ring column used for this role, or count of valid values",---,audit bookkeeping
+unified_galaxy_inventory.csv,has_sbbul,Presence of this quantity in the available files (all points non-null),---,audit flag
+unified_galaxy_inventory.csv,pt_vdisp_key,"Per-ring column used for this role, or count of valid values",---,audit bookkeeping
+unified_galaxy_inventory.csv,pt_vdisp_n_valid,"Per-ring column used for this role, or count of valid values",---,audit bookkeeping
+unified_galaxy_inventory.csv,has_vdisp,Presence of this quantity in the available files (all points non-null),---,audit flag
+unified_galaxy_inventory.csv,other_error_like_columns,Other per-ring columns whose names look like uncertainties,---,audit bookkeeping
+unified_galaxy_inventory.csv,n_duplicate_radii,Repeated radius values (e.g. approaching/receding halves),---,derived (count)
+unified_galaxy_inventory.csv,n_nonpositive_radii,Count,---,derived (count)
+unified_galaxy_inventory.csv,n_null_point_values,Count,---,derived (count)
+unified_galaxy_inventory.csv,json_telescope,Galaxy-level field 'telescope' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_notes,Galaxy-level field 'notes' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_data_source,Galaxy-level field 'data_source' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_r_unit_original,Galaxy-level field 'r_unit_original' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_r_unit_converted,Galaxy-level field 'r_unit_converted' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_R0.3_kpc,Galaxy-level field 'R0.3_kpc' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_V0.3_kms,Galaxy-level field 'V0.3_kms' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_qflag_model,Galaxy-level field 'qflag_model' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_citation,Galaxy-level field 'citation' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_ingested_date,Galaxy-level field 'ingested_date' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,json_vdisp_mean_kms,Galaxy-level field 'vdisp_mean_kms' copied as stored in the unified JSON,as stored,confirmed: unified JSON
+unified_galaxy_inventory.csv,has_coordinates,Presence of this quantity in the available files (all points non-null),---,audit flag
+unified_galaxy_inventory.csv,has_distance,Galaxy-level distance present,---,audit flag
+unified_galaxy_inventory.csv,has_inclination,Galaxy-level inclination present,---,audit flag
+unified_galaxy_inventory.csv,n_points_field_matches,Stored n_points equals the data-array length,---,audit flag
+external_data_checklist.csv,galaxy,Galaxy identifier as given in the source file,---,confirmed
+external_data_checklist.csv,survey,"Survey (canonical: SPARC, THINGS, LITTLE_THINGS, WALLABY)",---,confirmed (normalised spelling)
+external_data_checklist.csv,independent_of_sparc,Not a SPARC duplicate; may count as independent data,---,audit flag
+external_data_checklist.csv,item_to_obtain,Input that must be retrieved from external sources,---,audit field
+external_data_checklist.csv,where_to_look,Suggested primary source to check,---,audit field
+external_data_checklist.csv,status,Retrieval or table status,---,audit field
+sparc_corpus_vs_original_matches.csv,galaxy_a,Identifier of the first record,---,confirmed (as stored)
+sparc_corpus_vs_original_matches.csv,survey_a,Survey of the first record (SPARC_MRT = original SPARC table),---,confirmed
+sparc_corpus_vs_original_matches.csv,galaxy_b,Identifier of the second record,---,confirmed (as stored)
+sparc_corpus_vs_original_matches.csv,survey_b,Survey of the second record,---,confirmed
+sparc_corpus_vs_original_matches.csv,relation,cross_survey / within_survey_duplicate / sparc_corpus_vs_original,---,audit classification
+sparc_corpus_vs_original_matches.csv,match_methods,"How the pair was found: normalised_name, alias_table, position",---,audit classification
+sparc_corpus_vs_original_matches.csv,normalised_a,Normalised name used for matching,---,derived
+sparc_corpus_vs_original_matches.csv,normalised_b,Normalised name used for matching,---,derived
+sparc_corpus_vs_original_matches.csv,separation_arcsec,Angular separation between the two records,arcsec,derived
+sparc_corpus_vs_original_matches.csv,match_status,Agreement between name and position evidence,---,audit classification
+sparc_corpus_vs_original_matches.csv,needs_manual_review,"True for alias, position-only, conflicting or multiple matches",---,audit flag
+sparc_corpus_vs_original_matches.csv,distance_a_mpc,Distance of record A as stored,Mpc,confirmed (as stored)
+sparc_corpus_vs_original_matches.csv,distance_b_mpc,Distance of record B as stored,Mpc,confirmed (as stored)
+sparc_corpus_vs_original_matches.csv,inc_a_deg,Inclination of record A as stored,deg,confirmed (as stored)
+sparc_corpus_vs_original_matches.csv,inc_b_deg,Inclination of record B as stored,deg,confirmed (as stored)
+sparc_corpus_vs_original_matches.csv,n_points_a,Radial points in record A,---,derived (count)
+sparc_corpus_vs_original_matches.csv,n_points_b,Radial points in record B,---,derived (count)
+sparc_corpus_vs_original_matches.csv,rc_overlap_points,Number of A's radii inside the radial range covered by both curves,---,derived (count)
+sparc_corpus_vs_original_matches.csv,rc_median_abs_dV_kms,Median |V_a - V_b| over overlapping radii (B interpolated onto A's radii),km/s,derived
+sparc_corpus_vs_original_matches.csv,rc_median_frac_dV,Median |V_a - V_b| / V_b over overlapping radii,---,derived
+sparc_corpus_vs_original_matches.csv,abs_diff_distance_mpc,|distance_a - distance_b|,Mpc,derived
+sparc_corpus_vs_original_matches.csv,abs_diff_inc_deg,|inc_a - inc_b|,deg,derived
+sparc_corpus_vs_original_matches.csv,multiple_candidates,A record matched more than one record in the other survey,---,audit flag

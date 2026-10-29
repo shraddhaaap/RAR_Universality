@@ -1,0 +1,15 @@
+parameter,model,dist,loc,scale,unit,note,low,high,kind,median,sigma_dex
+mu_lnA,D/E,Normal,1.6094379124341003,1.0,ln(km/s),"population median amplitude; 95% prior range ~0.7-35 km/s, broad enough to include amplitudes reported as upper limits by Chase et al. 2025 (~20 km/s) and Oman & Riley 2024 (<10 km/s, Milky Way). A choice, not a measurement.",,,,,
+sigma_lnA,D/E,HalfNormal,,0.5,ln(km/s),galaxy-to-galaxy spread of ln A; regularisation choice,,,,,
+mu_u,D/E,Normal,0.0,1.5,logit,population position of ln l between each galaxy's bounds,,,,,
+sigma_u,D/E,HalfNormal,,1.0,logit,galaxy-to-galaxy spread; regularisation choice,,,,,
+phi,D/E,Uniform,,,-,decomposition variant only: correlated fraction of published variance,0.0,1.0,,,
+log10_a0,"C/D/E (shared, from NB03)",Uniform,,,log10(m s^-2),,-11.5,-8.5,computational support (broad),,
+beta,"C/D/E (shared, from NB03)",Uniform,,,-,,0.05,1.0,"computational support; keeps low-g slope 1-beta in [0, 0.95]",,
+sigma_int,"C/D/E (shared, from NB03)",HalfNormal,,0.1,dex,,,,proposal: half-normal including zero; scale is a regularisation choice,,
+tau,"C/D/E (shared, from NB03)",HalfNormal,,0.1,dex,,,,proposal: half-normal including zero; scale is a regularisation choice,,
+distance,"C/D/E (shared, from NB03)",LogNormal per galaxy,ln D_SPARC,e_D / D_SPARC,Mpc,,,,"physical: proposal (log-normal, catalogue errors)",,
+inclination,"C/D/E (shared, from NB03)",TruncatedNormal per galaxy,i_SPARC,e_i,deg,,1.0,90.0,"physical: proposal (Gaussian, catalogue errors); bounds 0<i<=90 as in Li et al. 2018",,
+upsilon_disk,"C/D/E (shared, from NB03)",LogNormal per galaxy,,,Msun/Lsun,,,,"physical: proposal (log-normal about SPARC value 0.5); 0.1 dex width as in Li et al. 2018, Sec. 2.2",0.5,0.1
+upsilon_bulge,"C/D/E (shared, from NB03)",LogNormal per bulge galaxy,,,Msun/Lsun,,,,physical: as above; only galaxies with Vbul > 0 get this parameter,0.7,0.1
+upsilon_disk/bulge sigma_dex,E only,LogNormal,,0.2,,alternative nuisance prior (Sec. 4.4e); 2x baseline; sensitivity choice,,,,,

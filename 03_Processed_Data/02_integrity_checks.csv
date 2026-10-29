@@ -1,0 +1,37 @@
+section,check,status,severity,detail
+Inputs,SPARC files unchanged since Phase 1 (SHA-256),PASS,critical,176 files verified
+Inputs,no new rotmod files since Phase 1,PASS,warning,none
+Phase 1,Phase 1 has no critical failures,PASS,critical,0 FAIL rows
+Phase 1 warning,"MRT parse agrees with independent corpus values (D, e_D, i, e_i)",PASS,critical,"175 galaxies compared; max |diff| {'distance_mpc': 0.0, 'e_distance_mpc': 0.0, 'inc_deg': 0.0, 'e_inc_deg': 0.0}"
+Phase 1 warning,"parsed Q in {1,2,3} and inclinations in [0, 90] deg",PASS,critical,"Q values [1, 2, 3]"
+Sample,re-applied cuts reproduce the Phase 1 eligible set,PASS,critical,only Phase 1: []; only recomputed: []
+Sample,eligible galaxies = 153,PASS,critical,153 galaxies
+Sample,eligible radial points = 3168,PASS,critical,3168 points
+Sample,raw rotmod values identical to the Phase 1 point table,PASS,critical,unmatched rows 0; max |diff| 0.0
+Exclusions,no galaxy loses all its points,PASS,warning,none
+Exclusions,excluded points are a small fraction (< 5%),PASS,warning,2 points
+RAR function,high-g limit: g_obs/g_bar -> 1 (g_bar = 1e3 a0),PASS,critical,
+RAR function,low-g limit: g_obs -> sqrt(g_bar a0) for beta=0.5,PASS,critical,
+RAR function,low-g limit general beta=0.3: g_bar^(0.7) a0^0.3 (g_bar = 1e-22),PASS,critical,
+RAR function,beta=0.5 equals McGaugh+2016 form,PASS,critical,
+RAR function,value at g_bar = a0 equals a0/(1-1/e),PASS,critical,
+RAR function,monotonically increasing,PASS,critical,
+RAR function,g_obs >= g_bar everywhere,PASS,critical,
+RAR function,asymptotic log-log slope = 1 - beta,PASS,critical,
+RAR function,log wrapper consistent,PASS,critical,
+Units,100 km/s at 1 kpc gives 3.2408e-10 m/s^2,PASS,critical,3.24078e-10
+Consistency,g_obs and g_bar agree with Phase 1 unit-check values,PASS,critical,max rel diff g_obs 4.4e-16; g_bar 2.0e-15
+Consistency,g_bar components sum to g_bar_ref,PASS,critical,ok
+Consistency,Vbar_ref^2 / R reproduces g_bar_ref,PASS,critical,ok
+Consistency,galaxy table point counts sum to point table,PASS,critical,3168
+Consistency,galaxy_index is a contiguous 0..N-1 integer index,PASS,critical,ok
+Consistency,rotmod header distances equal MRT distances,PASS,warning,ok
+Consistency,"distance rescaling: g_bar invariant, g_obs ∝ 1/D",PASS,critical,tested with D x 1.37
+Plausibility,g_obs within 1e-13 to 1e-8 m/s^2 for >= 99% of points,PASS,critical,0.0009 outside
+Plausibility,median log g_obs between -11.5 and -9.5,PASS,critical,-10.20
+Plausibility,g_obs < g_bar_ref (super-baryonic) in fewer than 20% of points,PASS,warning,0.060 of points (expected for some inner points given errors and reference Y*)
+Plausibility,residual median within ±0.2 dex of the reference curve,PASS,warning,-0.013 dex
+Plausibility,sigma_log_gobs_V finite and positive for used points,PASS,critical,ok
+Plausibility,inclination error term finite for all galaxies,PASS,warning,max 0.263 dex
+Integrity,original SPARC files unchanged after the run,PASS,critical,176 files
+Integrity,observational columns unchanged in memory,PASS,critical,hash compared

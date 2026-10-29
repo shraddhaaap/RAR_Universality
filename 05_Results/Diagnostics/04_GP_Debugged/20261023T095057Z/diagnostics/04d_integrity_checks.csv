@@ -1,0 +1,46 @@
+section,check,status,severity,detail
+NB03,a Notebook 03 run with a completed full Model C exists,PASS,critical,1 candidate runs
+NB03,Model C posterior file exists,PASS,critical,/content/drive/MyDrive/RAR_Universality_Research/05_Results/Posterior_Samples/03_bayesian_full_modelC_posterior.nc
+NB03,Model C posterior carries run ID 20261022T095735Z,PASS,critical,file run_id 20261022T095735Z
+NB03,Model C met all convergence criteria in Notebook 03,PASS,critical,"max R-hat 1.0014, min ESS 2962, divergences 0"
+NB03,Model A posterior file exists,PASS,critical,/content/drive/MyDrive/RAR_Universality_Research/05_Results/Posterior_Samples/03_bayesian_full_modelA_posterior.nc
+NB03,Model A posterior carries run ID 20261022T095735Z,PASS,critical,file run_id 20261022T095735Z
+NB03,Model A met all convergence criteria in Notebook 03,PASS,critical,"max R-hat 1.0026, min ESS 1913, divergences 0"
+NB03,Model B posterior file exists,PASS,critical,/content/drive/MyDrive/RAR_Universality_Research/05_Results/Posterior_Samples/03_bayesian_full_modelB_posterior.nc
+NB03,Model B posterior carries run ID 20261022T095735Z,PASS,critical,file run_id 20261022T095735Z
+NB03,Model B met all convergence criteria in Notebook 03,PASS,critical,"max R-hat 1.0002, min ESS 2012, divergences 0"
+NB03,Notebook 03 check register has no FAIL rows,PASS,critical,"03_bayesian_integrity_checks_20261022T095735Z.csv: 43 checks, 0 FAIL, 1 WARN"
+NB03,Notebook 03 galaxy-level PSIS-LOO reliable (Pareto k > 0.7 in < 10% of galaxies),WARN,warning,"[['PILOT (validation only)', 'C', 5], ['FULL', 'C', 88]]"
+NB03,shared priors in this notebook equal Notebook 03's saved priors,PASS,critical,"log10_a0, beta, sigma_int, tau, Upsilon, inclination bounds"
+NB03,Sigma_x convention unchanged (0: no documented baryonic-component errors),PASS,critical,0.0
+Sample,sparc_rar_points_baseline.csv unchanged since Notebook 03,PASS,critical,SHA-256 compared
+Sample,sparc_rar_galaxies_baseline.csv unchanged since Notebook 03,PASS,critical,SHA-256 compared
+Sample,sparc_rar_model_inputs.npz unchanged since Notebook 03,PASS,critical,SHA-256 compared
+Sample,point set reproduces Notebook 03 (3164 points),PASS,critical,3164
+Sample,excluded points identical to Notebook 03,PASS,critical,"[('DDO064', 0), ('UGC01281', 0), ('UGC01281', 1), ('UGC07577', 0)]"
+Covariance,all covariance matrices symmetric,PASS,critical,612 matrices
+Covariance,J K J positive semi-definite for all galaxies,PASS,critical,min eig -7.90e-15
+Covariance,full covariance positive-definite for all galaxies (no jitter),PASS,critical,min eig 1.23e-03; max condition 3.52e+04
+Covariance,"bucketed GP log-lik = dense SciPy (galaxy 0, n = 9)",PASS,critical,-1.99033169 vs -1.99033169
+Covariance,"bucketed GP log-lik = dense SciPy (galaxy 76, n = 31)",PASS,critical,55.56864982 vs 55.56864982
+Covariance,"bucketed GP log-lik = dense SciPy (galaxy 93, n = 115)",PASS,critical,198.95977587 vs 198.95977587
+Covariance,GP log-likelihood gradient finite,PASS,critical,d/dA
+Covariance,max condition number < 1e+10 (jitter not required; jitter_dex2 = 0.0),PASS,critical,max condition 3.52e+04
+Regression,Notebook 03 Model C galaxy order equals this notebook's,PASS,critical,153 galaxies
+Regression,"zero-GP likelihood = Notebook 03 saved Model C log-likelihoods (10 posterior draws, all galaxies)",PASS,critical,max |diff| = 1.18e-12
+Regression,zero-GP likelihood = reconstructed Sherman-Morrison Model C,PASS,critical,max |diff| = 8.24e-13
+Equivalence,Model D: test points with finite original log density,PASS,critical,20/20
+Equivalence,log-likelihood original vs revised at identical physical parameters (full data) [D],PASS,critical,max dev 1.819e-12 (tol 1e-09) nats
+Equivalence,joint log density: log p_rev(T^-1 theta) - log|J| = log p_orig(theta) [D],PASS,critical,max dev 7.736e-15 (tol 1e-08) relative
+Equivalence,Model E: test points with finite original log density,PASS,critical,20/20
+Equivalence,log-likelihood original vs revised at identical physical parameters (full data) [E],PASS,critical,max dev 1.819e-12 (tol 1e-09) nats
+Equivalence,joint log density: log p_rev(T^-1 theta) - log|J| = log p_orig(theta) [E],PASS,critical,max dev 6.024e-16 (tol 1e-08) relative
+Equivalence,"inclination quantile map = exact TruncatedNormal quantile (50-digit mpmath; 153 galaxies, z = -6..6) [D/E]",PASS,critical,max dev 1.577e-14 (tol 1e-10) deg
+Equivalence,"inclination prior draws ~ TruncatedNormal (KS, IC4202, i0=90+-1)",PASS,critical,"KS D = 1.96e-03, p = 0.424"
+Equivalence,Model D: Upsilon floor = original zero-likelihood boundary for all 25 wall galaxies,PASS,critical,0 mismatches
+Equivalence,Model E: Upsilon floor = original zero-likelihood boundary for all 25 wall galaxies,PASS,critical,0 mismatches
+Equivalence,original and revised models use identical data arrays (single build_data; SHA-256),PASS,critical,a360ad89b0047027
+Pilot,"PILOT D_base (debugged) meets R-hat, bulk/tail ESS, divergence, tree-depth and BFMI criteria",PASS,warning,"{""max_r_hat_all"": 1.0042290546371782, ""min_ess_bulk_all"": 980.2668916580404, ""min_ess_tail_all"": 1327.9666613346037, ""divergences"": 0, ""max_tree_depth_hits"": 0, ""bfmi_per_chain"": [0.7500540891126906, 0.7956556085100117, 0.7835486801845208, 0.7159422534018094]}"
+Pilot,"PILOT E_base (debugged) meets R-hat, bulk/tail ESS, divergence, tree-depth and BFMI criteria",PASS,warning,"{""max_r_hat_all"": 1.0048842138805907, ""min_ess_bulk_all"": 883.9097645113243, ""min_ess_tail_all"": 1291.1518029577865, ""divergences"": 0, ""max_tree_depth_hits"": 0, ""bfmi_per_chain"": [0.7772158818873317, 0.7684797012925758, 0.6753467352449387, 0.7479274346580365]}"
+Covariance,"posterior-region covariances positive-definite and condition < 1e10 (200 draws, D_base/E_base)",PASS,critical,min eig 2.39e-05; max condition 4.58e+04
+Benchmark,full-data Model D log-density and gradient finite at initial values,PASS,critical,log p = 2824.45

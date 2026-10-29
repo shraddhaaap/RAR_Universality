@@ -1,0 +1,11 @@
+survey,role,file,relative_path,size_bytes,sha256,status,stated_origin,read_by_notebook
+LITTLE_THINGS,ReadMe,ReadMe,01_Datasets/LITTLE_THINGS/ReadMe,20246,c9cafe20d4096448078e9191534a7d6890262669ca9a90e802abf83dc5607c0c,present,https://cdsarc.cds.unistra.fr/viz-bin/cat/J/AJ/149/180,True
+LITTLE_THINGS,table1,table1.dat,01_Datasets/LITTLE_THINGS/table1.dat,2756,4dc9f3727818062ea1e424e10dcfedf385af5723c79ff3b213702cc39d96b3f4,present,https://cdsarc.cds.unistra.fr/viz-bin/cat/J/AJ/149/180,True
+LITTLE_THINGS,table2,table2.dat,01_Datasets/LITTLE_THINGS/table2.dat,4471,cc8ab9e5351d60b5ee017a61d0d6a1fa42d0d85a278a6c4ea136cfd53f940efb,present,https://cdsarc.cds.unistra.fr/viz-bin/cat/J/AJ/149/180,True
+LITTLE_THINGS,rotdmbar,rotdmbar.dat,01_Datasets/LITTLE_THINGS/rotdmbar.dat,109824,1ce3e9ee850b0a25c5f97fa36db3b0705fb558979f1e5df77eea71c3c56efe4c,present,https://cdsarc.cds.unistra.fr/viz-bin/cat/J/AJ/149/180,True
+THINGS,folder,(none),01_Datasets/THINGS,0,,THINGS folder empty,,False
+PHASE1,feasibility,extension_feasibility_audit.csv,03_Processed_Data/extension_feasibility_audit.csv,84610,fb3b1a3dafb95b3df70301b4900126a834c94e2059a9e1658ac95438f1b5ac41,present (read-only input),01_Data_Audit.ipynb,True
+PHASE1,duplicates,cross_survey_duplicate_candidates.csv,03_Processed_Data/cross_survey_duplicate_candidates.csv,5712,5557b56732c744de5aa4168b4b682e56d89c8b69e3f0ebab892c847fc2687383,present (read-only input),01_Data_Audit.ipynb,True
+PHASE1,checklist,external_data_checklist.csv,03_Processed_Data/external_data_checklist.csv,37896,cac0462dbf9ca3f8cc10709a8bc2b2bfef4eea750915782c0e66d7b135c17501,present (read-only input),01_Data_Audit.ipynb,True
+PHASE1,inventory,unified_galaxy_inventory.csv,03_Processed_Data/unified_galaxy_inventory.csv,357281,1f70e57626946a833bdf3a4105aced0d6517458828a98ea5360b60200608f008,present (read-only input),01_Data_Audit.ipynb,True
+PHASE1,sparc,sparc_galaxy_audit.csv,03_Processed_Data/sparc_galaxy_audit.csv,42792,e9e877d4dd3786bb14ce2707ff0c5d82a5f2f59c7a69f3f397cdf75115d6e992,present (read-only input),01_Data_Audit.ipynb,True

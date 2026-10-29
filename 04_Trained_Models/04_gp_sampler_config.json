@@ -1,0 +1,557 @@
+{
+  "run_id": "20261022T124247Z",
+  "created_utc": "2026-10-22T12:42:47Z",
+  "versions": {
+    "python": "3.13.16",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.16.3",
+    "jax": "0.11.1",
+    "numpyro": "0.22.0",
+    "xarray": "2025.12.0",
+    "matplotlib": "3.10.0",
+    "cpu_count": 2,
+    "jax_devices": 2,
+    "jax_backend": "cpu",
+    "x64": true
+  },
+  "seed": 20261023,
+  "notebook03_run_id": "20261022T095735Z",
+  "notebook03_posteriors": {
+    "C": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Posterior_Samples/03_bayesian_full_modelC_posterior.nc",
+    "A": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Posterior_Samples/03_bayesian_full_modelA_posterior.nc",
+    "B": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Posterior_Samples/03_bayesian_full_modelB_posterior.nc"
+  },
+  "gp": {
+    "kernel": "SE",
+    "pooling": "partial",
+    "mode": "additive",
+    "lmin_mult": 1.0,
+    "lmax_frac": 0.5,
+    "jitter_dex2": 0.0
+  },
+  "bound_variants": {
+    "base": [
+      1.0,
+      0.5
+    ],
+    "narrow": [
+      1.0,
+      0.25
+    ],
+    "wide": [
+      0.5,
+      1.0
+    ]
+  },
+  "gp_priors": {
+    "mu_lnA": {
+      "dist": "Normal",
+      "loc": 1.6094379124341003,
+      "scale": 1.0,
+      "unit": "ln(km/s)",
+      "note": "population median amplitude; 95% prior range ~0.7-35 km/s, broad enough to include amplitudes reported as upper limits by Chase et al. 2025 (~20 km/s) and Oman & Riley 2024 (<10 km/s, Milky Way). A choice, not a measurement."
+    },
+    "sigma_lnA": {
+      "dist": "HalfNormal",
+      "scale": 0.5,
+      "unit": "ln(km/s)",
+      "note": "galaxy-to-galaxy spread of ln A; regularisation choice"
+    },
+    "mu_u": {
+      "dist": "Normal",
+      "loc": 0.0,
+      "scale": 1.5,
+      "unit": "logit",
+      "note": "population position of ln l between each galaxy's bounds"
+    },
+    "sigma_u": {
+      "dist": "HalfNormal",
+      "scale": 1.0,
+      "unit": "logit",
+      "note": "galaxy-to-galaxy spread; regularisation choice"
+    },
+    "phi": {
+      "dist": "Uniform",
+      "low": 0.0,
+      "high": 1.0,
+      "unit": "-",
+      "note": "decomposition variant only: correlated fraction of published variance"
+    }
+  },
+  "ups_sigma_dex": {
+    "D": 0.1,
+    "E": 0.2
+  },
+  "shared_priors_from_nb03": {
+    "log10_a0": {
+      "dist": "Uniform",
+      "low": -11.5,
+      "high": -8.5,
+      "unit": "log10(m s^-2)",
+      "kind": "computational support (broad)"
+    },
+    "beta": {
+      "dist": "Uniform",
+      "low": 0.05,
+      "high": 1.0,
+      "unit": "-",
+      "kind": "computational support; keeps low-g slope 1-beta in [0, 0.95]"
+    },
+    "sigma_int": {
+      "dist": "HalfNormal",
+      "scale": 0.1,
+      "unit": "dex",
+      "kind": "proposal: half-normal including zero; scale is a regularisation choice"
+    },
+    "tau": {
+      "dist": "HalfNormal",
+      "scale": 0.1,
+      "unit": "dex",
+      "kind": "proposal: half-normal including zero; scale is a regularisation choice"
+    },
+    "error_inflation_s": {
+      "dist": "LogNormal",
+      "loc": 0.0,
+      "scale": 0.5,
+      "unit": "-",
+      "kind": "Model B only; regularisation choice (median 1)"
+    },
+    "distance": {
+      "dist": "LogNormal per galaxy",
+      "loc": "ln D_SPARC",
+      "scale": "e_D / D_SPARC",
+      "unit": "Mpc",
+      "kind": "physical: proposal (log-normal, catalogue errors)"
+    },
+    "inclination": {
+      "dist": "TruncatedNormal per galaxy",
+      "loc": "i_SPARC",
+      "scale": "e_i",
+      "low": 1.0,
+      "high": 90.0,
+      "unit": "deg",
+      "kind": "physical: proposal (Gaussian, catalogue errors); bounds 0<i<=90 as in Li et al. 2018"
+    },
+    "upsilon_disk": {
+      "dist": "LogNormal per galaxy",
+      "median": 0.5,
+      "sigma_dex": 0.1,
+      "unit": "Msun/Lsun",
+      "kind": "physical: proposal (log-normal about SPARC value 0.5); 0.1 dex width as in Li et al. 2018, Sec. 2.2"
+    },
+    "upsilon_bulge": {
+      "dist": "LogNormal per bulge galaxy",
+      "median": 0.7,
+      "sigma_dex": 0.1,
+      "unit": "Msun/Lsun",
+      "kind": "physical: as above; only galaxies with Vbul > 0 get this parameter"
+    }
+  },
+  "target_accept": 0.9,
+  "max_tree_depth": 10,
+  "pilot": {
+    "chains": 4,
+    "warmup": 1000,
+    "samples": 1000,
+    "galaxies": [
+      "F571-8",
+      "NGC0289",
+      "NGC0300",
+      "NGC3953",
+      "NGC5005",
+      "NGC7793",
+      "UGC00891",
+      "UGC02487",
+      "UGC05716",
+      "UGC06446",
+      "UGC07577",
+      "UGC08837"
+    ],
+    "variants": {
+      "D_base": {
+        "cfg": {
+          "model": "D",
+          "ups_sig": 0.1,
+          "pooling": "partial",
+          "mode": "additive",
+          "kernel": "SE",
+          "bounds": "base",
+          "name": "D_base"
+        },
+        "seconds": 635.712325334549,
+        "stats": {
+          "divergences": 1,
+          "divergences_per_chain": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "max_tree_depth_hits": 0,
+          "mean_num_steps": 31.05475,
+          "bfmi_per_chain": [
+            0.8575925204213113,
+            0.7452784411397235,
+            0.9416798329896481,
+            0.8231986389385806
+          ],
+          "mean_accept_prob": 0.940178135426998,
+          "max_r_hat_all": 1.0053727013448694,
+          "min_ess_bulk_all": 1208.2930149141966,
+          "min_ess_tail_all": 1199.6702148432134,
+          "converged_by_all_criteria": false
+        },
+        "error": null,
+        "netcdf": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Posterior_Samples/04_gp_pilot_D_base_posterior.nc",
+        "warnings": [
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC)."
+        ]
+      },
+      "D_bounds_narrow": {
+        "cfg": {
+          "model": "D",
+          "ups_sig": 0.1,
+          "pooling": "partial",
+          "mode": "additive",
+          "kernel": "SE",
+          "bounds": "narrow",
+          "name": "D_bounds_narrow"
+        },
+        "seconds": 533.4820458889008,
+        "stats": {
+          "divergences": 9,
+          "divergences_per_chain": [
+            2,
+            0,
+            7,
+            0
+          ],
+          "max_tree_depth_hits": 0,
+          "mean_num_steps": 30.77025,
+          "bfmi_per_chain": [
+            0.8423029949503295,
+            0.8201785772325016,
+            0.7910559412464635,
+            0.816946914607142
+          ],
+          "mean_accept_prob": 0.9248118759913186,
+          "max_r_hat_all": 1.0036380093864024,
+          "min_ess_bulk_all": 928.5349435146989,
+          "min_ess_tail_all": 1178.547674414317,
+          "converged_by_all_criteria": false
+        },
+        "error": null,
+        "netcdf": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Posterior_Samples/04_gp_pilot_D_bounds_narrow_posterior.nc",
+        "warnings": [
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC)."
+        ]
+      },
+      "D_bounds_wide": {
+        "cfg": {
+          "model": "D",
+          "ups_sig": 0.1,
+          "pooling": "partial",
+          "mode": "additive",
+          "kernel": "SE",
+          "bounds": "wide",
+          "name": "D_bounds_wide"
+        },
+        "seconds": 622.4770739078522,
+        "stats": {
+          "divergences": 2,
+          "divergences_per_chain": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "max_tree_depth_hits": 0,
+          "mean_num_steps": 40.99125,
+          "bfmi_per_chain": [
+            0.8235689759195917,
+            0.7585030846917482,
+            0.7763447963230745,
+            0.7604108998707763
+          ],
+          "mean_accept_prob": 0.9339535932022863,
+          "max_r_hat_all": 1.0058209183017042,
+          "min_ess_bulk_all": 449.95410550319497,
+          "min_ess_tail_all": 625.947604858999,
+          "converged_by_all_criteria": false
+        },
+        "error": null,
+        "netcdf": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Posterior_Samples/04_gp_pilot_D_bounds_wide_posterior.nc",
+        "warnings": [
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC)."
+        ]
+      },
+      "D_matern32": {
+        "cfg": {
+          "model": "D",
+          "ups_sig": 0.1,
+          "pooling": "partial",
+          "mode": "additive",
+          "kernel": "M32",
+          "bounds": "base",
+          "name": "D_matern32"
+        },
+        "seconds": 538.7249321937561,
+        "stats": {
+          "divergences": 4,
+          "divergences_per_chain": [
+            0,
+            1,
+            0,
+            3
+          ],
+          "max_tree_depth_hits": 0,
+          "mean_num_steps": 30.5115,
+          "bfmi_per_chain": [
+            0.9028893925367467,
+            0.8760202831694077,
+            0.8925574288969317,
+            0.8972255694245593
+          ],
+          "mean_accept_prob": 0.9333689886615743,
+          "max_r_hat_all": 1.0051960441776,
+          "min_ess_bulk_all": 1785.777147623776,
+          "min_ess_tail_all": 1531.1801844247375,
+          "converged_by_all_criteria": false
+        },
+        "error": null,
+        "netcdf": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Posterior_Samples/04_gp_pilot_D_matern32_posterior.nc",
+        "warnings": [
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC)."
+        ]
+      },
+      "D_complete_pooling": {
+        "cfg": {
+          "model": "D",
+          "ups_sig": 0.1,
+          "pooling": "complete",
+          "mode": "additive",
+          "kernel": "SE",
+          "bounds": "base",
+          "name": "D_complete_pooling"
+        },
+        "seconds": 491.401225566864,
+        "stats": {
+          "divergences": 0,
+          "divergences_per_chain": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "max_tree_depth_hits": 0,
+          "mean_num_steps": 28.168,
+          "bfmi_per_chain": [
+            0.8654126470102732,
+            0.8128813476681912,
+            0.8224295252311589,
+            0.7813072162888451
+          ],
+          "mean_accept_prob": 0.938256041335185,
+          "max_r_hat_all": 1.0055515226617942,
+          "min_ess_bulk_all": 1805.7808705462878,
+          "min_ess_tail_all": 1668.9569162205503,
+          "converged_by_all_criteria": true
+        },
+        "error": null,
+        "netcdf": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Posterior_Samples/04_gp_pilot_D_complete_pooling_posterior.nc",
+        "warnings": [
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC)."
+        ]
+      },
+      "D_decomposition": {
+        "cfg": {
+          "model": "D",
+          "ups_sig": 0.1,
+          "pooling": "partial",
+          "mode": "decomposition",
+          "kernel": "SE",
+          "bounds": "base",
+          "name": "D_decomposition"
+        },
+        "seconds": 427.93217754364014,
+        "stats": {
+          "divergences": 0,
+          "divergences_per_chain": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "max_tree_depth_hits": 0,
+          "mean_num_steps": 21.624,
+          "bfmi_per_chain": [
+            0.9571242628274179,
+            0.9000910496990255,
+            0.964585202593486,
+            0.8094636294605093
+          ],
+          "mean_accept_prob": 0.9215290667928762,
+          "max_r_hat_all": 1.0046170702782065,
+          "min_ess_bulk_all": 1492.588642688637,
+          "min_ess_tail_all": 1224.1952014925398,
+          "converged_by_all_criteria": true
+        },
+        "error": null,
+        "netcdf": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Posterior_Samples/04_gp_pilot_D_decomposition_posterior.nc",
+        "warnings": [
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC)."
+        ]
+      },
+      "E_base": {
+        "cfg": {
+          "model": "E",
+          "ups_sig": 0.2,
+          "pooling": "partial",
+          "mode": "additive",
+          "kernel": "SE",
+          "bounds": "base",
+          "name": "E_base"
+        },
+        "seconds": 575.4245758056641,
+        "stats": {
+          "divergences": 33,
+          "divergences_per_chain": [
+            3,
+            3,
+            9,
+            18
+          ],
+          "max_tree_depth_hits": 0,
+          "mean_num_steps": 31.05475,
+          "bfmi_per_chain": [
+            0.7884333028422519,
+            0.7787492210768437,
+            0.7941604721796167,
+            0.7555696753518971
+          ],
+          "mean_accept_prob": 0.9008746170739623,
+          "max_r_hat_all": 1.0040710877809182,
+          "min_ess_bulk_all": 923.3871723149023,
+          "min_ess_tail_all": 849.6456997183054,
+          "converged_by_all_criteria": false
+        },
+        "error": null,
+        "netcdf": "/content/drive/MyDrive/RAR_Universality_Research/05_Results/Posterior_Samples/04_gp_pilot_E_base_posterior.nc",
+        "warnings": [
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+          "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC)."
+        ]
+      }
+    }
+  },
+  "run_full": false,
+  "forced_full": false,
+  "full": {
+    "models": [
+      "D",
+      "E"
+    ],
+    "chains": 4,
+    "warmup": 1500,
+    "samples": 1000,
+    "completed": {}
+  },
+  "convergence_criteria": {
+    "rank_r_hat_max": 1.01,
+    "ess_bulk_min": 400,
+    "ess_tail_min": 400,
+    "divergences_max": 0
+  },
+  "integrated_loo": {
+    "post_draws": 400,
+    "mc": 64
+  },
+  "ppc_draws": 300,
+  "benchmark": {
+    "device": "cpu",
+    "log_density_finite": true,
+    "compile_seconds": 22.29524850845337,
+    "seconds_per_grad_eval": 0.07507386207580566,
+    "pilot_mean_leapfrog_steps": 31.05475,
+    "estimated_full_hours_per_model": 6.476111161940627,
+    "dense_covariance_storage_MB": 1.087536,
+    "peak_rss_MB_so_far": 2323.17578125
+  },
+  "regression_test": {
+    "max_abs_diff_vs_saved_NB03": 1.1795009413617663e-12,
+    "max_abs_diff_vs_SM": 8.242295734817162e-13,
+    "n_draws": 10
+  },
+  "data_checksums": {
+    "sparc_rar_points_baseline.csv": "00d6c70a16f198118ebdeac366e60bfccb4ea1fc8abb278b40faf98151d5d04d",
+    "sparc_rar_galaxies_baseline.csv": "6ab7205b2a5f70d8196f7ed87926c4b9d5fcda9a6a90f10d47de363632d205c6",
+    "sparc_rar_model_inputs.npz": "7d56b9edeb02a50abcbcde2363d3834e2517e879c98738ceba73cea59a035a65"
+  },
+  "n_points": 3164,
+  "n_galaxies": 153,
+  "beam_sizes": "not available for SPARC in the project files; correlation-length bounds use radial spacing and extent only",
+  "resume_note": "No sampler-state checkpointing; interrupted chains cannot be resumed."
+}

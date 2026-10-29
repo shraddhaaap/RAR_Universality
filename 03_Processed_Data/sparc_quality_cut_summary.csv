@@ -1,0 +1,10 @@
+step,n_galaxies,n_radial_points,criteria
+All galaxies (MRT ∪ rotmod files),175,3391,Q <= 2; inc >= 30.0 deg (proposal Section 3)
+In MRT,175,3391,Q <= 2; inc >= 30.0 deg (proposal Section 3)
+…with a parseable rotmod file,175,3391,Q <= 2; inc >= 30.0 deg (proposal Section 3)
+…and Q ≤ 2,163,3271,Q <= 2; inc >= 30.0 deg (proposal Section 3)
+…and inc ≥ 30° (final sample),153,3168,Q <= 2; inc >= 30.0 deg (proposal Section 3)
+Excluded: Q > 2 only,10,109,Q <= 2; inc >= 30.0 deg (proposal Section 3)
+Excluded: inc < 30° only,10,103,Q <= 2; inc >= 30.0 deg (proposal Section 3)
+Excluded: both Q and inc,2,11,Q <= 2; inc >= 30.0 deg (proposal Section 3)
+Excluded: missing MRT entry or rotmod file,0,0,Q <= 2; inc >= 30.0 deg (proposal Section 3)

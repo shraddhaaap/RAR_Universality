@@ -1,0 +1,101 @@
+stage,quantity,value
+PILOT D_base,contraction_log10_a0,
+PILOT D_base,contraction_beta,
+PILOT D_base,contraction_sigma_int,0.9990045918097455
+PILOT D_base,contraction_tau,0.5416944150938252
+PILOT D_base,contraction_mu_lnA,0.9392772915196024
+PILOT D_base,contraction_sigma_lnA,0.6357971218243481
+PILOT D_base,contraction_mu_u,0.8517742971420568
+PILOT D_base,contraction_sigma_u,0.2240455641445539
+PILOT D_base,frac_ell_draws_within_5pct_of_lower_bound,0.0021666666666666666
+PILOT D_base,frac_ell_draws_within_5pct_of_upper_bound,0.04813888888888889
+PILOT D_base,median_point_GP_variance_dex2,0.005151018793548304
+PILOT D_base,sigma_int_sq_dex2,3.975644816714949e-06
+PILOT D_base,tau_sq_dex2,0.0028365061975543573
+PILOT D_base,median_sigma_V_sq_dex2,0.003105951079435276
+PILOT D_base,"corr(sigma_int,mu_lnA)",0.01632967368643696
+PILOT D_base,"corr(sigma_int,mu_u)",0.03255043184356049
+PILOT D_base,"corr(tau,mu_lnA)",-0.14922498401249493
+PILOT D_base,"corr(tau,mu_u)",-0.08558120626226894
+PILOT D_base,frac_sigma_int_below_0.005_dex,0.8906666666666667
+PILOT D_base,frac_tau_below_0.01_dex,0.102
+PILOT D_base,sigma_int_95pct_upper,0.006055967399469977
+PILOT D_base,tau_95pct_upper,0.13523559241614755
+PILOT D_base,tau_2.5pct,0.0022273997376945215
+PILOT D_base,frac_inc_draws_above_89deg,0.006805555555555555
+PILOT D_base,non_identifiability_flags,sigma_int piles toward 0 (posterior consistent with zero; only an upper limit is constrained)
+PILOT E_base,contraction_log10_a0,
+PILOT E_base,contraction_beta,
+PILOT E_base,contraction_sigma_int,0.999087722239708
+PILOT E_base,contraction_tau,0.5126401607085833
+PILOT E_base,contraction_mu_lnA,0.921036837539289
+PILOT E_base,contraction_sigma_lnA,0.5915455811543007
+PILOT E_base,contraction_mu_u,0.8234200615121003
+PILOT E_base,contraction_sigma_u,0.16245798689976199
+PILOT E_base,frac_ell_draws_within_5pct_of_lower_bound,0.002277777777777778
+PILOT E_base,frac_ell_draws_within_5pct_of_upper_bound,0.04725
+PILOT E_base,median_point_GP_variance_dex2,0.00450086890325121
+PILOT E_base,sigma_int_sq_dex2,3.4430159888321793e-06
+PILOT E_base,tau_sq_dex2,0.002727308951116971
+PILOT E_base,median_sigma_V_sq_dex2,0.003105951079435276
+PILOT E_base,"corr(sigma_int,mu_lnA)",0.013768457030251239
+PILOT E_base,"corr(sigma_int,mu_u)",0.00686572613163008
+PILOT E_base,"corr(tau,mu_lnA)",-0.14335544674442774
+PILOT E_base,"corr(tau,mu_u)",-0.11702558168717878
+PILOT E_base,frac_sigma_int_below_0.005_dex,0.918
+PILOT E_base,frac_tau_below_0.01_dex,0.09366666666666666
+PILOT E_base,sigma_int_95pct_upper,0.00561648526523576
+PILOT E_base,tau_95pct_upper,0.13933771652088794
+PILOT E_base,tau_2.5pct,0.0027197266562273116
+PILOT E_base,frac_inc_draws_above_89deg,0.006527777777777778
+PILOT E_base,non_identifiability_flags,sigma_int piles toward 0 (posterior consistent with zero; only an upper limit is constrained)
+FULL Model D,contraction_log10_a0,
+FULL Model D,contraction_beta,
+FULL Model D,contraction_sigma_int,0.9999587261729745
+FULL Model D,contraction_tau,0.8943273571852486
+FULL Model D,contraction_mu_lnA,0.9928652331439792
+FULL Model D,contraction_sigma_lnA,0.9521945635643823
+FULL Model D,contraction_mu_u,0.9793394034649898
+FULL Model D,contraction_sigma_u,0.9129202478379448
+FULL Model D,frac_ell_draws_within_5pct_of_lower_bound,0.0002505446623093682
+FULL Model D,frac_ell_draws_within_5pct_of_upper_bound,0.054986928104575165
+FULL Model D,median_point_GP_variance_dex2,0.005088915604525736
+FULL Model D,sigma_int_sq_dex2,2.2647667515134886e-07
+FULL Model D,tau_sq_dex2,0.002263527528889806
+FULL Model D,median_sigma_V_sq_dex2,0.0012060139811573688
+FULL Model D,"corr(sigma_int,mu_lnA)",-0.02193809100854811
+FULL Model D,"corr(sigma_int,mu_u)",0.024804059460639096
+FULL Model D,"corr(tau,mu_lnA)",-0.15848676571639234
+FULL Model D,"corr(tau,mu_u)",-0.05958221520956424
+FULL Model D,frac_sigma_int_below_0.005_dex,1.0
+FULL Model D,frac_tau_below_0.01_dex,0.05
+FULL Model D,sigma_int_95pct_upper,0.0012871799208325676
+FULL Model D,tau_95pct_upper,0.07633038483770173
+FULL Model D,tau_2.5pct,0.005206483447900579
+FULL Model D,frac_inc_draws_above_89deg,0.04624183006535948
+FULL Model D,non_identifiability_flags,sigma_int piles toward 0 (posterior consistent with zero; only an upper limit is constrained)
+FULL Model E,contraction_log10_a0,
+FULL Model E,contraction_beta,
+FULL Model E,contraction_sigma_int,0.9999518179714035
+FULL Model E,contraction_tau,0.8706750296378951
+FULL Model E,contraction_mu_lnA,0.99234787233861
+FULL Model E,contraction_sigma_lnA,0.9353931422457753
+FULL Model E,contraction_mu_u,0.979577511564131
+FULL Model E,contraction_sigma_u,0.9087085135344106
+FULL Model E,frac_ell_draws_within_5pct_of_lower_bound,0.0003246187363834423
+FULL Model E,frac_ell_draws_within_5pct_of_upper_bound,0.05584313725490196
+FULL Model E,median_point_GP_variance_dex2,0.004818449378556524
+FULL Model E,sigma_int_sq_dex2,2.2581579667680978e-07
+FULL Model E,tau_sq_dex2,0.0011456388013060732
+FULL Model E,median_sigma_V_sq_dex2,0.0012060139811573688
+FULL Model E,"corr(sigma_int,mu_lnA)",0.01899853419766931
+FULL Model E,"corr(sigma_int,mu_u)",0.071074743515065
+FULL Model E,"corr(tau,mu_lnA)",-0.15883334154415704
+FULL Model E,"corr(tau,mu_u)",-0.05713280098119464
+FULL Model E,frac_sigma_int_below_0.005_dex,1.0
+FULL Model E,frac_tau_below_0.01_dex,0.138
+FULL Model E,sigma_int_95pct_upper,0.0013845006024253718
+FULL Model E,tau_95pct_upper,0.0729535463916088
+FULL Model E,tau_2.5pct,0.0021179318905386853
+FULL Model E,frac_inc_draws_above_89deg,0.046407407407407404
+FULL Model E,non_identifiability_flags,sigma_int piles toward 0 (posterior consistent with zero; only an upper limit is constrained)

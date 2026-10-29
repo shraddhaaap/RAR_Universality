@@ -1,0 +1,5 @@
+stage,model,n_galaxies,elpd_loo_galaxy,elpd_loo_se,p_loo,n_pareto_k_gt_0.7,converged_by_all_criteria,max_r_hat,min_ess_bulk,divergences,log10_a0_median,log10_a0_ci68,beta_median,beta_ci68,sigma_int_median,sigma_int_ci68,tau_median,tau_ci68,P(sigma_int < 0.034 dex),sigma_int_95pct_upper,status
+PILOT (validation only),C,12.0,135.76103383601196,78.99056026009056,58.684227100619125,5.0,True,1.0021435372934848,2553.916446910076,0.0,-10.271714072441306,"[-10.3995, -10.1293]",0.599839134802908,"[0.5556, 0.6459]",0.06035499870667768,"[0.0539, 0.0674]",0.18612542695922468,"[0.1512, 0.2304]",0.0,0.07189293410986239,
+FULL,A,,,,,,,,,,,,,,,,,,,,NOT RUN in this session (no result exists)
+FULL,B,,,,,,,,,,,,,,,,,,,,NOT RUN in this session (no result exists)
+FULL,C,,,,,,,,,,,,,,,,,,,,NOT RUN in this session (no result exists)

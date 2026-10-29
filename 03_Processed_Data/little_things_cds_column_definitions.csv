@@ -1,0 +1,100 @@
+file,start_byte,end_byte,format,units,label,explanation
+table1.dat,1.0,8.0,A8,---,Name,Main name of the source
+table1.dat,10.0,11.0,I2,h,RAh,Hour of right ascension (J2000) (1)
+table1.dat,13.0,14.0,I2,min,RAm,Minute of right ascension (J2000) (1)
+table1.dat,16.0,19.0,F4.1,s,RAs,Second of right ascension (J2000) (1)
+table1.dat,21.0,21.0,A1,---,DE-,Sign of declination (J2000) (1)
+table1.dat,22.0,23.0,I2,deg,DEd,Degree of declination (J2000) (1)
+table1.dat,25.0,26.0,I2,arcmin,DEm,Arcminute of declination (J2000) (1)
+table1.dat,28.0,31.0,F4.1,arcsec,DEs,Arcsecond of declination (J2000) (1)
+table1.dat,33.0,36.0,F4.1,Mpc,Dist,[0.7/10.3] Distance as given in Hunter+2012 (J/AJ/144/134)
+table1.dat,38.0,43.0,F6.1,km/s,Vsys,[-348/589.4] Systemic velocity (1)
+table1.dat,45.0,47.0,F3.1,km/s,e_Vsys,[0.7/5.6] Vsys uncertainty (1)
+table1.dat,49.0,53.0,F5.1,deg,PA,[8.2/359.6] Average value of the kinematic position angle (2)
+table1.dat,55.0,58.0,F4.1,deg,e_PA,[0/13.9] PA uncertainty (2)
+table1.dat,60.0,63.0,F4.1,deg,i,[22.6/82.5] Average value of the kinematic inclination (1)
+table1.dat,65.0,68.0,F4.1,deg,e_i,[0/15.6] i uncertainty (1)
+table1.dat,70.0,74.0,F5.1,mag,VMag,[-18.2/-10.9] Absolute V magnitude as given in Hunter+2012 (J/AJ/144/134)
+table1.dat,76.0,78.0,F3.1,[-],Ab(O/H),[7.2/8.7] 12+log(O/H) ; Oxygen abundance taken from the literature as compiled in Hunter+2012 (J/AJ/144/134)
+table1.dat,80.0,83.0,F4.2,[-],e_Ab(O/H),[0.01/0.2]? Ab(O/H) uncertainty
+table1.dat,85.0,89.0,F5.2,Msun/yr/kpc2,log(SFR)Ha,[-4.1/0.19]? H{alpha} star formation rates normalized to the area ({pi}R^2^ where R is the disk scale length) as given in Hunter+2004 (J/AJ/128/2170)
+table1.dat,91.0,94.0,F4.2,Msun/yr/kpc2,e_log(SFR)Ha,[0.01/0.07]? log(SFR)Ha uncertainty
+table1.dat,96.0,100.0,F5.2,Msun/yr/kpc2,log(SFR)FUV,[-3.21/-0.01]? GALEX FUV star formation rates normalized to the area ({pi}R^2^ where R is the disk scale length) as given in Hunter+2010 (2010AJ....139..447H)
+table1.dat,102.0,105.0,F4.2,Msun/yr/kpc2,e_log(SFR)FUV,[0/0.06]? log(SFR)FUV uncertainty
+table1.dat,,,,,Note (1),Derived from the tilted-ring analysis described in Section 3.1.1.
+table1.dat,,,,,Note (2),Derived from the tilted-ring analysis described in Section 3.1.1. PA is the angle measured counter-clockwise from the north direction in the sky to the major axis of the receding half of the galaxy.
+table2.dat,1.0,8.0,A8,---,Name,Main name of the source
+table2.dat,10.0,13.0,F4.2,kpc,Rmax,[0.31/9.81] Radius where the outermost part of the rotation curve is measured
+table2.dat,15.0,18.0,F4.2,kpc,R0.3,[0.2/5.43] Radius where the logarithmic slope of the total rotation curve dlog(V)/dlog(R)=0.3
+table2.dat,20.0,24.0,F5.1,km/s,V(Rmax),[12/125.5] Rotation velocity (asymmetric drift corrected) at Rmax
+table2.dat,26.0,30.0,F5.1,km/s,Viso(Rmax),[11.3/130.2] Rotation velocity of the best fitted pseudo-isothermal halo model at Rmax
+table2.dat,32.0,36.0,F5.1,---,Rmax/HI,[6/103.8] Ratio of Rmax to H_I_ beam size
+table2.dat,38.0,41.0,F4.2,kpc,z0,[0.07/0.48]? Vertical scale height of the stellar disk
+table2.dat,43.0,46.0,F4.1,---,c,[-0.4/25] Concentration parameter
+table2.dat,48.0,53.0,F6.1,---,e_c,[0.2/1503.4]? c uncertainty (1)
+table2.dat,55.0,58.0,F4.1,---,cM07,[8.1/18.6] Concentration parameter derived using an empirical relationship between c and V200 as given by McGaugh+2007 (2007ApJ...659..149M)
+table2.dat,60.0,65.0,F6.1,km/s,V200,[5.4/2290.8] Rotation velocity for a NFW model (2)
+table2.dat,67.0,73.0,F7.1,km/s,e_V200,[0.9/48442.1]? V200 uncertainty (1)
+table2.dat,75.0,79.0,F5.1,km/s,V200M07,"[12.4/598.2]? V200 values fitted after fixing c to cM07 assuming a ""minimum disk"" (2)"
+table2.dat,81.0,84.0,F4.1,km/s,e_V200M07,[0.2/30.4]? V200M07 uncertainty
+table2.dat,86.0,89.0,F4.2,kpc,Rc,"[0.15/8.4] Core radius of pseudo-isothermal model (Begeman+1991, 1991MNRAS.249..523B)"
+table2.dat,91.0,95.0,F5.2,kpc,e_Rc,[0.01/12.2] Rc uncertainty
+table2.dat,97.0,103.0,F7.2,10-3Msun/pc3,rho0,"[8.19/2132.4] Core density of pseudo-isothermal model (Begeman+1991, 1991MNRAS.249..523B)"
+table2.dat,105.0,110.0,F6.2,10-3Msun/pc3,e_rho0,[0.77/381.14] rho0 uncertainty
+table2.dat,112.0,116.0,F5.2,---,alphamin,[-1.25/1.16] Logarithmic inner slope of the total matter (DM halo+baryons) density profiles (3)
+table2.dat,118.0,122.0,F5.2,---,e_alphamin,[0.01/1.22] alphamin uncertainty
+table2.dat,124.0,124.0,A1,---,f_alphamin,The dynamical contribution by the stellar component is included in the DM density profile as no Spitzer 3.6mum image is available for this galaxy
+table2.dat,126.0,130.0,F5.2,---,alpha3.6,[-1.25/0.97] Logarithmic inner slope of the DM density profiles (3)
+table2.dat,132.0,136.0,F5.2,---,e_alpha3.6,[0.01/0.92] alpha3.6 uncertainty
+table2.dat,138.0,138.0,A1,---,f_alpha3.6,The dynamical contribution by the stellar component is included in the DM density profile as no Spitzer 3.6mum image is available for this galaxy
+table2.dat,140.0,145.0,F6.2,10+7Msun,Mgas,[0.14/132.52] Gas mass (4)
+table2.dat,147.0,151.0,F5.2,10+7Msun,MstarK,[0.04/20.7]? Stellar mass derived from the kinematic analysis (5)
+table2.dat,153.0,157.0,F5.2,10+7Msun,MstarSED,[0.06/46.7]? Stellar mass derived using a spectral energy distribution fitting technique in Zhang+2012 (2012AJ....143...47Z)
+table2.dat,159.0,163.0,F5.3,[Msun],log(Mdyn),[6.9/9.93] Log of dynamical mass measured using Viso(Rmax) and Rmax
+table2.dat,165.0,171.0,F7.3,[Msun],log(M200),[8.7/510.2] CDM halo mass estimated from V200M07 (6)
+table2.dat,,,,,Note (1),A null value means that the error is unphysically large.
+table2.dat,,,,,Note (2),NFW model from Navarro+1995 (1995MNRAS.275...56N) & Navarro+1996b (1996ApJ...462..563N). See Section 3.4.
+table2.dat,,,,,Note (3),Measured in Section 4.2.
+table2.dat,,,,,Note (4),Derived in Section 3.2.
+table2.dat,,,,,Note (5),Derived in Section 3.3.
+table2.dat,,,,,Note (6),Using Equation 3 from Oh+2011a (2011AJ....142...24O). See Section 3.4.
+rotdmbar.dat,1.0,8.0,A8,---,Name,Galaxy identifier
+rotdmbar.dat,10.0,14.0,A5,---,Type,Data type (1)
+rotdmbar.dat,16.0,23.0,F8.6,kpc,R0.3,Radius where the logarithmic slope of the total rotation curve dlog(V)/dlog(R)=0.3
+rotdmbar.dat,25.0,34.0,F10.6,km/s,V0.3,Rotation velocity at R0.3
+rotdmbar.dat,36.0,44.0,F9.6,---,R,Radius scaled by R0.3
+rotdmbar.dat,46.0,54.0,F9.6,---,V,Velocity scaled by V0.3
+rotdmbar.dat,56.0,63.0,F8.6,---,e_V,Uncertainty in V
+rotdmbar.dat,,,,,Note (1),Data type as follows: Data = The scaled total rotation velocity which is corrected for the asymmetric drift. Model = Pseudo-isothermal halo model fit to the total rotation velocity.
+rotdm.dat,1.0,8.0,A8,---,Name,Galaxy identifier
+rotdm.dat,10.0,14.0,A5,---,Type,Data type (1)
+rotdm.dat,16.0,23.0,F8.6,kpc,R0.3,Radius where the logarithmic slope of the total rotation curve dlog(V)/dlog(R)=0.3
+rotdm.dat,25.0,34.0,F10.6,km/s,V0.3,Rotation velocity at R0.3
+rotdm.dat,36.0,44.0,F9.6,---,R,Radius scaled by R0.3
+rotdm.dat,46.0,54.0,F9.6,---,V,Velocity scaled by V0.3
+rotdm.dat,56.0,63.0,F8.6,---,e_V,Uncertainty in V
+rotdm.dat,,,,,Note (1),Data type as follows: Data = The scaled total rotation velocity which is corrected for the asymmetric drift. Model = Pseudo-isothermal halo model fit to the total rotation velocity.
+dendmbar.dat,1.0,8.0,A8,---,Name,Galaxy identifier
+dendmbar.dat,10.0,14.0,A5,---,Type,Data type (1)
+dendmbar.dat,16.0,23.0,F8.5,[-],R,Log radius scaled by R0.3
+dendmbar.dat,25.0,35.0,E11.4,[-],rho,Log density scaled by {rho}0.3
+dendmbar.dat,37.0,42.0,F6.4,[-],e_rho,Uncertainty in rho
+dendmbar.dat,,,,,Note (1),Data type as follows: Data = The scaled total rotation velocity which is corrected for the asymmetric drift. Model = Pseudo-isothermal halo model fit to the total rotation velocity.
+dendm.dat,1.0,8.0,A8,---,Name,Galaxy identifier
+dendm.dat,10.0,14.0,A5,---,Type,Data type (1)
+dendm.dat,16.0,23.0,F8.5,[-],R,Log radius scaled by R0.3
+dendm.dat,25.0,35.0,E11.4,[-],rho,Log density scaled by {rho}0.3
+dendm.dat,37.0,42.0,F6.4,[-],e_rho,Uncertainty in rho
+dendm.dat,,,,,Note (1),Data type as follows: Data = The scaled total rotation velocity which is corrected for the asymmetric drift. Model = Pseudo-isothermal halo model fit to the total rotation velocity.
+nfwac.dat,1.0,6.0,F6.3,---,c,Model concentration parameter
+nfwac.dat,8.0,10.0,I3,km/s,V200,Model rotation velocity at R_200_; see Equ. 7
+nfwac.dat,12.0,20.0,F9.6,---,R,Model radius scaled by R0.3
+nfwac.dat,22.0,29.0,F8.6,---,V,Model rotation velocity scaled by V0.3 (1)
+nfwac.dat,31.0,38.0,F8.6,---,e_V,Uncertainty in V
+nfwac.dat,,,,,Note (1),See Equation 7.
+nfwbd.dat,1.0,6.0,F6.3,---,c,Model concentration parameter
+nfwbd.dat,8.0,10.0,I3,km/s,V200,Model rotation velocity at R_200_
+nfwbd.dat,12.0,19.0,F8.5,[-],R,Model log radius scaled by R0.3
+nfwbd.dat,21.0,31.0,E11.4,[-],rho,Model log density scaled by {rho}0.3 (1)
+nfwbd.dat,33.0,38.0,F6.4,[-],e_rho,Uncertainty in rho
+nfwbd.dat,,,,,Note (1),See Equation 6.

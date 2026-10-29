@@ -1,0 +1,26 @@
+{
+  "created_utc": "2026-10-22T08:50:33Z",
+  "source": "SPARC rotmod files + SPARC_Lelli2016c.mrt via Phase 1 audit",
+  "n_galaxies": 153,
+  "n_points": 3168,
+  "units": {
+    "R_kpc": "kpc",
+    "*_kms": "km/s",
+    "gal_D_mpc": "Mpc",
+    "gal_inc_deg": "deg"
+  },
+  "conventions": {
+    "Vgas": "signed; enters V_bar^2 as Vgas*|Vgas|",
+    "Vdisk_ups1_kms/Vbul_ups1_kms": "for Upsilon = 1",
+    "distance_scaling": "R \u221d D, V_component \u221d sqrt(D), V_obs independent of D => g_bar invariant, g_obs \u221d 1/D",
+    "inclination_scaling": "V_obs \u221d 1/sin(i) relative to the catalogue inclination"
+  },
+  "kpc_in_m": 3.085677581491367e+19,
+  "reference_parameters_not_fitted": {
+    "a0_ms2": 1.2e-10,
+    "beta": 0.5,
+    "upsilon_disk": 0.5,
+    "upsilon_bulge": 0.7
+  },
+  "selection": "Q <= 2, inc >= 30.0 deg (proposal Section 3)"
+}
